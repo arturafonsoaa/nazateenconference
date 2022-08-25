@@ -1143,55 +1143,19 @@
         </section>
         <!-- section close -->
 
-        <!-- section begin -->
-        <section id="call-to-action" class="gradient-to-right text-light call-to-action" aria-label="cta">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-8 col-md-7">
-                        <h3 class="size-2 no-margin">Get your seat before the price goes up</h3>
+        <section id="call-to-action" class="bg-gradient-to-r from-neon-pink to-neon-purple py-16">
+            <div class="container m-auto">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">
+                            Adquira agora seu ingresso
+                        </h3>
                     </div>
 
-                    <div class="col-lg-4 col-md-5 text-right">
-                        <a href="#section-ticket" class="btn-custom text-white scroll-to">Get Ticket</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- logo carousel section close -->
-
-        <section id="section-fun-facts" class="text-light" data-bgimage="url(images-event/bg/3.jpg) fixed top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
-                        <div class="de_count">
-                            <i class="icon_id-2 id-color-2"></i>
-                            <h3>8800</h3>
-                            <span class="text-white">Participants</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
-                        <div class="de_count">
-                            <i class="icon_easel id-color-2"></i>
-                            <h3>300</h3>
-                            <span class="text-white">Topics</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
-                        <div class="de_count">
-                            <i class="icon_headphones id-color-2"></i>
-                            <h3>50</h3>
-                            <span class="text-white">Speakers</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-xs-6 wow fadeIn" data-wow-delay=".5s">
-                        <div class="de_count">
-                            <i class="icon_globe id-color-2"></i>
-                            <h3>20</h3>
-                            <span class="text-white">Awards</span>
-                        </div>
+                    <div>
+                        <a href="#section-ticket" class="bg-neon-pink py-2 px-8 rounded-sm uppercase text-white">
+                            Comprar ingresso
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1202,7 +1166,9 @@
         <div class="container m-auto">
             <div class="flex items-center justify-between">
                 <div class="lg:basis-2/12">
-                    <img src="{{ Vite::asset('resources/img/logo-nazateen-conference.png') }}">
+                    <figure>
+                        <img src="{{ Vite::asset('resources/img/logo-nazateen-conference.png') }}" class="lg:w-60">
+                    </figure>
                 </div>
 
                 <div class="lg:basis-8/12">
@@ -1215,7 +1181,7 @@
                 </div>
 
                 <div class="lg:basis-2/12">
-                    <div class="text-center">
+                    <div class="text-right">
                         <a href="#" class="text-white text-2xl mr-2">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
