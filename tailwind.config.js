@@ -6,7 +6,16 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                'neon-blue': '#3cd3f0',
+                'neon-pink': '#da43ff',
+                'neon-purple': '#7831b6',
+            },
+            fontFamily: {
+                'base': ['Poppins'],
+            }
+        },
     },
     plugins: [],
 }
