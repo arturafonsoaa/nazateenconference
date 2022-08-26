@@ -937,85 +937,78 @@
         </section>
         <!-- section close -->
 
-        <!-- section begin -->
-        <section id="section-sponsors" data-bgimage="url(images-event/bg/3.png) fixed center no-repeat">
-            <div class="wm wm-border dark wow fadeInDown ">sponsors</div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
-                        <h1>Official Sponsors</h1>
-                        <div class="separator"><span><i class="fa fa-square"></i></span></div>
-                        <div class="spacer-single"></div>
+        <section id="section-sponsors" class="py-20 bg-center bg-cover bg-fixed bg-no-repeat" style="background-image: url('{{ Vite::asset('resources/img/background3.jpg') }}')">
+            <div class="container m-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl text-white font-bold">Patrocinadores Oficiais</h2>
+                    <div class="separator">
+                        <span>
+                            <i class="fa fa-square text-neon-orange"></i>
+                        </span>
                     </div>
+                </div>
 
-                    <div class="col-md-12 text-center wow fadeInUp">
-                        <h3>Gold Sponsors</h3>
-                        <div class="spacer-single"></div>
-                        <img src="images-event/logo/1.png" alt="" class="grey-hover">
-                        <img src="images-event/logo/2b.png" alt="" class="grey-hover">
-                        <img src="images-event/logo/3b.png" alt="" class="grey-hover">
-                        <img src="images-event/logo/4b.png" alt="" class="grey-hover">
-                        <div class="spacer-double"></div>
-
-                        <h3>Silver Sponsors</h3>
-                        <div class="spacer-single"></div>
-                        <img src="images-event/logo/5.png" alt="" class="grey-hover">
-                        <img src="images-event/logo/6.png" alt="" class="grey-hover">
-                        <img src="images-event/logo/7.png" alt="" class="grey-hover">
-                        <img src="images-event/logo/8b.png" alt="" class="grey-hover">
-                    </div>
+                <div class="lg:max-w-5xl flex justify-center items-center gap-4 my-12 m-auto">
+                    <figure>
+                        <img src="{{ Vite::asset('resources/img/logo1.png') }}">
+                    </figure>
+                    <figure>
+                        <img src="{{ Vite::asset('resources/img/logo2.png') }}">
+                    </figure>
+                    <figure>
+                        <img src="{{ Vite::asset('resources/img/logo3.png') }}">
+                    </figure>
+                    <figure>
+                        <img src="{{ Vite::asset('resources/img/logo4.png') }}">
+                    </figure>
                 </div>
             </div>
         </section>
-        <!-- section close -->
 
-        <!-- section begin -->
-        <section id="section-testimonials" aria-label="section" class="text-light">
-            <div class="wm wm-border dark wow fadeInDown">testimonials</div>
-            <div class="container">
-                <div class="row">
+        <section id="section-testimonials" class="py-16">
+            <div class="container m-auto">
+                <div class="m-auto lg:w-2/3 text-center">
+                    <div class="splide">
+                        <div class="splide__track">
+                            <div class="splide__list">
+                                <blockquote class="splide__slide">
+                                    <p class="text-4xl text-neon-orange mb-4">
+                                        <i class="fa fa-quote-left"></i>
+                                    </p>
+                                    <p class="text-3xl font-semibold text-gray-200 mb-4">Superou minhas expectativas!</p>
+                                    <p class="text-xl italic text-gray-200 mb-4">
+                                        I'm always impressed with the event. Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                        minim
+                                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                    </p>
+                                    <p class="text-base text-gray-200">Participante 1</p>
+                                </blockquote>
 
-                    <div class="col-md-8 offset-md-2">
-
-                        <div id="testimonial-carousel-single" class="owl-carousel owl-theme wow fadeInUp">
-                            <blockquote class="testimonial-big">
-                                <span class="title">I've got lot experiences!</span>
-                                I'm always impressed with the event. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-
-                                <span class="name">John, Customer</span>
-                            </blockquote>
-
-                            <blockquote class="testimonial-big">
-                                <span class="title">Exceeded my expectations!</span>
-                                Just wow! I'm always impressed with the event. Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-
-                                <span class="name">Sandra, Customer</span>
-                            </blockquote>
-
-                            <blockquote class="testimonial-big">
-                                <span class="title">Better than I think!</span>
-                                I'm always impressed with the event. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-
-                                <span class="name">Michael, Customer</span>
-                            </blockquote>
+                                <blockquote class="splide__slide">
+                                    <p class="text-4xl text-neon-orange mb-4">
+                                        <i class="fa fa-quote-left"></i>
+                                    </p>
+                                    <p class="text-3xl font-semibold text-gray-200 mb-4">Superou minhas expectativas!</p>
+                                    <p class="text-xl italic text-gray-200 mb-4">
+                                        I'm always impressed with the event. Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                        minim
+                                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                    </p>
+                                    <p class="text-base text-gray-200">Participante 1</p>
+                                </blockquote>
+                            </div>
                         </div>
-
+                        <ul class="splide__pagination"></ul>
                     </div>
-
                 </div>
-
             </div>
         </section>
-        <!-- section close -->
 
-        <!-- section begin -->
-        <section id="section-portfolio" class="no-top no-bottom" aria-label="section">
+        <section id="section-gallery">
             <div id="gallery" class="gallery zoom-gallery full-gallery de-gallery pf_full_width wow fadeInUp"
                 data-wow-delay=".3s">
 
@@ -1080,70 +1073,8 @@
                 <!-- close gallery item -->
             </div>
         </section>
-        <!-- section close -->
 
-        <!-- section begin -->
-        <section id="section-register">
-            <div class="wm wm-border dark wow fadeInDown">register</div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
-                        <h1>Register Now</h1>
-                        <div class="separator"><span><i class="fa fa-square"></i></span></div>
-                        <div class="spacer-single"></div>
-                    </div>
-
-                    <div class="col-md-8 offset-md-2 wow fadeInUp">
-                        <form name="contactForm" id='contact_form' method="post" action='email.php'>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div id='name_error' class='error'>Please enter your name.</div>
-                                    <div>
-                                        <input type='text' name='name' id='name' class="form-control"
-                                            placeholder="Your Name">
-                                    </div>
-
-                                    <div id='email_error' class='error'>Please enter your valid E-mail ID.</div>
-                                    <div>
-                                        <input type='text' name='email' id='email' class="form-control"
-                                            placeholder="Your Email">
-                                    </div>
-
-                                    <div id='phone_error' class='error'>Please enter your phone number.</div>
-                                    <div>
-                                        <input type='text' name='phone' id='phone' class="form-control"
-                                            placeholder="Your Phone">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div id='message_error' class='error'>Please enter your message.</div>
-                                    <div>
-                                        <textarea name='message' id='message' class="form-control" placeholder="Additional Message"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12 text-center">
-                                    <p id='submit'>
-                                        <input type='submit' id='send_message' value='Register Now'
-                                            class="btn btn-line">
-                                    </p>
-                                    <div id='mail_success' class='success'>Your message has been sent
-                                        successfully.</div>
-                                    <div id='mail_fail' class='error'>Sorry, error occured this time sending your
-                                        message.</div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-
-                </div>
-            </div>
-
-        </section>
-        <!-- section close -->
-
-        <section id="call-to-action" class="bg-gradient-to-r from-neon-pink to-neon-purple py-16">
+        <section id="call-to-action" class="bg-gradient-to-r from-neon-orange to-neon-blue py-16">
             <div class="container m-auto">
                 <div class="flex items-center justify-between">
                     <div>
@@ -1153,7 +1084,7 @@
                     </div>
 
                     <div>
-                        <a href="#section-ticket" class="bg-neon-pink py-2 px-8 rounded-sm uppercase text-white">
+                        <a href="#section-ticket" class="bg-neon-orange py-2 px-8 rounded-lg uppercase text-white">
                             Comprar ingresso
                         </a>
                     </div>
@@ -1175,8 +1106,8 @@
                     <p class="text-gray-200 text-center">
                         &copy; Copyright 2022 - Igreja do Nazareno Central de Mossoró - Template do site do Nazateen
                         Conference
-                        feito por <br> <a href="" class="text-neon-pink">Artur Afonso</a> e <a href=""
-                            class="text-neon-pink">Felipe de Sena</a>
+                        feito por <br> <a href="" class="text-neon-orange">Artur Afonso</a> e <a href=""
+                            class="text-neon-orange">Felipe de Sena</a>
                     </p>
                 </div>
 
@@ -1196,7 +1127,7 @@
             </div>
         </div>
 
-        <a href="#" class="block fixed bottom-6 right-6 bg-neon-pink p-3 rounded-lg">
+        <a href="#" class="block fixed bottom-6 right-6 bg-neon-orange p-3 rounded-lg">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 fill-white">
                 <path fill-rule="evenodd"
                     d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z"
@@ -1204,4 +1135,21 @@
             </svg>
         </a>
     </footer>
+@endsection
+
+@section('js')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let splide = new Splide('.splide', {
+                type: 'loop',
+                arrows: false,
+                autoplay: true,
+                classes: {
+                    pagination: 'splide__pagination',
+                    page: 'splide__pagination__page fa fa-circle text-white mx-1 my-4 text-xs',
+                },
+            })
+            splide.mount()
+        })
+    </script>
 @endsection
