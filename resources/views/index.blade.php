@@ -863,87 +863,62 @@
         </section>
         <!-- section close -->
 
-        <!-- section begin -->
-        <section id="section-ticket" class="text-light" data-bgimage="url(images-event/bg/2.jpg) fixed top">
-            <div class="wm wm-border dark wow fadeInDown">tickets</div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
-                        <h1>Choose a Ticket</h1>
-                        <div class="separator"><span><i class="fa fa-square"></i></span></div>
-                        <div class="spacer-single"></div>
+        <section id="section-ticket" class="py-20 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink">
+            <div class="container m-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl text-white font-bold">Compre sua Senha</h2>
+                    <div class="separator">
+                        <span>
+                            <i class="fa fa-square text-neon-pink"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4">
+                    <div>
+                        <div class="bg-neutral-black py-16">
+                            <div class="text-center mb-8">
+                                <h4 class="text-2xl text-white font-light mb-6">Senha Padrão</h4>
+                                <p class="text-3xl text-white font-bold">
+                                    <span class="text-neon-pink text-base align-top font-normal">R$</span> 40,00
+                                </p>
+                            </div>
+                            <div class="mb-16">
+                                <ul class="text-white text-sm">
+                                    <li class="py-4 px-6 bg-neutral-gray">
+                                        <i class="fa fa-check text-neon-pink mr-4"></i> Acesso à conferência
+                                    </li>
+                                    <li class="py-4 px-6">
+                                        <i class="fa fa-check text-neon-pink mr-4"></i> Coffee break
+                                    </li>
+                                    <li class="py-4 px-6 bg-neutral-gray">
+                                        <i class="fa fa-check text-neon-pink mr-4"></i> Brindes
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <a href="#" class="bg-neon-pink rounded-lg py-2 px-8 text-white uppercase">
+                                    Comprar Ingresso
+                                </a>
+                            </div>
+                        </div>
+                        <div class="h-1 bg-gradient-to-r from-neon-pink to-neon-purple"></div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="pricing-s1 mb30 wow fadeInUp">
-                            <div class="top">
-                                <h2>Day Pass</h2>
-                                <p class="price"><span class="currency id-color">$</span> <b>49.99</b></p>
-                            </div>
-                            <div class="bottom">
-                                <ul>
-                                    <li><i class="icon_check_alt2"></i>Conference Tickets</li>
-                                    <li><i class="icon_check_alt2"></i>Free Lunch Nad Coffee</li>
-                                    <li><i class="icon_check_alt2"></i>Certificates</li>
-                                    <li><i class="icon_close_alt2"></i>Private Access</li>
-                                    <li><i class="icon_close_alt2"></i>Experts Contacts</li>
-                                </ul>
-                                <a href="" class="btn btn-custom text-white">Buy Ticket</a>
-                            </div>
-                            <div class="ps1-deco"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="pricing-s1 mb30 wow fadeInUp">
-                            <div class="ribbon color-2 text-white">Recommend</div>
-                            <div class="top">
-                                <h2>Full Pass</h2>
-                                <p class="price"><span class="currency id-color">$</span> <b>79.99</b></p>
-                            </div>
-                            <div class="bottom">
-                                <ul>
-                                    <li><i class="icon_check_alt2"></i>Conference Tickets</li>
-                                    <li><i class="icon_check_alt2"></i>Free Lunch Nad Coffee</li>
-                                    <li><i class="icon_check_alt2"></i>Certificates</li>
-                                    <li><i class="icon_check_alt2"></i>Private Access</li>
-                                    <li><i class="icon_close_alt2"></i>Experts Contacts</li>
-                                </ul>
-                                <a href="" class="btn btn-custom text-white">Buy Ticket</a>
-                            </div>
-                            <div class="ps1-deco"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="pricing-s1 mb30 wow fadeInUp">
-                            <div class="top">
-                                <h2>Group Pass</h2>
-                                <p class="price"><span class="currency id-color">$</span> <b>139.99</b></p>
-                            </div>
-                            <div class="bottom">
-                                <ul>
-                                    <li><i class="icon_check_alt2"></i>Conference Tickets</li>
-                                    <li><i class="icon_check_alt2"></i>Free Lunch Nad Coffee</li>
-                                    <li><i class="icon_check_alt2"></i>Certificates</li>
-                                    <li><i class="icon_check_alt2"></i>Private Access</li>
-                                    <li><i class="icon_check_alt2"></i>Experts Contacts</li>
-                                </ul>
-                                <a href="" class="btn btn-custom text-white">Buy Ticket</a>
-                            </div>
-                            <div class="ps1-deco"></div>
-                        </div>
-                    </div>
+                    <div class="col-span-2"></div>
                 </div>
             </div>
         </section>
         <!-- section close -->
 
-        <section id="section-sponsors" class="py-20 bg-center bg-cover bg-fixed bg-no-repeat" style="background-image: url('{{ Vite::asset('resources/img/background3.jpg') }}')">
+        <section id="section-sponsors" class="py-20 bg-center bg-cover bg-fixed bg-no-repeat"
+            style="background-image: url('{{ Vite::asset('resources/img/background3.png') }}')">
             <div class="container m-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl text-white font-bold">Patrocinadores Oficiais</h2>
                     <div class="separator">
                         <span>
-                            <i class="fa fa-square text-neon-orange"></i>
+                            <i class="fa fa-square text-neon-pink"></i>
                         </span>
                     </div>
                 </div>
@@ -971,8 +946,8 @@
                     <div class="splide">
                         <div class="splide__track">
                             <div class="splide__list">
-                                <blockquote class="splide__slide">
-                                    <p class="text-4xl text-neon-orange mb-4">
+                                <blockquote class="splide__slide mb-8">
+                                    <p class="text-4xl text-neon-pink mb-4">
                                         <i class="fa fa-quote-left"></i>
                                     </p>
                                     <p class="text-3xl font-semibold text-gray-200 mb-4">Superou minhas expectativas!</p>
@@ -986,8 +961,8 @@
                                     <p class="text-base text-gray-200">Participante 1</p>
                                 </blockquote>
 
-                                <blockquote class="splide__slide">
-                                    <p class="text-4xl text-neon-orange mb-4">
+                                <blockquote class="splide__slide mb-8">
+                                    <p class="text-4xl text-neon-pink mb-4">
                                         <i class="fa fa-quote-left"></i>
                                     </p>
                                     <p class="text-3xl font-semibold text-gray-200 mb-4">Superou minhas expectativas!</p>
@@ -1044,7 +1019,7 @@
             </div>
         </section>
 
-        <section id="call-to-action" class="bg-gradient-to-r from-neon-orange to-neon-purple py-16">
+        <section id="call-to-action" class="bg-gradient-to-r from-neon-pink to-neon-purple py-16">
             <div class="container m-auto">
                 <div class="flex items-center justify-between">
                     <div>
@@ -1054,7 +1029,7 @@
                     </div>
 
                     <div>
-                        <a href="#section-ticket" class="bg-neon-orange py-2 px-8 rounded-lg uppercase text-white">
+                        <a href="#section-ticket" class="bg-neon-pink py-2 px-8 rounded-lg uppercase text-white">
                             Comprar ingresso
                         </a>
                     </div>
@@ -1076,8 +1051,8 @@
                     <p class="text-gray-200 text-center">
                         &copy; Copyright 2022 - Igreja do Nazareno Central de Mossoró - Template do site do Nazateen
                         Conference
-                        feito por <br> <a href="" class="text-neon-orange">Artur Afonso</a> e <a href=""
-                            class="text-neon-orange">Felipe de Sena</a>
+                        feito por <br> <a href="" class="text-neon-pink">Artur Afonso</a> e <a href=""
+                            class="text-neon-pink">Felipe de Sena</a>
                     </p>
                 </div>
 
@@ -1097,7 +1072,7 @@
             </div>
         </div>
 
-        <a href="#" class="block fixed bottom-6 right-6 bg-neon-orange p-3 rounded-lg">
+        <a href="#" class="block fixed bottom-6 right-6 bg-neon-pink p-3 rounded-lg">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 fill-white">
                 <path fill-rule="evenodd"
                     d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z"
@@ -1116,7 +1091,7 @@
                 autoplay: true,
                 classes: {
                     pagination: 'splide__pagination',
-                    page: 'splide__pagination__page fa fa-circle text-white mx-1 my-4 text-xs',
+                    page: 'splide__pagination__page fa fa-circle text-white mx-1 my-4',
                 },
             })
             splide.mount()

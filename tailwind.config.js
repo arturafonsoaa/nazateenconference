@@ -12,7 +12,8 @@ module.exports = {
                 'neon-pink': '#da43ff',
                 'neon-orange': '#fb7728',
                 'neon-purple': '#7831b6',
-                'neutral-black': '#101010'
+                'neutral-black': '#101010',
+                'neutral-gray': '#202020'
             },
             fontFamily: {
                 'base': ['Poppins'],
