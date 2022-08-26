@@ -1009,72 +1009,42 @@
         </section>
 
         <section id="section-gallery">
-            <div id="gallery" class="gallery zoom-gallery full-gallery de-gallery pf_full_width wow fadeInUp"
-                data-wow-delay=".3s">
+            <div id="gallery" class="grid lg:grid-cols-5">
 
-                <!-- gallery item -->
-                <div class="item residential">
-                    <div class="picframe">
-                        <a href="images-event/portfolio/1.jpg" title="Event Photo">
-                            <span class="overlay">
-                                <span class="pf_text">
-                                    <span class="project-name">View Image</span>
-                                </span>
-                            </span>
-                            <img src="images-event/portfolio/1.jpg" alt="" />
-                        </a>
-                    </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://dummyimage.com/800x500/fff/aaa" />
+                    </figure>
                 </div>
-                <!-- close gallery item -->
 
-                <!-- gallery item -->
-                <div class="item hospitaly">
-                    <div class="picframe">
-                        <a href="images-event/portfolio/2.jpg" title="Event Photo">
-                            <span class="overlay">
-                                <span class="pf_text">
-                                    <span class="project-name">View Image</span>
-                                </span>
-                            </span>
-                            <img src="images-event/portfolio/2.jpg" alt="" />
-                        </a>
-                    </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://dummyimage.com/800x500/fff/aaa" />
+                    </figure>
                 </div>
-                <!-- close gallery item -->
 
-                <!-- gallery item -->
-                <div class="item hospitaly">
-                    <div class="picframe">
-                        <a href="images-event/portfolio/3.jpg" title="Event Photo">
-                            <span class="overlay">
-                                <span class="pf_text">
-                                    <span class="project-name">View Image</span>
-                                </span>
-                            </span>
-                            <img src="images-event/portfolio/3.jpg" alt="" />
-                        </a>
-                    </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://dummyimage.com/800x500/fff/aaa" />
+                    </figure>
                 </div>
-                <!-- close gallery item -->
 
-                <!-- gallery item -->
-                <div class="item residential">
-                    <div class="picframe">
-                        <a href="images-event/portfolio/4.jpg" title="Event Photo">
-                            <span class="overlay">
-                                <span class="pf_text">
-                                    <span class="project-name">View Image</span>
-                                </span>
-                            </span>
-                            <img src="images-event/portfolio/4.jpg" alt="" />
-                        </a>
-                    </div>
+                <div class="item">
+                    <figure>
+                        <img src="https://dummyimage.com/800x500/fff/aaa" />
+                    </figure>
                 </div>
-                <!-- close gallery item -->
+
+                <div class="item">
+                    <figure>
+                        <img src="https://dummyimage.com/800x500/fff/aaa" />
+                    </figure>
+                </div>
+
             </div>
         </section>
 
-        <section id="call-to-action" class="bg-gradient-to-r from-neon-orange to-neon-blue py-16">
+        <section id="call-to-action" class="bg-gradient-to-r from-neon-orange to-neon-purple py-16">
             <div class="container m-auto">
                 <div class="flex items-center justify-between">
                     <div>
