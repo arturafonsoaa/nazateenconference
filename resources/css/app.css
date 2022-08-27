@@ -17,6 +17,10 @@
     .splide__pagination__page.is-active {
         @apply text-neon-pink;
     }
+
+    .nav-item .active {
+        @apply bg-neon-purple;
+    }
 }
 
 .text-stroke-gray-800 {

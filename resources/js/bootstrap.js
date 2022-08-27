@@ -16,6 +16,8 @@ window.$ = window.jQuery = jQuery;
 import Splide from '@splidejs/splide';
 window.Splide = Splide;
 
+import 'tw-elements';
+
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**

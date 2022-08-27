@@ -346,522 +346,127 @@
         </section>
         <!-- section close -->
 
-
-        <!-- section begin -->
-        <section id="section-schedule" aria-label="section-services-tab"
-            data-bgimage="url(images-event/bg/2.png) fixed center no-repeat">
-            <div class="wm wm-border dark wow fadeInDown ">schedule</div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
-                        <h1>Event Schedule</h1>
-                        <div class="separator"><span><i class="fa fa-square"></i></span></div>
-                        <div class="spacer-single"></div>
+        <section id="section-schedule" class="py-20">
+            <div class="container m-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl text-white font-bold">Programação</h2>
+                    <div class="separator">
+                        <span>
+                            <i class="fa fa-square text-neon-purple"></i>
+                        </span>
                     </div>
+                </div>
 
-                    <div class="col-md-12 wow fadeInUp">
-                        <div class="de_tab tab_style_4 text-center">
-                            <ul class="de_nav de_nav_dark">
-                                <li class="active" data-link="#section-services-tab">
-                                    <h3>Day <span>01</span></h3>
-                                    <h4>June 20, 2022</h4>
-                                </li>
-                                <li data-link="#section-services-tab">
-                                    <h3>Day <span>02</span></h3>
-                                    <h4>June 21, 2022</h4>
-                                </li>
-                                <li data-link="#section-services-tab">
-                                    <h3>Day <span>03</span></h3>
-                                    <h4>March 22, 2021</h4>
-                                </li>
-                                <li data-link="#section-services-tab">
-                                    <h3>Day <span>04</span></h3>
-                                    <h4>March 23, 2021</h4>
-                                </li>
-                                <li data-link="#section-services-tab">
-                                    <h3>Day <span>05</span></h3>
-                                    <h4>March 24, 2021</h4>
-                                </li>
-                            </ul>
+                <div>
+                    <ul class="nav nav-tabs flex bg-neutral-gray w-fit m-auto rounded-xl" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a href="#tabs-day1" class="inline-block py-6 px-12 rounded-tl-xl rounded-bl-xl active"
+                                data-bs-toggle="pill" data-bs-target="#tabs-day1" role="tab"
+                                aria-controls="tabs-day1" aria-selected="true" id="tabs-day1-tab">
+                                <span class="block text-white text-center text-2xl">
+                                    Dia 01
+                                </span>
+                                <span class="block text-white text-center text-sm">
+                                    14 de Outubro de 2022
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="#tabs-day2" class="inline-block py-6 px-12 rounded-tr-xl rounded-br-xl"
+                                data-bs-toggle="pill" data-bs-target="#tabs-day2" role="tab"
+                                aria-controls="tabs-day2" id="tabs-day2-tab">
+                                <span class="block text-white text-center text-2xl">
+                                    Dia 02
+                                </span>
+                                <span class="block text-white text-center text-sm">
+                                    15 de Outubro de 2022
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
 
-                            <div class="de_tab_content text-left">
-
-                                <div id="tab1" class="tab_single_content dark">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">08:00 - 10:00 AM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/1.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>John Smith</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Introduction Creative Design</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">12:00 - 14:00 PM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/2.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Michael Dennis</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Getting Started With Creative Design</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">16:00 - 18:00 PM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/3.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Sarah Michelle</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Prepare Your Design Concept</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">20:00 - 22:00 PM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/4.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Katty Wilson</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Creative Design Implementation Basic</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                    <div class="max-w-6xl m-auto">
+                        <div class="tab-content pt-16">
+                            <div class="tab-pane fade show active" id="tabs-day1" role="tabpanel" aria-labelledby="tabs-day1-tab">
+                                <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
+                                    <div class="si-time text-white text-center">19:00 às 21:00</div>
+                                    <div class="si-pic">
+                                        <img src="https://dummyimage.com/400x400/fff/101010" class="rounded-full lg:w-9/12 mx-auto">
+                                    </div>
+                                    <div class="si-name">
+                                        <h4 class="text-white font-bold">John Smith</h4>
+                                        <span class="text-neon-purple">Igreja x</span>
+                                    </div>
+                                    <div class="si-info col-span-5">
+                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra</h3>
+                                        <p class="text-gray-200">In this session we will discuss about digital topics in detail. You need laptops and other tech support equipment. This session will last for 2 hours. So prepare yourself.</p>
                                     </div>
                                 </div>
-
-                                <div id="tab2" class="tab_single_content dark">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">08:00 - 12:00 AM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/5.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Rose Shipp</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Creative Design Implementation Basic 2</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">12:00 - 14:00 PM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/6.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Isaac Nicholas</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>How to Design Happiness</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">16:00 - 18:00 PM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/7.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>John Arnold</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Good Storytelling For Great Design</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">20:00 - 22:00 PM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/1.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>John Smith</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Unintuitive Lessons on Being a Designer</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="tabs-day2" role="tabpanel" aria-labelledby="tabs-day1-tab">
+                                <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
+                                    <div class="si-time text-white text-center">19:00 às 21:00</div>
+                                    <div class="si-pic">
+                                        <img src="https://dummyimage.com/400x400/fff/101010" class="rounded-full lg:w-9/12 mx-auto">
+                                    </div>
+                                    <div class="si-name">
+                                        <h4 class="text-white font-bold">John Smith</h4>
+                                        <span class="text-neon-purple">Igreja x</span>
+                                    </div>
+                                    <div class="si-info col-span-5">
+                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra</h3>
+                                        <p class="text-gray-200">In this session we will discuss about digital topics in detail. You need laptops and other tech support equipment. This session will last for 2 hours. So prepare yourself.</p>
                                     </div>
                                 </div>
-
-                                <div id="tab3" class="tab_single_content dark">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">08:00 - 12:00 AM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/2.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Michael Dennis</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>The Secret of Great App Design</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">12:00 - 14:00 PM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/3.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Sarah Michelle</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Use Design Thinking in Your Everyday Routine</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">16:00 - 18:00 PM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/4.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Katty Wilson</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Design Into The Real World</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">20:00 - 22:00 AM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/5.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Rose Shipp</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Advanced Design Implementation</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray bg-gradient-to-r from-transparent via-zinc-900 to-transparent">
+                                    <div class="si-time text-white text-center">19:00 às 21:00</div>
+                                    <div class="si-pic">
+                                        <img src="https://dummyimage.com/400x400/fff/101010" class="rounded-full lg:w-9/12 mx-auto">
+                                    </div>
+                                    <div class="si-name">
+                                        <h4 class="text-white font-bold">John Smith</h4>
+                                        <span class="text-neon-purple">Igreja x</span>
+                                    </div>
+                                    <div class="si-info col-span-5">
+                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra</h3>
+                                        <p class="text-gray-200">In this session we will discuss about digital topics in detail. You need laptops and other tech support equipment. This session will last for 2 hours. So prepare yourself.</p>
                                     </div>
                                 </div>
-
-                                <div id="tab4" class="tab_single_content dark">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">08:00 - 12:00 AM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/6.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Isaac Nicholas</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Advanced Design Implementation 2</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">12:00 - 14:00 PM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/7.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>John Arnold</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Branding, Identity &amp; Logo Design Explained</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">16:00 - 18:00 PM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/1.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>John Smith</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>The Art of Personal Branding</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">20:00 - 22:00 PM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/2.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Michael Dennis</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>8 Secret Benefits of Branding</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
+                                    <div class="si-time text-white text-center">19:00 às 21:00</div>
+                                    <div class="si-pic">
+                                        <img src="https://dummyimage.com/400x400/fff/101010" class="rounded-full lg:w-9/12 mx-auto">
+                                    </div>
+                                    <div class="si-name">
+                                        <h4 class="text-white font-bold">John Smith</h4>
+                                        <span class="text-neon-purple">Igreja x</span>
+                                    </div>
+                                    <div class="si-info col-span-5">
+                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra</h3>
+                                        <p class="text-gray-200">In this session we will discuss about digital topics in detail. You need laptops and other tech support equipment. This session will last for 2 hours. So prepare yourself.</p>
                                     </div>
                                 </div>
-
-                                <div id="tab5" class="tab_single_content dark">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">08:00 - 12:00 AM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/1.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>John Smith</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>How To Brand A Startup On A Small Budget</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">08:00 - 12:00 AM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/2.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>John Smith</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Establishing a Brand Identity</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">08:00 - 12:00 AM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/3.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Sarah Michelle</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Interview With World Class Designer</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="schedule-listing">
-                                                <div class="schedule-item">
-                                                    <div class="sc-time">08:00 - 12:00 AM</div>
-                                                    <div class="sc-pic">
-                                                        <img src="images-event/team/4.jpg" class="img-circle"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="sc-name">
-                                                        <h4>Katty Wilson</h4>
-                                                        <span>Founder & CEO</span>
-                                                    </div>
-                                                    <div class="sc-info">
-                                                        <h3>Close Event Ceremony &amp; Doorprize</h3>
-                                                        <p>In this session we will discuss about digital topics in
-                                                            detail. You need laptops and other tech support
-                                                            equipment. This session will last for 2 hours. So
-                                                            prepare yourself.</p>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray bg-gradient-to-r from-transparent via-zinc-900 to-transparent">
+                                    <div class="si-time text-white text-center">19:00 às 21:00</div>
+                                    <div class="si-pic">
+                                        <img src="https://dummyimage.com/400x400/fff/101010" class="rounded-full lg:w-9/12 mx-auto">
+                                    </div>
+                                    <div class="si-name">
+                                        <h4 class="text-white font-bold">John Smith</h4>
+                                        <span class="text-neon-purple">Igreja x</span>
+                                    </div>
+                                    <div class="si-info col-span-5">
+                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra</h3>
+                                        <p class="text-gray-200">In this session we will discuss about digital topics in detail. You need laptops and other tech support equipment. This session will last for 2 hours. So prepare yourself.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
-        <!-- section close -->
 
         <section id="section-ticket" class="py-20 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink">
             <div class="container m-auto">
@@ -874,39 +479,42 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-3 gap-4">
-                    <div>
-                        <div class="bg-neutral-black py-16">
-                            <div class="text-center mb-8">
-                                <h4 class="text-2xl text-white font-light mb-6">Senha Padrão</h4>
-                                <p class="text-3xl text-white font-bold">
-                                    <span class="text-neon-pink text-base align-top font-normal">R$</span> 40,00
-                                </p>
+                <div class="max-w-6xl m-auto">
+                    <div class="grid grid-cols-3 gap-4">
+                        <div>
+                            <div class="bg-neutral-black py-16">
+                                <div class="text-center mb-8">
+                                    <h4 class="text-2xl text-white font-light mb-6">Senha Padrão</h4>
+                                    <p class="text-3xl text-white font-bold">
+                                        <span class="text-neon-pink text-base align-top font-normal">R$</span> 40,00
+                                    </p>
+                                </div>
+                                <div class="mb-16">
+                                    <ul class="text-white text-sm">
+                                        <li class="py-4 px-6 bg-neutral-gray">
+                                            <i class="fa fa-check text-neon-pink mr-4"></i> Acesso à conferência
+                                        </li>
+                                        <li class="py-4 px-6">
+                                            <i class="fa fa-check text-neon-pink mr-4"></i> Coffee break
+                                        </li>
+                                        <li class="py-4 px-6 bg-neutral-gray">
+                                            <i class="fa fa-check text-neon-pink mr-4"></i> Brindes
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="text-center">
+                                    <a href="#" class="bg-neon-pink rounded-lg py-2 px-8 text-white uppercase">
+                                        Comprar Ingresso
+                                    </a>
+                                </div>
                             </div>
-                            <div class="mb-16">
-                                <ul class="text-white text-sm">
-                                    <li class="py-4 px-6 bg-neutral-gray">
-                                        <i class="fa fa-check text-neon-pink mr-4"></i> Acesso à conferência
-                                    </li>
-                                    <li class="py-4 px-6">
-                                        <i class="fa fa-check text-neon-pink mr-4"></i> Coffee break
-                                    </li>
-                                    <li class="py-4 px-6 bg-neutral-gray">
-                                        <i class="fa fa-check text-neon-pink mr-4"></i> Brindes
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="text-center">
-                                <a href="#" class="bg-neon-pink rounded-lg py-2 px-8 text-white uppercase">
-                                    Comprar Ingresso
-                                </a>
-                            </div>
+                            <div class="h-1 bg-gradient-to-r from-neon-pink to-neon-purple"></div>
                         </div>
-                        <div class="h-1 bg-gradient-to-r from-neon-pink to-neon-purple"></div>
-                    </div>
 
-                    <div class="col-span-2"></div>
+                        <div class="col-span-2"></div>
+                    </div>
                 </div>
+
             </div>
         </section>
         <!-- section close -->
@@ -988,31 +596,31 @@
 
                 <div class="item">
                     <figure>
-                        <img src="https://dummyimage.com/800x500/fff/aaa" />
+                        <img src="https://dummyimage.com/800x500/101010/fff" />
                     </figure>
                 </div>
 
                 <div class="item">
                     <figure>
-                        <img src="https://dummyimage.com/800x500/fff/aaa" />
+                        <img src="https://dummyimage.com/800x500/101010/fff" />
                     </figure>
                 </div>
 
                 <div class="item">
                     <figure>
-                        <img src="https://dummyimage.com/800x500/fff/aaa" />
+                        <img src="https://dummyimage.com/800x500/101010/fff" />
                     </figure>
                 </div>
 
                 <div class="item">
                     <figure>
-                        <img src="https://dummyimage.com/800x500/fff/aaa" />
+                        <img src="https://dummyimage.com/800x500/101010/fff" />
                     </figure>
                 </div>
 
                 <div class="item">
                     <figure>
-                        <img src="https://dummyimage.com/800x500/fff/aaa" />
+                        <img src="https://dummyimage.com/800x500/101010/fff" />
                     </figure>
                 </div>
 
@@ -1035,18 +643,22 @@
                         <div class="grid grid-cols-2 gap-4 mb-8">
                             <div>
                                 <div class="mb-4">
-                                    <input type="text" placeholder="Nome completo*" class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus:border focus:border-neon-blue border-0">
+                                    <input type="text" placeholder="Nome completo*"
+                                        class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus:border focus:border-neon-blue border-transparent">
                                 </div>
                                 <div class="mb-4">
-                                    <input type="text" placeholder="Whatsapp*" class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus:border focus:border-neon-blue border-0">
+                                    <input type="text" placeholder="Whatsapp*"
+                                        class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus:border focus:border-neon-blue border-0">
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="E-mail*" class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus:border focus:border-neon-blue border-0">
+                                    <input type="text" placeholder="E-mail*"
+                                        class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus:border focus:border-neon-blue border-0">
                                 </div>
                             </div>
                             <div class="h-full">
                                 <div class="h-full">
-                                    <textarea placeholder="Quais suas expectativas para o Nazateen Conference?" class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus:border focus:border-neon-blue border-0 h-full"></textarea>
+                                    <textarea placeholder="Quais suas expectativas para o Nazateen Conference?"
+                                        class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus:border focus:border-neon-blue border-0 h-full"></textarea>
                                 </div>
                             </div>
                         </div>
