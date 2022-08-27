@@ -73,161 +73,134 @@
 
     <main id="main-content" class="bg-neutral-black">
 
-        <!-- section begin -->
-        <section id="section-hero" class="text-light" data-bgimage="url(images-event/bg/9.jpg) top left no-repeat"
-            data-stellar-background-ratio=".2">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-
-                        <div class="d-flex justify-content-left sm-hide">
-                            <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-calendar-check-o id-color"></i>June
-                                20th to 25th</div>
-                            <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-user id-color"></i>12 Speakers
-                            </div>
-                            <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-map-marker id-color"></i>Palo
-                                Alto, California</div>
-                        </div>
-
-                        <h1 class="title-3 text-left">
-                            Creative Design<br>Expo <span class="id-color">2021</span>
-                        </h1>
-
-                        <div class="spacer-single"></div>
-
-                        <a href="#section-ticket" class="btn-custom text-white scroll-to">Get Ticket</a>
-                        <div class="spacer-single"></div>
-                        <div id="defaultCountdown" class="countdown-s2"></div>
+        <section id="section-banner" class="py-40">
+            <div class="container m-auto">
+                <div class="flex gap-8 justify-center mb-8">
+                    <div class="flex items-center gap-2">
+                        <i class="fa fa-fw fa-calendar-check text-neon-pink text-xl"></i>
+                        <span class="text-white font-bold">
+                            14 e 15 de Outubro de 2022
+                        </span>
                     </div>
-
-                    <div class="col-lg-6">
-                        <img src="images-event/misc/man-1.png" class="img-responsive" alt="">
+                    <div class="flex items-center gap-2">
+                        <i class="fa fa-fw fa-microphone-lines text-neon-pink text-xl"></i>
+                        <span class="text-white font-bold">
+                            4 palestrantes
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa fa-fw fa-location-dot text-neon-pink text-xl"></i>
+                        <span class="text-white font-bold">
+                            Igreja do Nazareno Central de Mossoró
+                        </span>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- section close -->
-
-        <!-- section begin -->
-        <section id="section-about" data-bgimage="url(images-event/bg/1.png) fixed no-repeat">
-            <div class="wm wm-border dark wow fadeInDown">welcome</div>
-            <div class="container">
-                <div class="row align-items-center">
-
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0s">
-                        <h2>Welcome to the Biggest<br>Creative Design Conference</h2>
-                        <p>
-                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                            occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
-                            mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et
-                            expedita distinctio.
-                        </p>
-
-                        <div class="spacer10"></div>
-
-                        <a href="#" class="btn-custom font-weight-bold text-white sm-mb-30">About Us</a>
-                    </div>
-
-                    <div class="col-lg-6 mb-sm-30 text-center wow fadeInRight">
-                        <div class="de-images">
-                            <img class="di-small wow fadeIn" src="images-event/misc/2.jpg" alt="" />
-                            <img class="di-small-2" src="images-event/misc/3.jpg" alt="" />
-                            <img class="img-fluid wow fadeInRight" data-wow-delay=".25s" src="images-event/misc/1.jpg"
-                                alt="" />
-                        </div>
-                    </div>
-
+                <figure class="max-w-4xl m-auto mb-16">
+                    <img src="{{ Vite::asset('resources/img/logo-nazateen-conference.png') }}">
+                </figure>
+                <div class="text-center">
+                    <a href="#" class="bg-neon-pink rounded-lg py-2 px-8 text-white uppercase">
+                        Comprar Ingresso
+                    </a>
                 </div>
             </div>
         </section>
 
-
-        <!-- section begin -->
-        <section id="section-features">
-            <div class="wm wm-border dark wow fadeInDown ">features</div>
-            <div class="container">
+        <section id="section-reasons" class="my-20">
+            <div class="container m-auto">
                 <div class="row">
-                    <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
-                        <h1>Why you should Join Event</h1>
-                        <div class="separator"><span><i class="fa fa-square"></i></span></div>
-                        <div class="spacer-single"></div>
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl text-white font-bold">Porque você deveria participar</h2>
+                        <div class="separator">
+                            <span>
+                                <i class="fa fa-square text-neon-pink"></i>
+                            </span>
+                        </div>
                     </div>
 
-
-                    <div class="col-lg-4 wow fadeIn" data-wow-delay="0s">
-                        <div class="box-number square">
-                            <i class="bg-color hover-color-2 fa fa-microphone text-light"></i>
+                    <div class="grid lg:grid-cols-3 gap-8">
+                        <div class="box-reason flex gap-8">
+                            <div>
+                                <div
+                                    class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
+                                    <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
+                                </div>
+                            </div>
                             <div class="text">
-                                <h3><span>World Class Speakers</span></h3>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
+                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                    praesentium voluptatum deleniti atque.</p>
+                            </div>
+                        </div>
+                        <div class="box-reason flex gap-8">
+                            <div>
+                                <div
+                                    class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
+                                    <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
+                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                    praesentium voluptatum deleniti atque.</p>
+                            </div>
+                        </div>
+                        <div class="box-reason flex gap-8">
+                            <div>
+                                <div
+                                    class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
+                                    <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
+                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                    praesentium voluptatum deleniti atque.</p>
+                            </div>
+                        </div>
+                        <div class="box-reason flex gap-8">
+                            <div>
+                                <div
+                                    class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
+                                    <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
+                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                    praesentium voluptatum deleniti atque.</p>
+                            </div>
+                        </div>
+                        <div class="box-reason flex gap-8">
+                            <div>
+                                <div
+                                    class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
+                                    <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
+                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                    praesentium voluptatum deleniti atque.</p>
+                            </div>
+                        </div>
+                        <div class="box-reason flex gap-8">
+                            <div>
+                                <div
+                                    class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
+                                    <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
+                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
                                     praesentium voluptatum deleniti atque.</p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 wow fadeIn" data-wow-delay=".25s">
-                        <div class="box-number square">
-                            <i class="bg-color hover-color-2 fa fa-lightbulb-o text-light"></i>
-                            <div class="text">
-                                <h3><span>Best Experience</span></h3>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 wow fadeIn" data-wow-delay=".5s">
-                        <div class="box-number square">
-                            <i class="bg-color hover-color-2 fa fa-sitemap text-light"></i>
-                            <div class="text">
-                                <h3><span>Networking</span></h3>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="spacer-single sm-hide"></div>
-
-                    <div class="col-lg-4 wow fadeIn" data-wow-delay=".75s">
-                        <div class="box-number square">
-                            <i class="bg-color hover-color-2 fa fa-building text-light"></i>
-                            <div class="text">
-                                <h3><span>Modern Venue</span></h3>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 wow fadeIn" data-wow-delay="1s">
-                        <div class="box-number square">
-                            <i class="bg-color hover-color-2  fa fa-users text-light"></i>
-                            <div class="text">
-                                <h3><span>New People</span></h3>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 wow fadeIn" data-wow-delay="1.25s">
-                        <div class="box-number square">
-                            <i class="bg-color hover-color-2 fa fa-mortar-board text-light"></i>
-                            <div class="text">
-                                <h3><span>Certificates</span></h3>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
         </section>
-        <!-- section close -->
 
         <section id="section-speakers" class="py-20 bg-center bg-cover bg-fixed bg-no-repeat"
             style="background-image: url('{{ Vite::asset('resources/img/background3.png') }}')">
@@ -244,9 +217,9 @@
                     <div>
                         <div class="block rounded-lg shadow-lg bg-white">
                             <div class="overflow-hidden rounded-t-lg h-28 bg-neutral-gray"></div>
-                            <div
-                                class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
-                                <img src="https://dummyimage.com/400x400/fff/101010" class="w-full rounded-full border-2 border-white" />
+                            <div class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
+                                <img src="https://dummyimage.com/400x400/fff/101010"
+                                    class="w-full rounded-full border-2 border-white" />
                             </div>
                             <div class="px-8 pb-8">
                                 <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Palestrante 0</h4>
@@ -259,9 +232,9 @@
                     <div>
                         <div class="block rounded-lg shadow-lg bg-white">
                             <div class="overflow-hidden rounded-t-lg h-28 bg-neon-blue"></div>
-                            <div
-                                class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
-                                <img src="https://dummyimage.com/400x400/fff/101010" class="w-full rounded-full border-2 border-white" />
+                            <div class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
+                                <img src="https://dummyimage.com/400x400/fff/101010"
+                                    class="w-full rounded-full border-2 border-white" />
                             </div>
                             <div class="px-8 pb-8">
                                 <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Palestrante 1</h4>
@@ -274,9 +247,9 @@
                     <div>
                         <div class="block rounded-lg shadow-lg bg-white">
                             <div class="overflow-hidden rounded-t-lg h-28 bg-neon-purple"></div>
-                            <div
-                                class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
-                                <img src="https://dummyimage.com/400x400/fff/101010" class="w-full rounded-full border-2 border-white" />
+                            <div class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
+                                <img src="https://dummyimage.com/400x400/fff/101010"
+                                    class="w-full rounded-full border-2 border-white" />
                             </div>
                             <div class="px-8 pb-8">
                                 <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Palestrante 2</h4>
@@ -289,9 +262,9 @@
                     <div>
                         <div class="block rounded-lg shadow-lg bg-white">
                             <div class="overflow-hidden rounded-t-lg h-28 bg-neon-pink"></div>
-                            <div
-                                class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
-                                <img src="https://dummyimage.com/400x400/fff/101010" class="w-full rounded-full border-2 border-white" />
+                            <div class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
+                                <img src="https://dummyimage.com/400x400/fff/101010"
+                                    class="w-full rounded-full border-2 border-white" />
                             </div>
                             <div class="px-8 pb-8">
                                 <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Palestrante 3</h4>
@@ -618,7 +591,7 @@
                     <h2 class="text-4xl text-white font-bold">Se Cadastre Para Comprar</h2>
                     <div class="separator">
                         <span>
-                            <i class="fa fa-square text-neon-pink"></i>
+                            <i class="fa fa-square text-neon-blue"></i>
                         </span>
                     </div>
                 </div>
