@@ -2,73 +2,52 @@
 
 @section('content')
     <header>
-        <div class="info">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="column">Working Hours Monday - Friday <span
-                                class="id-color"><strong>08:00-16:00</strong></span></div>
-                        <div class="column">Toll Free <span class="id-color"><strong>1800.899.900</strong></span>
-                        </div>
-                        <!-- social icons -->
-                        <div class="column social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-rss"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-envelope-o"></i></a>
-                        </div>
-                        <!-- social icons close -->
-                    </div>
+        <nav
+            class="relative w-full flex flex-wrap items-center justify-between py-4 bg-neutral-black text-white hover:text-neon-pink navbar navbar-expand-lg navbar-light">
+            <div class="container m-auto flex flex-wrap items-center justify-between px-6">
+                <button
+                    class="navbar-toggler text-white border-0 hover:shadow-none hover:no-underline py-2 px-2.5 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#navbar-links" aria-controls="navbar-links"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="w-6"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                        </path>
+                    </svg>
+                </button>
+                <div class="w-24">
+                    <a class="w-24" href="#">
+                        <img src="{{ Vite::asset('resources/img/logo-nazateen-conference.png') }}" class="w-full" />
+                    </a>
                 </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- logo begin -->
-                    <div id="logo">
-                        <a href="index.html">
-                            <img class="logo" src="images-event/logo.png" alt="">
-                        </a>
-                    </div>
-                    <!-- logo close -->
-
-                    <!-- small button begin -->
-                    <span id="menu-btn"></span>
-                    <!-- small button close -->
-
-                    <div class="header-extra">
-                        <div class="v-center">
-                            <span id="b-menu">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- mainmenu begin -->
-                    <ul id="mainmenu" class="ms-2">
-                        <li><a href="#section-hero">Home<span></span></a></li>
-                        <li><a href="#section-about">About<span></span></a></li>
-                        <li><a href="#section-speakers">Speakers<span></span></a></li>
-                        <li><a href="#section-schedule">Schedule<span></span></a></li>
-                        <li><a href="#section-ticket">Ticket<span></span></a></li>
-                        <li><a href="#section-sponsors">Sponsors<span></span></a></li>
-                        <li><a href="#section-register">Register<span></span></a></li>
+                <div class="collapse navbar-collapse items-center" id="navbar-links">
+                    <ul class="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
+                        <li class="nav-item p-2">
+                            <a class="nav-link text-white hover:text-neon-pink"
+                                href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="nav-link text-white hover:text-neon-pink"
+                                href="#">Palestrantes</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="nav-link text-white hover:text-neon-pink"
+                                href="#">Programação</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="nav-link text-white hover:text-neon-pink"
+                                href="#">Patrocinadores</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="nav-link text-white hover:text-neon-pink"
+                                href="#">Inscrição</a>
+                        </li>
                     </ul>
-
-                    <!-- mainmenu close -->
-
-
-
+                    <!-- Left links -->
                 </div>
-
-
             </div>
-        </div>
+        </nav>
     </header>
 
     <main id="main-content" class="bg-neutral-black">
@@ -121,79 +100,79 @@
                     <div class="grid lg:grid-cols-3 gap-8">
                         <div class="box-reason flex gap-8">
                             <div>
-                                <div
-                                    class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
+                                <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
                                     <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
                                 </div>
                             </div>
                             <div class="text">
                                 <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
-                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis
                                     praesentium voluptatum deleniti atque.</p>
                             </div>
                         </div>
                         <div class="box-reason flex gap-8">
                             <div>
-                                <div
-                                    class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
+                                <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
                                     <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
                                 </div>
                             </div>
                             <div class="text">
                                 <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
-                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis
                                     praesentium voluptatum deleniti atque.</p>
                             </div>
                         </div>
                         <div class="box-reason flex gap-8">
                             <div>
-                                <div
-                                    class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
+                                <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
                                     <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
                                 </div>
                             </div>
                             <div class="text">
                                 <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
-                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis
                                     praesentium voluptatum deleniti atque.</p>
                             </div>
                         </div>
                         <div class="box-reason flex gap-8">
                             <div>
-                                <div
-                                    class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
+                                <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
                                     <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
                                 </div>
                             </div>
                             <div class="text">
                                 <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
-                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis
                                     praesentium voluptatum deleniti atque.</p>
                             </div>
                         </div>
                         <div class="box-reason flex gap-8">
                             <div>
-                                <div
-                                    class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
+                                <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
                                     <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
                                 </div>
                             </div>
                             <div class="text">
                                 <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
-                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis
                                     praesentium voluptatum deleniti atque.</p>
                             </div>
                         </div>
                         <div class="box-reason flex gap-8">
                             <div>
-                                <div
-                                    class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
+                                <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
                                     <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
                                 </div>
                             </div>
                             <div class="text">
                                 <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
-                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                    blanditiis
                                     praesentium voluptatum deleniti atque.</p>
                             </div>
                         </div>
