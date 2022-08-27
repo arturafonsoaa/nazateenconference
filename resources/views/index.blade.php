@@ -229,122 +229,81 @@
         </section>
         <!-- section close -->
 
-        <!-- section begin -->
-        <section id="section-speakers" class="text-light" data-bgimage="url(images-event/bg/1.jpg) fixed top center"
-            data-stellar-background-ratio=".2">
-            <div class="wm wm-border dark wow fadeInDown">speakers</div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
-                        <h1>The Speakers</h1>
-                        <div class="separator"><span><i class="fa fa-square"></i></span></div>
-                        <div class="spacer-single"></div>
+        <section id="section-speakers" class="py-20 bg-center bg-cover bg-fixed bg-no-repeat"
+            style="background-image: url('{{ Vite::asset('resources/img/background3.png') }}')">
+            <div class="container m-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl text-white font-bold">Os Palestrantes</h2>
+                    <div class="separator">
+                        <span>
+                            <i class="fa fa-square text-neon-blue"></i>
+                        </span>
                     </div>
-
-                    <div class="clearfix"></div>
-
-                    <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                        <!-- team member -->
-                        <div class="de-team-list">
-                            <div class="team-pic">
-                                <img src="images-event/team/1.jpg" class="img-responsive" alt="" />
+                </div>
+                <div class="grid md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="block rounded-lg shadow-lg bg-white">
+                            <div class="overflow-hidden rounded-t-lg h-28 bg-neutral-gray"></div>
+                            <div
+                                class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
+                                <img src="https://dummyimage.com/400x400/fff/101010" class="w-full rounded-full border-2 border-white" />
                             </div>
-                            <div class="team-desc">
-                                <h3>John Smith</h3>
-                                <p class="lead">Expert Designer</p>
-                                <div class="small-border"></div>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                    fugiat.</p>
-
-                                <div class="social">
-                                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-skype fa-lg"></i></a>
-                                </div>
+                            <div class="px-8 pb-8">
+                                <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Palestrante 0</h4>
+                                <p class="text-neutral-gray">
+                                    Palestra de abertura
+                                </p>
                             </div>
                         </div>
-                        <!-- team close -->
                     </div>
-
-                    <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                        <!-- team member -->
-                        <div class="de-team-list">
-                            <div class="team-pic">
-                                <img src="images-event/team/2.jpg" class="img-responsive" alt="" />
+                    <div>
+                        <div class="block rounded-lg shadow-lg bg-white">
+                            <div class="overflow-hidden rounded-t-lg h-28 bg-neon-blue"></div>
+                            <div
+                                class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
+                                <img src="https://dummyimage.com/400x400/fff/101010" class="w-full rounded-full border-2 border-white" />
                             </div>
-                            <div class="team-desc">
-                                <h3>Michael Dennis</h3>
-                                <p class="lead">Expert Designer</p>
-                                <div class="small-border"></div>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                    fugiat.</p>
-
-                                <div class="social">
-                                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-skype fa-lg"></i></a>
-                                </div>
+                            <div class="px-8 pb-8">
+                                <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Palestrante 1</h4>
+                                <p class="text-neon-blue">
+                                    Santidade pessoal
+                                </p>
                             </div>
                         </div>
-                        <!-- team close -->
                     </div>
-
-                    <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                        <!-- team member -->
-                        <div class="de-team-list">
-                            <div class="team-pic">
-                                <img src="images-event/team/3.jpg" class="img-responsive" alt="" />
+                    <div>
+                        <div class="block rounded-lg shadow-lg bg-white">
+                            <div class="overflow-hidden rounded-t-lg h-28 bg-neon-purple"></div>
+                            <div
+                                class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
+                                <img src="https://dummyimage.com/400x400/fff/101010" class="w-full rounded-full border-2 border-white" />
                             </div>
-                            <div class="team-desc">
-                                <h3>Sarah Michelle</h3>
-                                <p class="lead">Expert Designer</p>
-                                <div class="small-border"></div>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                    fugiat.</p>
-
-                                <div class="social">
-                                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-skype fa-lg"></i></a>
-                                </div>
+                            <div class="px-8 pb-8">
+                                <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Palestrante 2</h4>
+                                <p class="text-neon-purple">
+                                    Santidade social
+                                </p>
                             </div>
                         </div>
-                        <!-- team close -->
                     </div>
-
-                    <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                        <!-- team member -->
-                        <div class="de-team-list">
-                            <div class="team-pic">
-                                <img src="images-event/team/4.jpg" class="img-responsive" alt="" />
+                    <div>
+                        <div class="block rounded-lg shadow-lg bg-white">
+                            <div class="overflow-hidden rounded-t-lg h-28 bg-neon-pink"></div>
+                            <div
+                                class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
+                                <img src="https://dummyimage.com/400x400/fff/101010" class="w-full rounded-full border-2 border-white" />
                             </div>
-                            <div class="team-desc">
-                                <h3>Katty Wilson</h3>
-                                <p class="lead">Expert Designer</p>
-                                <div class="small-border"></div>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                    fugiat.</p>
-
-                                <div class="social">
-                                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-skype fa-lg"></i></a>
-                                </div>
+                            <div class="px-8 pb-8">
+                                <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Palestrante 3</h4>
+                                <p class="text-neon-pink">
+                                    Santidade sexual
+                                </p>
                             </div>
                         </div>
-                        <!-- team close -->
                     </div>
-
-                    <div class="clearfix"></div>
-
                 </div>
             </div>
         </section>
-        <!-- section close -->
 
         <section id="section-schedule" class="py-20">
             <div class="container m-auto">
@@ -387,77 +346,103 @@
 
                     <div class="max-w-6xl m-auto">
                         <div class="tab-content pt-16">
-                            <div class="tab-pane fade show active" id="tabs-day1" role="tabpanel" aria-labelledby="tabs-day1-tab">
-                                <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
+                            <div class="tab-pane fade show active" id="tabs-day1" role="tabpanel"
+                                aria-labelledby="tabs-day1-tab">
+                                <div
+                                    class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
                                     <div class="si-time text-white text-center">19:00 às 21:00</div>
                                     <div class="si-pic">
-                                        <img src="https://dummyimage.com/400x400/fff/101010" class="rounded-full lg:w-9/12 mx-auto">
+                                        <img src="https://dummyimage.com/400x400/fff/101010"
+                                            class="rounded-full lg:w-9/12 mx-auto">
                                     </div>
                                     <div class="si-name">
                                         <h4 class="text-white font-bold">John Smith</h4>
                                         <span class="text-neon-purple">Igreja x</span>
                                     </div>
                                     <div class="si-info col-span-5">
-                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra</h3>
-                                        <p class="text-gray-200">In this session we will discuss about digital topics in detail. You need laptops and other tech support equipment. This session will last for 2 hours. So prepare yourself.</p>
+                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra
+                                        </h3>
+                                        <p class="text-gray-200">In this session we will discuss about digital topics in
+                                            detail. You need laptops and other tech support equipment. This session will
+                                            last for 2 hours. So prepare yourself.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tabs-day2" role="tabpanel" aria-labelledby="tabs-day1-tab">
-                                <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
+                                <div
+                                    class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
                                     <div class="si-time text-white text-center">19:00 às 21:00</div>
                                     <div class="si-pic">
-                                        <img src="https://dummyimage.com/400x400/fff/101010" class="rounded-full lg:w-9/12 mx-auto">
+                                        <img src="https://dummyimage.com/400x400/fff/101010"
+                                            class="rounded-full lg:w-9/12 mx-auto">
                                     </div>
                                     <div class="si-name">
                                         <h4 class="text-white font-bold">John Smith</h4>
                                         <span class="text-neon-purple">Igreja x</span>
                                     </div>
                                     <div class="si-info col-span-5">
-                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra</h3>
-                                        <p class="text-gray-200">In this session we will discuss about digital topics in detail. You need laptops and other tech support equipment. This session will last for 2 hours. So prepare yourself.</p>
+                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra
+                                        </h3>
+                                        <p class="text-gray-200">In this session we will discuss about digital topics in
+                                            detail. You need laptops and other tech support equipment. This session will
+                                            last for 2 hours. So prepare yourself.</p>
                                     </div>
                                 </div>
-                                <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray bg-gradient-to-r from-transparent via-zinc-900 to-transparent">
+                                <div
+                                    class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray bg-gradient-to-r from-transparent via-zinc-900 to-transparent">
                                     <div class="si-time text-white text-center">19:00 às 21:00</div>
                                     <div class="si-pic">
-                                        <img src="https://dummyimage.com/400x400/fff/101010" class="rounded-full lg:w-9/12 mx-auto">
+                                        <img src="https://dummyimage.com/400x400/fff/101010"
+                                            class="rounded-full lg:w-9/12 mx-auto">
                                     </div>
                                     <div class="si-name">
                                         <h4 class="text-white font-bold">John Smith</h4>
                                         <span class="text-neon-purple">Igreja x</span>
                                     </div>
                                     <div class="si-info col-span-5">
-                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra</h3>
-                                        <p class="text-gray-200">In this session we will discuss about digital topics in detail. You need laptops and other tech support equipment. This session will last for 2 hours. So prepare yourself.</p>
+                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra
+                                        </h3>
+                                        <p class="text-gray-200">In this session we will discuss about digital topics in
+                                            detail. You need laptops and other tech support equipment. This session will
+                                            last for 2 hours. So prepare yourself.</p>
                                     </div>
                                 </div>
-                                <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
+                                <div
+                                    class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
                                     <div class="si-time text-white text-center">19:00 às 21:00</div>
                                     <div class="si-pic">
-                                        <img src="https://dummyimage.com/400x400/fff/101010" class="rounded-full lg:w-9/12 mx-auto">
+                                        <img src="https://dummyimage.com/400x400/fff/101010"
+                                            class="rounded-full lg:w-9/12 mx-auto">
                                     </div>
                                     <div class="si-name">
                                         <h4 class="text-white font-bold">John Smith</h4>
                                         <span class="text-neon-purple">Igreja x</span>
                                     </div>
                                     <div class="si-info col-span-5">
-                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra</h3>
-                                        <p class="text-gray-200">In this session we will discuss about digital topics in detail. You need laptops and other tech support equipment. This session will last for 2 hours. So prepare yourself.</p>
+                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra
+                                        </h3>
+                                        <p class="text-gray-200">In this session we will discuss about digital topics in
+                                            detail. You need laptops and other tech support equipment. This session will
+                                            last for 2 hours. So prepare yourself.</p>
                                     </div>
                                 </div>
-                                <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray bg-gradient-to-r from-transparent via-zinc-900 to-transparent">
+                                <div
+                                    class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray bg-gradient-to-r from-transparent via-zinc-900 to-transparent">
                                     <div class="si-time text-white text-center">19:00 às 21:00</div>
                                     <div class="si-pic">
-                                        <img src="https://dummyimage.com/400x400/fff/101010" class="rounded-full lg:w-9/12 mx-auto">
+                                        <img src="https://dummyimage.com/400x400/fff/101010"
+                                            class="rounded-full lg:w-9/12 mx-auto">
                                     </div>
                                     <div class="si-name">
                                         <h4 class="text-white font-bold">John Smith</h4>
                                         <span class="text-neon-purple">Igreja x</span>
                                     </div>
                                     <div class="si-info col-span-5">
-                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra</h3>
-                                        <p class="text-gray-200">In this session we will discuss about digital topics in detail. You need laptops and other tech support equipment. This session will last for 2 hours. So prepare yourself.</p>
+                                        <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra
+                                        </h3>
+                                        <p class="text-gray-200">In this session we will discuss about digital topics in
+                                            detail. You need laptops and other tech support equipment. This session will
+                                            last for 2 hours. So prepare yourself.</p>
                                     </div>
                                 </div>
                             </div>
