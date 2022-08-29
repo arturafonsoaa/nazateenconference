@@ -55,7 +55,7 @@
             </form>
 
             <p class="text-white text-center">
-                <a href="{{ route('index') }}#section-register-now">
+                <a href="{{ route('website.index') }}#section-register-now">
                     Não é cadastrado ainda?
                 </a>
             </p>
