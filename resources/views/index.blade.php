@@ -43,6 +43,10 @@
                             <a class="nav-link text-white hover:text-neon-pink"
                                 href="#">Inscrição</a>
                         </li>
+                        <li class="nav-item p-2">
+                            <a class="nav-link text-white hover:text-neon-pink"
+                                href="{{ route('login') }}">Entrar</a>
+                        </li>
                     </ul>
                     <!-- Left links -->
                 </div>

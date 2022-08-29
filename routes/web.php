@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
-Route::get('admin', [DashboardController::class, 'index'])->name('index');
+Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function() {
+    Route::get('', [DashboardController::class, 'index'])->name('index');
+});
