@@ -1,6 +1,6 @@
 <section id="section-sponsors" class="py-20 bg-center bg-cover bg-fixed bg-no-repeat"
     style="background-image: url('{{ Vite::asset('resources/img/background3.png') }}')">
-    <div class="container m-auto">
+    <div class="container m-auto" data-aos="fade-up">
         <div class="text-center mb-16">
             <h2 class="text-4xl text-white font-bold">Patrocinadores Oficiais</h2>
             <div class="separator">

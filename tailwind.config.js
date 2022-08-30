@@ -20,6 +20,7 @@ module.exports = {
                 base: ["Poppins"],
             },
             fontSize: {
+                small: ["10px", "10px"],
                 "10xl": ["256px", "256px"],
             },
             screens: {

@@ -1,6 +1,6 @@
 <section id="section-speakers" class="py-20 bg-center bg-cover bg-fixed bg-no-repeat"
     style="background-image: url('{{ Vite::asset('resources/img/background3.png') }}')">
-    <div class="container m-auto">
+    <div class="container m-auto" data-aos="fade-right">
         <div class="text-center mb-16">
             <h2 class="text-4xl text-white font-bold">Os Palestrantes</h2>
             <div class="separator">
@@ -9,7 +9,7 @@
                 </span>
             </div>
         </div>
-        <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div class="grid md:grid-cols-4 gap-8 text-center sm:px-4">
             <div>
                 <div class="block rounded-lg shadow-lg bg-white">
                     <div class="overflow-hidden rounded-t-lg h-28 bg-neutral-gray"></div>

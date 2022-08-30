@@ -1,5 +1,5 @@
 <section id="section-testimonials" class="py-16">
-    <div class="container m-auto">
+    <div class="container m-auto sm:px-4" data-aos="fade-up">
         <div class="m-auto lg:w-2/3 text-center">
             <div class="splide">
                 <div class="splide__track">

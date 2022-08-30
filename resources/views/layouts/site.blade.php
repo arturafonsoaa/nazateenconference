@@ -1,5 +1,5 @@
 <!doctype html>
-<html class='sm:min-w-full'>
+<html>
 
 <head>
     <meta charset="utf-8">

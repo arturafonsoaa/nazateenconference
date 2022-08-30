@@ -1,5 +1,5 @@
 <section id="section-ticket" class="py-20 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink">
-    <div class="container m-auto">
+    <div class="container m-auto" data-aos="fade-left">
         <div class="text-center mb-16">
             <h2 class="text-4xl text-white font-bold">Investimento</h2>
             <div class="separator">
@@ -9,7 +9,7 @@
             </div>
         </div>
 
-        <div class="max-w-6xl m-auto">
+        <div class="max-w-6xl m-auto sm: ml-4">
             <div class="grid grid-cols-3 gap-4 sm:grid-cols-1">
                 <div>
                     <div class="bg-neutral-black py-16">
