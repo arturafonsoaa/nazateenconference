@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <div class="lg:max-w-5xl flex justify-center items-center gap-4 my-12 m-auto">
+        <div class="lg:max-w-5xl flex justify-center items-center gap-4 my-12 m-auto sm:flex-wrap">
             <figure>
                 <img src="{{ Vite::asset('resources/img/logo1.png') }}">
             </figure>

@@ -1,5 +1,5 @@
 <section id="section-register-now" class="py-20">
-    <div class="container m-auto">
+    <div class="container m-auto ">
         <div class="text-center mb-16">
             <h2 class="text-4xl text-white font-bold">Se Cadastre Para Comprar</h2>
             <div class="separator">
@@ -8,10 +8,10 @@
                 </span>
             </div>
         </div>
-        <div class="max-w-4xl m-auto">
+        <div class="max-w-4xl m-auto ">
             <form action="" method="post">
                 @csrf
-                <div class="grid grid-cols-2 gap-4 mb-8">
+                <div class="grid grid-cols-2 gap-4 mb-8 sm:grid-cols-1">
                     <div>
                         <div class="mb-4">
                             <input type="text" placeholder="Nome completo*"

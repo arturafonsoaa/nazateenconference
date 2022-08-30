@@ -10,7 +10,7 @@
         </div>
 
         <div>
-            <ul class="nav nav-tabs flex bg-neutral-gray w-fit m-auto rounded-xl" role="tablist">
+            <ul class="nav nav-tabs flex bg-neutral-gray w-fit m-auto rounded-xl " role="tablist">
                 <li class="nav-item" role="presentation">
                     <a href="#tabs-day1" class="inline-block py-6 px-12 rounded-tl-xl rounded-bl-xl active"
                         data-bs-toggle="pill" data-bs-target="#tabs-day1" role="tab" aria-controls="tabs-day1"
@@ -38,11 +38,11 @@
             </ul>
 
             <div class="max-w-6xl m-auto">
-                <div class="tab-content pt-16">
-                    <div class="tab-pane fade show active" id="tabs-day1" role="tabpanel"
+                <div class="tab-content pt-16 ">
+                    <div class="tab-pane fade show active " id="tabs-day1" role="tabpanel"
                         aria-labelledby="tabs-day1-tab">
                         <div
-                            class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
+                            class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray ">
                             <div class="si-time text-white text-center">19:00 às 21:00</div>
                             <div class="si-pic">
                                 <img src="https://dummyimage.com/400x400/fff/101010"

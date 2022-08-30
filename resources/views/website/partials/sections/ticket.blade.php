@@ -10,7 +10,7 @@
         </div>
 
         <div class="max-w-6xl m-auto">
-            <div class="grid grid-cols-3 gap-4">
+            <div class="grid grid-cols-3 gap-4 sm:grid-cols-1">
                 <div>
                     <div class="bg-neutral-black py-16">
                         <div class="text-center mb-8">

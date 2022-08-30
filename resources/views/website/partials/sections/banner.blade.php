@@ -1,6 +1,6 @@
-<section id="section-banner" class="py-40">
-    <div class="container m-auto">
-        <div class="flex gap-8 justify-center mb-8">
+<section id="section-banner" class="py-40 sm:py-14">
+    <div class="container m-auto ">
+        <div class="flex gap-8 justify-center mb-8 sm:min-w-full sm:flex-wrap ">
             <div class="flex items-center gap-2">
                 <i class="fa fa-fw fa-calendar-check text-neon-pink text-xl"></i>
                 <span class="text-white font-bold">
@@ -13,7 +13,7 @@
                     4 palestrantes
                 </span>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 sm:text-center">
                 <i class="fa fa-fw fa-location-dot text-neon-pink text-xl"></i>
                 <span class="text-white font-bold">
                     Igreja do Nazareno Central de Mossoró
