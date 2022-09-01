@@ -26,6 +26,9 @@ module.exports = {
             screens: {
                 sm: { min: "320px", max: "767px" },
             },
+            aspectRatio: {
+                '8/5': '8 / 5',
+            },
         },
     },
     plugins: [
