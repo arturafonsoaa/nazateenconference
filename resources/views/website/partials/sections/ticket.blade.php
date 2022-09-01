@@ -1,6 +1,6 @@
 <section id="section-ticket" class="py-20 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink">
-    <div class="container m-auto" data-aos="fade-left">
-        <div class="text-center mb-16">
+    <div class="container m-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
             <h2 class="text-4xl text-white font-bold">Investimento</h2>
             <div class="separator">
                 <span>
@@ -9,9 +9,9 @@
             </div>
         </div>
 
-        <div class="max-w-6xl m-auto sm: ml-4">
+        <div class="lg:max-w-6xl m-auto sm:ml-4">
             <div class="grid grid-cols-3 gap-4 sm:grid-cols-1">
-                <div>
+                <div  data-aos="flip-left" data-aos-delay="100">
                     <div class="bg-neutral-black py-16">
                         <div class="text-center mb-8">
                             <h4 class="text-2xl text-white font-light mb-6">Senha Padrão</h4>
@@ -44,6 +44,5 @@
                 <div class="col-span-2"></div>
             </div>
         </div>
-
     </div>
 </section>

@@ -8,7 +8,9 @@
 </head>
 
 <body>
-    @yield('content')
+    <div id="site-container">
+        @yield('content')
+    </div>
 
     @yield('js')
 </body>

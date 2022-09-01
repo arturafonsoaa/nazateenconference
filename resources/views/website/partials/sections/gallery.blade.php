@@ -1,5 +1,5 @@
 <section id="section-gallery">
-    <div id="gallery" class="grid lg:grid-cols-5" data-aos="fade-right">
+    <div id="gallery" class="grid lg:grid-cols-5">
 
         <div class="item">
             <figure>
