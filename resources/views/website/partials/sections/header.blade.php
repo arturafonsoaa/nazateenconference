@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="text-center" data-aos="fade-up" data-aos-delay="600">
-            <a href="#section-ticket" class="bg-neon-pink rounded-lg py-2 px-8 text-white uppercase">
+            <a href="#section-register-now" class="bg-neon-pink rounded-lg py-2 px-8 text-white uppercase">
                 Comprar Ingresso
             </a>
         </div>

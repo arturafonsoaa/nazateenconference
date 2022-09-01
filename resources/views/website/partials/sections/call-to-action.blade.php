@@ -8,7 +8,7 @@
             </div>
 
             <div>
-                <a href="#section-ticket" class="bg-neon-pink py-2 px-8 rounded-lg uppercase text-white">
+                <a href="#section-register-now" class="bg-neon-pink py-2 px-8 rounded-lg uppercase text-white">
                     Comprar ingresso
                 </a>
             </div>
