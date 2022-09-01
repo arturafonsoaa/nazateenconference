@@ -11,7 +11,8 @@
         </div>
 
         <div class="lg:max-w-5xl flex justify-center items-center gap-4 my-12 m-auto sm:flex-wrap">
-            <figure data-aos="fade-in" data-aos-delay="100">
+            <p class="text-2xl text-white uppercase font-bold" data-aos="zoom-in" data-aos-delay="100">EM BREVE!</p>
+            {{--<figure data-aos="fade-in" data-aos-delay="100">
                 <img src="{{ Vite::asset('resources/img/logo1.png') }}">
             </figure>
             <figure data-aos="fade-in" data-aos-delay="200">
@@ -22,7 +23,7 @@
             </figure>
             <figure data-aos="fade-in" data-aos-delay="400">
                 <img src="{{ Vite::asset('resources/img/logo4.png') }}">
-            </figure>
+            </figure>--}}
         </div>
     </div>
 </section>
