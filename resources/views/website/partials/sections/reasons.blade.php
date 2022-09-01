@@ -10,83 +10,77 @@
                 </div>
             </div>
 
-            <div class="grid lg:grid-cols-3 gap-8 sm:px-4 sm:text-xs">
-                <div class="box-reason flex gap-8" data-aos="zoom-out-right">
+            <div class="grid lg:grid-cols-3 gap-x-8 gap-y-16 sm:px-4 sm:text-xs">
+                <div class="box-reason flex items-center gap-8" data-aos="zoom-out-right">
                     <div>
                         <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
-                            <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
+                            <i class="fa fa-fw fa-play text-white text-4xl flex-shrink-0"></i>
                         </div>
                     </div>
                     <div class="text">
-                        <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
-                        <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis
-                            praesentium voluptatum deleniti atque.</p>
+                        <p class="text-gray-200 font-bold">
+                            Você tem a oportunidade de viver um START na tua vida com Deus!
+                        </p>
                     </div>
                 </div>
-                <div class="box-reason flex gap-8" data-aos="zoom-out-right" data-aos-delay="50">
+                <div class="box-reason flex items-center gap-8" data-aos="zoom-out-right" data-aos-delay="50">
                     <div>
                         <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
-                            <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
+                            <i class="fa fa-fw fa-hands-praying text-white text-4xl flex-shrink-0"></i>
                         </div>
                     </div>
                     <div class="text">
-                        <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
-                        <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis
-                            praesentium voluptatum deleniti atque.</p>
+                        <p class="text-gray-200 font-bold">
+                            Você mão perder o mover de Santidade que o Senhor fará!
+                        </p>
                     </div>
                 </div>
-                <div class="box-reason flex gap-8" data-aos="zoom-out-right" data-aos-delay="100">
+                <div class="box-reason flex items-center gap-8" data-aos="zoom-out-right" data-aos-delay="100">
                     <div>
                         <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
-                            <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
+                            <i class="fa-brands fa-fw fa-fort-awesome text-white text-4xl flex-shrink-0"></i>
                         </div>
                     </div>
                     <div class="text">
-                        <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
-                        <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis
-                            praesentium voluptatum deleniti atque.</p>
+                        <p class="text-gray-200 font-bold">
+                            Você vai aprender a manifestar o Reino de Deus nas demais esferas da sociedade!
+                        </p>
                     </div>
                 </div>
-                <div class="box-reason flex gap-8" data-aos="zoom-out-right" data-aos-delay="150">
+                <div class="box-reason flex items-center gap-8" data-aos="zoom-out-right" data-aos-delay="150">
                     <div>
                         <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
-                            <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
+                            <i class="fa fa-fw fa-music text-white text-4xl flex-shrink-0"></i>
                         </div>
                     </div>
                     <div class="text">
-                        <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
-                        <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis
-                            praesentium voluptatum deleniti atque.</p>
+                        <p class="text-gray-200 font-bold">
+                            Serão dois dias de celebração, comunhão, ministração e salvação!
+                        </p>
                     </div>
                 </div>
-                <div class="box-reason flex gap-8" data-aos="zoom-out-right" data-aos-delay="200">
+                <div class="box-reason flex items-center gap-8" data-aos="zoom-out-right" data-aos-delay="200">
                     <div>
                         <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
-                            <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
+                            <i class="fa fa-fw fa-person-praying text-white text-4xl flex-shrink-0"></i>
                         </div>
                     </div>
                     <div class="text">
-                        <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
-                        <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis
-                            praesentium voluptatum deleniti atque.</p>
+                        <p class="text-gray-200 font-bold">
+                            Você vai desenvolver e aprofundar a tua vida de intimidade com o Senhor Jesus!
+                        </p>
                     </div>
                 </div>
-                <div class="box-reason flex gap-8" data-aos="zoom-out-right" data-aos-delay="250">
+                <div class="box-reason flex items-center gap-8" data-aos="zoom-out-right" data-aos-delay="250">
                     <div>
                         <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">
-                            <i class="fa fa-fw fa-microphone text-white text-4xl flex-shrink-0"></i>
+                            <i class="fa fa-fw fa-person-walking text-white text-4xl flex-shrink-0"></i>
                         </div>
                     </div>
                     <div class="text">
-                        <h3 class="text-white text-xl font-semibold mb-2">World Class Speakers</h3>
-                        <p class="text-gray-200">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis
-                            praesentium voluptatum deleniti atque.</p>
+                        <p class="text-gray-200 font-bold">
+                            Você vai entender o meu papel como adolescente na chamado de Deus à Santidade!
+                        </p>
                     </div>
                 </div>
             </div>
