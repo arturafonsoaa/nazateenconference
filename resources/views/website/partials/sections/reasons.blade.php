@@ -1,4 +1,4 @@
-<section id="section-reasons" class="my-20">
+<section id="section-reasons" class="py-20">
     <div class="container m-auto">
         <div class="row">
             <div class="text-center mb-16" data-aos="fade-up">
