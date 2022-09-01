@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import "@fortawesome/fontawesome-free/css/brands.css";
+@import "@splidejs/splide/css/core";
+@import "aos/dist/aos.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: Poppins, system-ui, sans-serif;
+    }
+}
+
+@layer components {
+    .splide__pagination__page.is-active {
+        @apply text-neon-pink;
+    }
+
+    .nav-item .active {
+        @apply bg-neon-purple;
+    }
+}
+
+.text-stroke-gray-800 {
+    -webkit-text-stroke: 1px rgb(31 51 55);
+}
+
+.separator {
+    line-height: 0.5;
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
+
+.separator span {
+    display: inline-block;
+    position: relative;
+}
+
+.separator span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.separator span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.separator span:before,
+.separator span:after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    top: 5px;
+    width: 120px;
+}
+
+.separator span i {
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+    float: none;
+}
+
+.splide__pagination__page {
+    font-size: 6px;
+}
