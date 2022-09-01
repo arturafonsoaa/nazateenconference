@@ -2,11 +2,10 @@
 
 @section('content')
     <header>
-        @include('website.partials.navbar')
+        @include('website.partials.sections.header')
     </header>
 
     <main id="main-content" class="bg-neutral-black">
-        @include('website.partials.sections.banner')
         @include('website.partials.sections.reasons')
         @include('website.partials.sections.speakers')
         @include('website.partials.sections.schedule')
@@ -32,6 +31,7 @@
 @endsection
 
 @section('js')
+    @parent
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             let splide = new Splide('.splide', {
