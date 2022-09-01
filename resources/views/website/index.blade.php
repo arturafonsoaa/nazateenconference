@@ -5,7 +5,7 @@
         @include('website.partials.navbar')
     </header>
 
-    <main id="main-content" class="bg-neutral-black overflow-x-hidden">
+    <main id="main-content" class="bg-neutral-black">
         @include('website.partials.sections.banner')
         @include('website.partials.sections.reasons')
         @include('website.partials.sections.speakers')
