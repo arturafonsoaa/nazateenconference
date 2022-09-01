@@ -1,5 +1,5 @@
 <section id="section-register-now" class="py-20">
-    <div class="container m-auto sm:px-4" data-aos="zoom-in">
+    <div class="container m-auto sm:px-4" data-aos="fade-up">
         <div class="text-center mb-16">
             <h2 class="text-4xl text-white font-bold">Se Cadastre Para Comprar</h2>
             <div class="separator">
