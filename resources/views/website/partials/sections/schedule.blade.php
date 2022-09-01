@@ -1,5 +1,5 @@
 <section id="section-schedule" class="py-20">
-    <div class="container m-auto">
+    <div class="container m-auto" data-aos="fade-up">
         <div class="text-center mb-16">
             <h2 class="text-4xl text-white font-bold">Programação</h2>
             <div class="separator">
@@ -10,7 +10,7 @@
         </div>
 
         <div>
-            <ul class="nav nav-tabs flex bg-neutral-gray w-fit m-auto rounded-xl" role="tablist">
+            <ul class="nav nav-tabs flex bg-neutral-gray w-fit m-auto rounded-xl sm:flex-col" role="tablist">
                 <li class="nav-item" role="presentation">
                     <a href="#tabs-day1" class="inline-block py-6 px-12 rounded-tl-xl rounded-bl-xl active"
                         data-bs-toggle="pill" data-bs-target="#tabs-day1" role="tab" aria-controls="tabs-day1"
@@ -38,13 +38,13 @@
             </ul>
 
             <div class="max-w-6xl m-auto">
-                <div class="tab-content pt-16">
+                <div class="tab-content pt-16 ">
                     <div class="tab-pane fade show active" id="tabs-day1" role="tabpanel"
                         aria-labelledby="tabs-day1-tab">
                         <div
-                            class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
+                            class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray sm:flex sm:flex-col">
                             <div class="si-time text-white text-center">19:00 às 21:00</div>
-                            <div class="si-pic">
+                            <div class="si-pic sm:w-24">
                                 <img src="https://dummyimage.com/400x400/fff/101010"
                                     class="rounded-full lg:w-9/12 mx-auto">
                             </div>
@@ -52,7 +52,7 @@
                                 <h4 class="text-white font-bold">John Smith</h4>
                                 <span class="text-neon-purple">Igreja x</span>
                             </div>
-                            <div class="si-info col-span-5">
+                            <div class="si-info col-span-5 sm:px-4">
                                 <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra
                                 </h3>
                                 <p class="text-gray-200">In this session we will discuss about digital topics in
@@ -63,9 +63,9 @@
                     </div>
                     <div class="tab-pane fade" id="tabs-day2" role="tabpanel" aria-labelledby="tabs-day1-tab">
                         <div
-                            class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
+                            class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray sm:flex sm:flex-col">
                             <div class="si-time text-white text-center">19:00 às 21:00</div>
-                            <div class="si-pic">
+                            <div class="si-pic sm:w-24">
                                 <img src="https://dummyimage.com/400x400/fff/101010"
                                     class="rounded-full lg:w-9/12 mx-auto">
                             </div>
@@ -73,7 +73,7 @@
                                 <h4 class="text-white font-bold">John Smith</h4>
                                 <span class="text-neon-purple">Igreja x</span>
                             </div>
-                            <div class="si-info col-span-5">
+                            <div class="si-info col-span-5 sm:px-4">
                                 <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra
                                 </h3>
                                 <p class="text-gray-200">In this session we will discuss about digital topics in
@@ -82,9 +82,9 @@
                             </div>
                         </div>
                         <div
-                            class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray bg-gradient-to-r from-transparent via-zinc-900 to-transparent">
+                            class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray bg-gradient-to-r from-transparent via-zinc-900 to-transparent sm:flex sm:flex-col">
                             <div class="si-time text-white text-center">19:00 às 21:00</div>
-                            <div class="si-pic">
+                            <div class="si-pic sm:w-24">
                                 <img src="https://dummyimage.com/400x400/fff/101010"
                                     class="rounded-full lg:w-9/12 mx-auto">
                             </div>
@@ -92,7 +92,7 @@
                                 <h4 class="text-white font-bold">John Smith</h4>
                                 <span class="text-neon-purple">Igreja x</span>
                             </div>
-                            <div class="si-info col-span-5">
+                            <div class="si-info col-span-5 sm:px-4">
                                 <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra
                                 </h3>
                                 <p class="text-gray-200">In this session we will discuss about digital topics in
@@ -101,9 +101,9 @@
                             </div>
                         </div>
                         <div
-                            class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray">
+                            class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray sm:flex sm:flex-col">
                             <div class="si-time text-white text-center">19:00 às 21:00</div>
-                            <div class="si-pic">
+                            <div class="si-pic sm:w-24">
                                 <img src="https://dummyimage.com/400x400/fff/101010"
                                     class="rounded-full lg:w-9/12 mx-auto">
                             </div>
@@ -111,7 +111,7 @@
                                 <h4 class="text-white font-bold">John Smith</h4>
                                 <span class="text-neon-purple">Igreja x</span>
                             </div>
-                            <div class="si-info col-span-5">
+                            <div class="si-info col-span-5 sm:px-4">
                                 <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra
                                 </h3>
                                 <p class="text-gray-200">In this session we will discuss about digital topics in
@@ -120,9 +120,9 @@
                             </div>
                         </div>
                         <div
-                            class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray bg-gradient-to-r from-transparent via-zinc-900 to-transparent">
+                            class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray bg-gradient-to-r from-transparent via-zinc-900 to-transparent sm:flex sm:flex-col">
                             <div class="si-time text-white text-center">19:00 às 21:00</div>
-                            <div class="si-pic">
+                            <div class="si-pic sm:w-24">
                                 <img src="https://dummyimage.com/400x400/fff/101010"
                                     class="rounded-full lg:w-9/12 mx-auto">
                             </div>
@@ -130,7 +130,7 @@
                                 <h4 class="text-white font-bold">John Smith</h4>
                                 <span class="text-neon-purple">Igreja x</span>
                             </div>
-                            <div class="si-info col-span-5">
+                            <div class="si-info col-span-5 sm:px-4">
                                 <h3 class="text-white font-extrabold text-xl mb-2">Tema da pregação ou palestra
                                 </h3>
                                 <p class="text-gray-200">In this session we will discuss about digital topics in

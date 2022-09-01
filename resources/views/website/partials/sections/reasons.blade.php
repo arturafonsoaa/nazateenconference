@@ -1,7 +1,7 @@
 <section id="section-reasons" class="my-20">
-    <div class="container m-auto">
+    <div class="container m-auto" data-aos="fade-up">
         <div class="row">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 ">
                 <h2 class="text-4xl text-white font-bold">Porque você deveria participar</h2>
                 <div class="separator">
                     <span>
@@ -10,7 +10,7 @@
                 </div>
             </div>
 
-            <div class="grid lg:grid-cols-3 gap-8">
+            <div class="grid lg:grid-cols-3 gap-8 sm:px-4 sm:text-xs">
                 <div class="box-reason flex gap-8">
                     <div>
                         <div class="bg-neon-pink h-20 w-20 text-center flex items-center justify-center rounded-lg">

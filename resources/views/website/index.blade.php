@@ -5,7 +5,7 @@
         @include('website.partials.navbar')
     </header>
 
-    <main id="main-content" class="bg-neutral-black">
+    <main id="main-content" class="bg-neutral-black overflow-x-hidden">
         @include('website.partials.sections.banner')
         @include('website.partials.sections.reasons')
         @include('website.partials.sections.speakers')
@@ -22,7 +22,7 @@
         @include('website.partials.footer')
     </footer>
 
-    <a href="#" class="block fixed bottom-6 right-6 bg-neon-pink p-3 rounded-lg">
+    <a href="#" class="block fixed bottom-6 right-6 bg-neon-pink p-3 rounded-lg  ">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 fill-white">
             <path fill-rule="evenodd"
                 d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z"

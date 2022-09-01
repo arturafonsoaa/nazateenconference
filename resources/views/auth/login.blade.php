@@ -12,7 +12,7 @@
 
     <div class="w-screen h-screen flex bg-neutral-black bg-center bg-cover bg-fixed bg-no-repeat"
         style="background-image: url('{{ Vite::asset('resources/img/background3.png') }}')">
-        <div class="lg:max-w-md m-auto w-full self-center">
+        <div class="lg:max-w-md m-auto w-full self-center sm:px-6">
             <figure class="lg:w-80 m-auto mb-4">
                 <img src="{{ Vite::asset('resources/img/logo-nazateen-conference.png') }}" class="w-full" />
             </figure>

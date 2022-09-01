@@ -1,5 +1,5 @@
-<div class="container m-auto">
-    <div class="flex items-center justify-between">
+<div class="container m-auto ">
+    <div class="flex items-center justify-between sm:flex-col sm:gap-3">
         <div class="lg:basis-2/12">
             <figure>
                 <img src="{{ Vite::asset('resources/img/logo-nazateen-conference.png') }}" class="lg:w-60">

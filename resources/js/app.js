@@ -1,5 +1,11 @@
-import './bootstrap';
+import "./bootstrap";
+import AOS from "aos";
+import.meta.glob(["../img/**"]);
+import { Countdown } from "./countdown";
 
-import.meta.glob([
-    '../img/**',
-]);
+AOS.init({
+    duration: 800,
+});
+
+Countdown();
+setInterval(Countdown, 1000);
