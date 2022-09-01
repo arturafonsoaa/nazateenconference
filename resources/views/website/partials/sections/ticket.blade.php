@@ -33,7 +33,7 @@
                             </ul>
                         </div>
                         <div class="text-center">
-                            <a href="#" class="bg-neon-pink rounded-lg py-2 px-8 text-white uppercase">
+                            <a href="#section-register-now" class="bg-neon-pink rounded-lg py-2 px-8 text-white uppercase">
                                 Comprar Ingresso
                             </a>
                         </div>
