@@ -1,5 +1,4 @@
-<nav
-    id="main-nav"
+<nav id="main-nav"
     class="fixed top-0 w-full flex flex-wrap items-center justify-between py-4 z-50 transition-colors bg-transparent text-white hover:text-neon-pink navbar navbar-expand-lg navbar-light">
     <div class="container m-auto flex flex-wrap items-center justify-between px-6">
         <button
@@ -18,8 +17,8 @@
                 <img src="{{ Vite::asset('resources/img/logo-base.png') }}" class="w-full" />
             </a>
         </div>
-        <div class="collapse navbar-collapse items-center" id="navbar-links">
-            <ul class="navbar-nav flex flex-col pl-0 list-style-none mr-auto uppercase">
+        <div class="collapse navbar-collapse items-center text-center" id="navbar-links">
+            <ul class="navbar-nav flex flex-col pl-0 py-4 lg:py-0 bg-neutral-black lg:bg-transparent list-style-none mr-auto uppercase">
                 <li class="nav-item p-2">
                     <a class="nav-link text-white hover:text-neon-pink" href="#section-speakers">Palestrantes</a>
                 </li>
@@ -33,7 +32,9 @@
                     <a class="nav-link text-white hover:text-neon-pink" href="#section-register-now">Inscrição</a>
                 </li>
                 <li class="nav-item p-2">
-                    <a class="nav-link text-white hover:text-neon-pink" href="{{ route('login') }}">Entrar</a>
+                    <a class="nav-link text-white hover:text-neon-pink" href="{{ route('login') }}">
+                        <i class="fa fa-right-to-bracket fa-fw mr-2"></i> Entrar
+                    </a>
                 </li>
             </ul>
             <!-- Left links -->
@@ -53,7 +54,6 @@
                     jQuery('#main-nav').removeClass('bg-neutral-black')
                     jQuery('#main-nav').addClass('bg-transparent')
                 }
-
             })
         })
     </script>
