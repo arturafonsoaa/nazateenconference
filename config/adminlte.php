@@ -1,5 +1,7 @@
 <?php
 
+use function PHPSTORM_META\map;
+
 return [
 
     /*
@@ -253,7 +255,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'admin',
+    'dashboard_url' => 'painel',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -290,7 +292,16 @@ return [
     */
 
     'menu' => [
-
+        [
+            'text' => 'Início',
+            'route' => 'admin.index',
+            'icon' => 'fa fa-id-card fa-fw mr-1',
+        ],
+        [
+            'text' => 'Alterar senha',
+            'route' => 'admin.changePassword',
+            'icon' => 'fa fa-lock fa-fw mr-1',
+        ]
     ],
 
     /*
@@ -395,6 +406,16 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
+                ],
+            ],
+        ],
+        'BsCustomFileInput' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/bs-custom-file-input/bs-custom-file-input.min.js',
                 ],
             ],
         ],
