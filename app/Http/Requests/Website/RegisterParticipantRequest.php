@@ -19,7 +19,7 @@ class RegisterParticipantRequest extends FormRequest
             'name' => 'required',
             'phone' => 'required',
             'email' => 'required',
-            'age' => 'required|integer|max:18'
+            'age' => 'required|integer|max:18|min:12'
         ];
     }
 
@@ -31,6 +31,7 @@ class RegisterParticipantRequest extends FormRequest
             'email.required' => 'Por favor, preencha seu e-mail',
             'age.required' => 'Por favor, preencha sua idade',
             'age.max' => 'A idade máxima permitida para o evento é de 18 anos',
+            'age.min' => 'A idade mínima permitida para o evento é de 12 anos',
         ];
     }
 }
