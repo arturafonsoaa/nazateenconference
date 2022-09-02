@@ -301,6 +301,7 @@ return [
             'text' => 'Alterar senha',
             'route' => 'admin.changePassword',
             'icon' => 'fa fa-lock fa-fw mr-1',
+            'can' => 'admin.changePassword'
         ]
     ],
 

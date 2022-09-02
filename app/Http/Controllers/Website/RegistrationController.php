@@ -33,6 +33,8 @@ class RegistrationController extends Controller
                 'message' => $request->get('message')
             ]);
 
+            $user->syncRoles(['registration']);
+
             DB::commit();
 
             Auth::loginUsingId($user->id);

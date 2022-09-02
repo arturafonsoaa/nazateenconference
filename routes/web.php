@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('website.index');
 Route::post('register-participant', [RegistrationController::class, 'registerParticipant'])->name('registerParticipant');
 
-Route::middleware(['auth'])->prefix('painel')->name('admin.')->group(function() {
+Route::middleware(['auth', 'permission.check'])->prefix('painel')->name('admin.')->group(function() {
 
     Route::middleware(['password.verify-default'])->group(function() {
         Route::get('', [DashboardController::class, 'index'])->name('index');
