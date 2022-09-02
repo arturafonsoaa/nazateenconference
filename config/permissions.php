@@ -6,4 +6,5 @@ return [
     'admin.downloadPaymentVoucher' => ['admin', 'registration'],
     'admin.changePassword' => ['admin', 'registration'],
     'admin.updatePassword' => ['admin', 'registration'],
+    'admin.registration.index' => ['admin'],
 ];
