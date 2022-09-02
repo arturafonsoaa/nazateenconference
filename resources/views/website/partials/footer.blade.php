@@ -10,8 +10,8 @@
             <p class="text-gray-200 text-center">
                 &copy; Copyright 2022 - Igreja do Nazareno Central de Mossoró - Template do site do Nazateen
                 Conference
-                feito por <br> <a href="" class="text-neon-pink">Artur Afonso</a> e <a href=""
-                    class="text-neon-pink">Felipe de Sena</a>
+                feito por <br> <a href="https://www.linkedin.com/in/arturafonsoaa/" class="text-neon-pink" target="_blank">Artur Afonso</a> e <a href="https://www.linkedin.com/in/felipeasena"
+                    class="text-neon-pink" target="_black">Felipe de Sena</a>
             </p>
         </div>
 

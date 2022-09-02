@@ -14,7 +14,7 @@
                 <div class="block rounded-lg shadow-lg bg-white">
                     <div class="overflow-hidden rounded-t-lg h-28 bg-neutral-gray"></div>
                     <div class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
-                        <img src="https://dummyimage.com/400x400/fff/101010"
+                        <img src="https://dummyimage.com/400x400/fff/fff"
                             class="w-full rounded-full border-2 border-white" />
                     </div>
                     <div class="px-8 pb-8">
@@ -29,7 +29,7 @@
                 <div class="block rounded-lg shadow-lg bg-white">
                     <div class="overflow-hidden rounded-t-lg h-28 bg-neon-blue"></div>
                     <div class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
-                        <img src="https://dummyimage.com/400x400/fff/101010"
+                        <img src="https://dummyimage.com/400x400/fff/fff"
                             class="w-full rounded-full border-2 border-white" />
                     </div>
                     <div class="px-8 pb-8">
@@ -44,7 +44,7 @@
                 <div class="block rounded-lg shadow-lg bg-white">
                     <div class="overflow-hidden rounded-t-lg h-28 bg-neon-purple"></div>
                     <div class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
-                        <img src="https://dummyimage.com/400x400/fff/101010"
+                        <img src="https://dummyimage.com/400x400/fff/fff"
                             class="w-full rounded-full border-2 border-white" />
                     </div>
                     <div class="px-8 pb-8">
@@ -59,7 +59,7 @@
                 <div class="block rounded-lg shadow-lg bg-white">
                     <div class="overflow-hidden rounded-t-lg h-28 bg-neon-pink"></div>
                     <div class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
-                        <img src="https://dummyimage.com/400x400/fff/101010"
+                        <img src="https://dummyimage.com/400x400/fff/fff"
                             class="w-full rounded-full border-2 border-white" />
                     </div>
                     <div class="px-8 pb-8">
