@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nazateen Conference - Entrar</title>
+    <title>Nazateen Conference 2022 - Entrar</title>
+    <link rel="icon" type="image/png" href="{{ Vite::asset('resources/img/icon.png') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -14,7 +15,9 @@
         style="background-image: url('{{ Vite::asset('resources/img/background3.png') }}')">
         <div class="lg:max-w-md m-auto w-full self-center sm:px-6">
             <figure class="lg:w-80 m-auto mb-4">
-                <img src="{{ Vite::asset('resources/img/logo-nazateen-conference.png') }}" class="w-full" />
+                <a href="{{ route('website.index') }}" class="block w-full">
+                    <img src="{{ Vite::asset('resources/img/logo-nazateen-conference.png') }}" class="w-full" />
+                </a>
             </figure>
             <p class="text-center text-white">
                 Por favor, digite seu login e senha para acompanhar a sua inscrição
