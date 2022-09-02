@@ -298,9 +298,16 @@ return [
             'icon' => 'fa fa-id-card fa-fw mr-1',
         ],
         [
+            'text' => 'Inscrições',
+            'route' => 'admin.registration.index',
+            'icon' => 'fa fa-users fa-fw mr-1',
+            'can' => 'admin.registration.index'
+        ],
+        [
             'text' => 'Alterar senha',
             'route' => 'admin.changePassword',
             'icon' => 'fa fa-lock fa-fw mr-1',
+            'can' => 'admin.changePassword'
         ]
     ],
 
