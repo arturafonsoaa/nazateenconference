@@ -31,7 +31,7 @@
                     </div>
                     <div class="text">
                         <p class="text-gray-200 font-bold">
-                            Você mão perder o mover de Santidade que o Senhor fará!
+                            Você não pode perder o mover de Santidade que o Senhor fará!
                         </p>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="text">
                         <p class="text-gray-200 font-bold">
-                            Você vai entender o meu papel como adolescente na chamado de Deus à Santidade!
+                            Você vai entender o seu papel como adolescente no chamado de Deus à Santidade!
                         </p>
                     </div>
                 </div>

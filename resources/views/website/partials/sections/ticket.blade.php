@@ -11,12 +11,13 @@
 
         <div class="lg:max-w-6xl m-auto sm:ml-4">
             <div class="grid grid-cols-3 gap-4 sm:grid-cols-1">
+                <div></div>
                 <div  data-aos="flip-left" data-aos-delay="100">
                     <div class="bg-neutral-black py-16">
                         <div class="text-center mb-8">
                             <h4 class="text-2xl text-white font-light mb-6">Senha Padrão</h4>
                             <p class="text-3xl text-white font-bold">
-                                <span class="text-neon-pink text-base align-top font-normal">R$</span> 40,00
+                                <span class="text-neon-pink text-base align-top font-normal">R$</span> 40,66
                             </p>
                         </div>
                         <div class="mb-16">
@@ -41,7 +42,7 @@
                     <div class="h-1 bg-gradient-to-r from-neon-pink to-neon-purple"></div>
                 </div>
 
-                <div class="col-span-2"></div>
+                <div></div>
             </div>
         </div>
     </div>
