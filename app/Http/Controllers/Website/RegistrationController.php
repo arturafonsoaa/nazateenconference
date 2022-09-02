@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Website\RegisterParticipantRequest;
-use App\Models\Registration;
 use App\Models\User;
 use App\Services\RegistrationService;
 use Exception;
