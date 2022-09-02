@@ -9,6 +9,11 @@
             </div>
         </div>
 
+        <div class="lg:max-w-5xl flex justify-center items-center my-12 m-auto sm:flex-wrap">
+            <p class="text-2xl text-white uppercase font-bold" data-aos="zoom-in" data-aos-delay="100">EM BREVE!</p>
+        </div>
+
+        {{--
         <div>
             <ul class="nav nav-tabs flex bg-neutral-gray w-fit m-auto rounded-xl sm:flex-col" role="tablist" data-aos="fade-right" data-aos-delay="50">
                 <li class="nav-item" role="presentation">
@@ -143,5 +148,6 @@
             </div>
 
         </div>
+        --}}
     </div>
 </section>

@@ -18,7 +18,7 @@
                             class="w-full rounded-full border-2 border-white" />
                     </div>
                     <div class="px-8 pb-8">
-                        <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Palestrante 0</h4>
+                        <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Em breve</h4>
                         <p class="text-neutral-gray">
                             Palestra de abertura
                         </p>
@@ -33,7 +33,7 @@
                             class="w-full rounded-full border-2 border-white" />
                     </div>
                     <div class="px-8 pb-8">
-                        <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Palestrante 1</h4>
+                        <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Em breve</h4>
                         <p class="text-neon-blue">
                             Santidade pessoal
                         </p>
@@ -48,7 +48,7 @@
                             class="w-full rounded-full border-2 border-white" />
                     </div>
                     <div class="px-8 pb-8">
-                        <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Palestrante 2</h4>
+                        <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Em breve</h4>
                         <p class="text-neon-purple">
                             Santidade social
                         </p>
@@ -63,7 +63,7 @@
                             class="w-full rounded-full border-2 border-white" />
                     </div>
                     <div class="px-8 pb-8">
-                        <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Palestrante 3</h4>
+                        <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Em breve</h4>
                         <p class="text-neon-pink">
                             Santidade sexual
                         </p>
