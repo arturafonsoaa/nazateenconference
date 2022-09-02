@@ -12,7 +12,9 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('admin.index');
+        return view('admin.index', [
+            'user' => auth()->user()
+        ]);
     }
 
     public function changePassword()

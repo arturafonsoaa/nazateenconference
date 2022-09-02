@@ -1,5 +1,7 @@
 <?php
 
+use function PHPSTORM_META\map;
+
 return [
 
     /*
@@ -290,7 +292,16 @@ return [
     */
 
     'menu' => [
-
+        [
+            'text' => 'Início',
+            'route' => 'admin.index',
+            'icon' => 'fa fa-id-card fa-fw mr-1',
+        ],
+        [
+            'text' => 'Alterar senha',
+            'route' => 'admin.changePassword',
+            'icon' => 'fa fa-lock fa-fw mr-1',
+        ]
     ],
 
     /*
