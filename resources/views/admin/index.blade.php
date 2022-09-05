@@ -1,5 +1,48 @@
 @extends('adminlte::page')
 
+@role('admin')
+    @section('content')
+        <div class="py-5">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2">
+                    <h3 class="mb-3">
+                        Dados das inscrições
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="info-box text-white" style="background-color: #7831b6;">
+                                <span class="info-box-icon"><i class="fa fa-check"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Inscrições pagas e aprovadas</span>
+                                    <span class="info-box-number mt-0">{{ $approvedRegistrations }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="info-box bg-warning">
+                                <span class="info-box-icon"><i class="fa fa-spinner"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Inscrições pendentes de aprovação</span>
+                                    <span class="info-box-number mt-0">{{ $underAnalysisRegistrations }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="info-box bg-maroon">
+                                <span class="info-box-icon"><i class="fa fa-wallet"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Inscrições sem pagamento</span>
+                                    <span class="info-box-number mt-0">{{ $pendingPaymentRegistrations }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endsection
+@endrole
+
 @role('registration')
     @section('content')
         <div class="py-5">

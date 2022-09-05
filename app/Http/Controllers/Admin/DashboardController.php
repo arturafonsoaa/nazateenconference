@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\UpdatePasswordRequest;
+use App\Models\Registration;
 use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -12,8 +13,15 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        $approvedRegistrations = Registration::whereStatus('approved')->count();
+        $underAnalysisRegistrations = Registration::whereStatus('under_analysis')->count();
+        $pendingPaymentRegistrations = Registration::whereStatus('pending_payment')->count();
+
         return view('admin.index', [
-            'user' => auth()->user()
+            'user' => auth()->user(),
+            'approvedRegistrations' => $approvedRegistrations,
+            'underAnalysisRegistrations' => $underAnalysisRegistrations,
+            'pendingPaymentRegistrations' => $pendingPaymentRegistrations,
         ]);
     }
 
