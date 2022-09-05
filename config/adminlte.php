@@ -308,6 +308,25 @@ return [
             'route' => 'admin.changePassword',
             'icon' => 'fa fa-lock fa-fw mr-1',
             'can' => 'admin.changePassword'
+        ],
+        [
+            'text' => 'Administradores',
+            'icon' => 'fa fa-user-cog fa-fw mr-1',
+            'can' => 'admin.adminUser.index',
+            'submenu' => [
+                [
+                    'text' => 'Listar administradores',
+                    'route' => 'admin.adminUser.index',
+                    'icon' => 'fa fa-users-cog fa-fw mr-1',
+                    'can' => 'admin.adminUser.index'
+                ],
+                [
+                    'text' => 'Cadastrar administrador',
+                    'route' => 'admin.adminUser.create',
+                    'icon' => 'fa fa-user-plus fa-fw mr-1',
+                    'can' => 'admin.adminUser.create'
+                ],
+            ],
         ]
     ],
 
