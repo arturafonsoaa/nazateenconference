@@ -15,6 +15,7 @@ return [
     'admin.adminUser.edit' => ['admin'],
 
     'admin.registration.index' => ['admin'],
+    'admin.registration.approve' => ['admin'],
 
     'admin.changePassword' => ['admin', 'registration'],
     'admin.updatePassword' => ['admin', 'registration'],

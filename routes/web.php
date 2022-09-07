@@ -27,6 +27,7 @@ Route::middleware(['auth', 'permission.check'])->prefix('painel')->name('admin.'
 
         Route::prefix('registros')->name('registration.')->group(function () {
             Route::get('', [AdminRegistrationController::class, 'index'])->name('index');
+            Route::get('{registrationId}/aprovar-cadastro', [AdminRegistrationController::class, 'approve'])->name('approve');
         });
     });
 

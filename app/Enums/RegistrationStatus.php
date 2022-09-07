@@ -13,9 +13,9 @@ final class RegistrationStatus extends Enum
     #[Description('Em análise')]
     const UnderAnalysis = 'under_analysis';
 
-    #[Description('Aprovado')]
+    #[Description('Aprovada')]
     const Approved = 'approved';
 
-    #[Description('Recusado')]
+    #[Description('Recusada')]
     const Refused = 'refused';
 }
