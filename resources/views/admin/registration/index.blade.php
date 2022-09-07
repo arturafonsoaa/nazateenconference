@@ -19,6 +19,7 @@
                                         <th>Idade</th>
                                         <th>Whatsapp</th>
                                         <th>Comprovante</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -36,6 +37,13 @@
                                                     </a>
                                                 @endif
                                             </td>
+                                            <td>
+                                                @if (!is_null($registration->payment_voucher) && $registration->status == 'under_analysis')
+                                                    <x-adminlte-button aria-id="{{ $registration->id }}" icon="fa fa-check fa-fw" data-toggle="modal"
+                                                        data-target="#approve-confirmation-modal" class="text-white btn-xs btn-open-modal-approve-registration"
+                                                        style="background-color: #7831b6;" />
+                                                @endif
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -46,4 +54,27 @@
             </div>
         </div>
     </div>
+
+    <div id="url-approve-registration" class="d-none">
+        {{ route('admin.registration.approve', 0) }}
+    </div>
+
+    <x-adminlte-modal id="approve-confirmation-modal" title="Tem certeza que deseja aprovar a inscrição?">
+        <x-slot name="footerSlot">
+            <a id="btn-confirm-approval" href="" class="btn text-white" style="background-color: #7831b6;">
+                <i class="fa fa-check fa-fw"></i> Aprovar
+            </a>
+            <x-adminlte-button theme="default" label="Cancelar" data-dismiss="modal" />
+        </x-slot>
+    </x-adminlte-modal>
+@endsection
+
+@section('js')
+    @parent
+    <script>
+        jQuery('.btn-open-modal-approve-registration').click(function() {
+            let urlApproveRegistration = jQuery('#url-approve-registration').html().trim().replace('/0', '/' + jQuery(this).attr('aria-id'))
+            jQuery('#btn-confirm-approval').attr('href', urlApproveRegistration)
+        })
+    </script>
 @endsection
