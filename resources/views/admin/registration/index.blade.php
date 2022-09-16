@@ -49,7 +49,7 @@
                                 </tbody>
                             </table>
 
-                            {{ $members->links() }}
+                            {{ $registrations->links() }}
                         </div>
                     </div>
                 </div>
