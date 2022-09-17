@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\RegistrationController as AdminRegistrationController;
+use App\Http\Controllers\Admin\ReportsController;
 use App\Http\Controllers\Website\HomeController;
 use App\Http\Controllers\Website\RegistrationController;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,10 @@ Route::middleware(['auth', 'permission.check'])->prefix('painel')->name('admin.'
         Route::prefix('registros')->name('registration.')->group(function () {
             Route::get('', [AdminRegistrationController::class, 'index'])->name('index');
             Route::get('{registrationId}/aprovar-cadastro', [AdminRegistrationController::class, 'approve'])->name('approve');
+        });
+
+        Route::prefix('relatorios')->name('reports.')->group(function() {
+            Route::get('inscricoes-por-dia', [ReportsController::class, 'registrationsPerDay'])->name('registrationsPerDay');
         });
     });
 
