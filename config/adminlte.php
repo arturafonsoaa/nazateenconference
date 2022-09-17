@@ -304,6 +304,19 @@ return [
             'can' => 'admin.registration.index'
         ],
         [
+            'text' => 'Relatórios',
+            'icon' => 'fa fa-chart-line fa-fw mr-1',
+            'can' => 'admin.reports.index',
+            'submenu' => [
+                [
+                    'text' => 'Inscrições por dia',
+                    'route' => 'admin.reports.registrationsPerDay',
+                    'icon' => '',
+                    'can' => 'admin.reports.registrationsPerDay'
+                ],
+            ],
+        ],
+        [
             'text' => 'Alterar senha',
             'route' => 'admin.changePassword',
             'icon' => 'fa fa-lock fa-fw mr-1',
