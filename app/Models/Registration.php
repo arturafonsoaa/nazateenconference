@@ -12,9 +12,16 @@ class Registration extends Model
 
     protected $guarded = ['id'];
 
+    protected $appends = ['br_date'];
+
     public function getHumanStatusAttribute()
     {
         return RegistrationStatus::fromValue($this->status)->description;
+    }
+
+    public function getBrDateAttribute()
+    {
+        return $this->created_at->format('d/m/Y');
     }
 
     public function user()
