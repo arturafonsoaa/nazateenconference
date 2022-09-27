@@ -3,25 +3,38 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Enums\PaymentMethod;
+use App\Enums\RegistrationStatus;
+use App\Enums\RegistrationType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Registration\ApproveRegistrationRequest;
 use App\Jobs\SendRegistrationApproveEmailJob;
 use App\Models\Registration;
 use Exception;
-use Illuminate\Support\Arr;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class RegistrationController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         try {
+            $registrations = Registration::query();
+
+            if ($request->has('name') && !is_null($request->get('name'))) {
+                $registrations->where('name', 'like', '%' . $request->get('name') . '%');
+            }
+
+            if ($request->has('status') && !is_null($request->get('status'))) {
+                $registrations->whereStatus($request->get('status'));
+            }
+
             $paymentMethods = PaymentMethod::asSelectArray();
             unset($paymentMethods['gift_coupon']);
 
             return view('admin.registration.index', [
                 'paymentMethods' => $paymentMethods,
-                'registrations' => Registration::paginate(50)
+                'registrationStatuses' => RegistrationStatus::asSelectArray(),
+                'registrations' => $registrations->paginate(50)
             ]);
         } catch (Exception $e) {
             dd($e->getMessage());
