@@ -26,9 +26,6 @@
                     <a class="nav-link text-white hover:text-neon-pink" href="#section-schedule">Programação</a>
                 </li>
                 <li class="nav-item p-2">
-                    <a class="nav-link text-white hover:text-neon-pink" href="#section-sponsors">Patrocinadores</a>
-                </li>
-                <li class="nav-item p-2">
                     <a class="nav-link text-white hover:text-neon-pink" href="#section-register-now">Inscrição</a>
                 </li>
                 <li class="nav-item p-2">
