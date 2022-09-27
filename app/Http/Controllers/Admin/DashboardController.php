@@ -13,12 +13,14 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        $totalOfRegistrations = Registration::where('status', '!=', 'refused')->count();
         $approvedRegistrations = Registration::whereStatus('approved')->count();
         $underAnalysisRegistrations = Registration::whereStatus('under_analysis')->count();
         $pendingPaymentRegistrations = Registration::whereStatus('pending_payment')->count();
 
         return view('admin.index', [
             'user' => auth()->user(),
+            'totalOfRegistrations' => $totalOfRegistrations,
             'approvedRegistrations' => $approvedRegistrations,
             'underAnalysisRegistrations' => $underAnalysisRegistrations,
             'pendingPaymentRegistrations' => $pendingPaymentRegistrations,
