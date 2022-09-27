@@ -13,11 +13,12 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Nome</th>
                                         <th>Matrícula</th>
-                                        <th>Situação da matrícula</th>
+                                        <th>Nome</th>
                                         <th>Idade</th>
                                         <th>Whatsapp</th>
+                                        <th>E-mail</th>
+                                        <th>Situação da matrícula</th>
                                         <th>Comprovante</th>
                                         <th></th>
                                     </tr>
@@ -25,11 +26,12 @@
                                 <tbody>
                                     @foreach ($registrations as $registration)
                                         <tr>
-                                            <td>{{ $registration->user->name }}</td>
                                             <td>{{ $registration->registration_code }}</td>
-                                            <td>{{ $registration->human_status }}</td>
+                                            <td>{{ $registration->user->name }}</td>
                                             <td>{{ $registration->age }}</td>
                                             <td>{{ $registration->phone }}</td>
+                                            <td>{{ $registration->user->email }}</td>
+                                            <td>{{ $registration->human_status }}</td>
                                             <td>
                                                 @if (!is_null($registration->payment_voucher))
                                                     <a href="{{ route('admin.downloadPaymentVoucher', $registration->id) }}">
@@ -48,9 +50,8 @@
                                     @endforeach
                                 </tbody>
                             </table>
-
-                            {{ $registrations->links() }}
                         </div>
+                        {{ $registrations->links() }}
                     </div>
                 </div>
             </div>
