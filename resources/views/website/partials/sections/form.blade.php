@@ -22,6 +22,16 @@
                             @enderror
                         </div>
                         <div class="mb-4">
+                            <select id="registration-type" name="registration_type"
+                                class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus-border focus:border-neon-blue border-transparent @error('registration_type') border-red-600 @enderror">
+                                @foreach ($registrationTypes as $registrationTypeKey => $registrationType)
+                                    <option value="{{ $registrationTypeKey }}">
+                                        {{ $registrationType }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div id="age-field-container" class="mb-4">
                             <input type="number" placeholder="Idade*" name="age" value="{{ old('age') }}"
                                 class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus:border focus:border-neon-blue border-transparent @error('age') border-red-600 @enderror">
                             @error('age')
@@ -69,6 +79,14 @@
             let phoneField = document.getElementById("phone")
             let phoneMask = new Inputmask("(99) 99999-9999")
             phoneMask.mask(phoneField)
+
+            document.getElementById('registration-type').addEventListener('change', function() {
+                document.getElementById('age-field-container').classList.remove('hidden')
+
+                if (this.value != 'participant') {
+                    document.getElementById('age-field-container').classList.add('hidden')
+                }
+            })
         })
     </script>
 @endsection

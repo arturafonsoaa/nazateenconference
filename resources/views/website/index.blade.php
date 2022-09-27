@@ -14,7 +14,9 @@
         @include('website.partials.sections.testimonials')
         @include('website.partials.sections.call-to-action')
         @include('website.partials.sections.gallery')
-        @include('website.partials.sections.form')
+        @include('website.partials.sections.form', [
+            'registrationTypes' => $registrationTypes
+        ])
     </main>
 
     <footer class="bg-neutral-gray py-20">
