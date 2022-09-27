@@ -12,7 +12,7 @@
                         <div class="col-md-3 col-sm-6 col-12">
                             <a href="{{ route('admin.registration.index') }}">
                                 <div class="info-box bg-dark">
-                                    <span class="info-box-icon"><i class="fa fa-check"></i></span>
+                                    <span class="info-box-icon"><i class="fa fa-users"></i></span>
                                     <div class="info-box-content">
                                         <span class="info-box-text">Total de inscrições</span>
                                         <span class="info-box-number mt-0">{{ $totalOfRegistrations }}</span>
