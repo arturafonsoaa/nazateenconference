@@ -4,12 +4,23 @@
     @section('content')
         <div class="py-5">
             <div class="row">
-                <div class="col-12 col-md-8 offset-md-2">
+                <div class="col-12">
                     <h3 class="mb-3">
                         Dados das inscrições
                     </h3>
                     <div class="row">
-                        <div class="col-md-4 col-sm-6 col-12">
+                        <div class="col-md-3 col-sm-6 col-12">
+                            <a href="{{ route('admin.registration.index') }}">
+                                <div class="info-box bg-dark">
+                                    <span class="info-box-icon"><i class="fa fa-check"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Total de inscrições</span>
+                                        <span class="info-box-number mt-0">{{ $totalOfRegistrations }}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-12">
                             <a href="{{ route('admin.registration.index') . '?status=approved' }}">
                                 <div class="info-box text-white" style="background-color: #7831b6;">
                                     <span class="info-box-icon"><i class="fa fa-check"></i></span>
@@ -20,7 +31,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-12">
+                        <div class="col-md-3 col-sm-6 col-12">
                             <a href="{{ route('admin.registration.index') . '?status=under_analysis' }}">
                                 <div class="info-box bg-warning">
                                     <span class="info-box-icon"><i class="fa fa-spinner"></i></span>
@@ -31,7 +42,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-12">
+                        <div class="col-md-3 col-sm-6 col-12">
                             <a href="{{ route('admin.registration.index') . '?status=pending_payment' }}">
                                 <div class="info-box bg-maroon">
                                     <span class="info-box-icon"><i class="fa fa-wallet"></i></span>
