@@ -9,15 +9,50 @@
                 </h3>
                 <div class="card">
                     <div class="card-body">
+                        <div class="mb-3">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <x-adminlte-input value="{{ request()->has('name') ? request()->get('name') : '' }}" name="name"
+                                            placeholder="Busque pelo nome" class="mb-0" />
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="float-right">
+                                            <button class="btn btn-default mr-1" type="button" data-toggle="collapse"
+                                                data-target="#search-collapse" aria-expanded="{{ !empty(request()->toArray()) ? 'true' : 'false' }}"
+                                                aria-controls="search-collapse">
+                                                <i class="fa fa-filter"></i>
+                                                Filtros
+                                            </button>
+                                            <a href="{{ route('admin.registration.index') }}" class="btn btn-default mr-1">
+                                                <i class="fa fa-recycle"></i>
+                                                Limpar
+                                            </a>
+                                            <button class="btn text-white" type="submit" style="background-color: #7831b6;">
+                                                <i class="fa fa-search"></i>
+                                                Buscar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse @if (!empty(request()->toArray())) show @endif " id="search-collapse">
+                                    <x-adminlte-select label="Situação da inscrição" name="status">
+                                        <x-adminlte-options empty-option="Todos" :options="$registrationStatuses" :selected="request()->has('status') ? request()->get('status'): null" />
+                                    </x-adminlte-select>
+                                </div>
+                            </form>
+                        </div>
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Nome</th>
+                                        <th>#</th>
                                         <th>Matrícula</th>
-                                        <th>Situação da matrícula</th>
+                                        <th>Nome</th>
                                         <th>Idade</th>
                                         <th>Whatsapp</th>
+                                        <th>E-mail</th>
+                                        <th>Situação da matrícula</th>
                                         <th>Comprovante</th>
                                         <th></th>
                                     </tr>
@@ -25,11 +60,13 @@
                                 <tbody>
                                     @foreach ($registrations as $registration)
                                         <tr>
-                                            <td>{{ $registration->user->name }}</td>
+                                            <td>{{ $loop->iteration }}</td>
                                             <td>{{ $registration->registration_code }}</td>
-                                            <td>{{ $registration->human_status }}</td>
+                                            <td>{{ $registration->user->name }}</td>
                                             <td>{{ $registration->age }}</td>
                                             <td>{{ $registration->phone }}</td>
+                                            <td>{{ $registration->user->email }}</td>
+                                            <td>{{ $registration->human_status }}</td>
                                             <td>
                                                 @if (!is_null($registration->payment_voucher))
                                                     <a href="{{ route('admin.downloadPaymentVoucher', $registration->id) }}">
@@ -48,9 +85,8 @@
                                     @endforeach
                                 </tbody>
                             </table>
-
-                            {{ $registrations->links() }}
                         </div>
+                        {{ $registrations->links() }}
                     </div>
                 </div>
             </div>
@@ -65,7 +101,7 @@
         <form id="form-confirm-approval" action="" method="post">
             @csrf
 
-            <x-adminlte-select name="payment_method">
+            <x-adminlte-select label="Método de pagamento" name="payment_method">
                 <x-adminlte-options :options="$paymentMethods" />
             </x-adminlte-select>
 

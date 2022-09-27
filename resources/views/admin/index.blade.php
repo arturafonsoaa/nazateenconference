@@ -10,31 +10,37 @@
                     </h3>
                     <div class="row">
                         <div class="col-md-4 col-sm-6 col-12">
-                            <div class="info-box text-white" style="background-color: #7831b6;">
-                                <span class="info-box-icon"><i class="fa fa-check"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Inscrições pagas e aprovadas</span>
-                                    <span class="info-box-number mt-0">{{ $approvedRegistrations }}</span>
+                            <a href="{{ route('admin.registration.index') . '?status=approved' }}">
+                                <div class="info-box text-white" style="background-color: #7831b6;">
+                                    <span class="info-box-icon"><i class="fa fa-check"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Inscrições pagas e aprovadas</span>
+                                        <span class="info-box-number mt-0">{{ $approvedRegistrations }}</span>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-4 col-sm-6 col-12">
-                            <div class="info-box bg-warning">
-                                <span class="info-box-icon"><i class="fa fa-spinner"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Inscrições pendentes de aprovação</span>
-                                    <span class="info-box-number mt-0">{{ $underAnalysisRegistrations }}</span>
+                            <a href="{{ route('admin.registration.index') . '?status=under_analysis' }}">
+                                <div class="info-box bg-warning">
+                                    <span class="info-box-icon"><i class="fa fa-spinner"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Inscrições pendentes de aprovação</span>
+                                        <span class="info-box-number mt-0">{{ $underAnalysisRegistrations }}</span>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-4 col-sm-6 col-12">
-                            <div class="info-box bg-maroon">
-                                <span class="info-box-icon"><i class="fa fa-wallet"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Inscrições sem pagamento</span>
-                                    <span class="info-box-number mt-0">{{ $pendingPaymentRegistrations }}</span>
+                            <a href="{{ route('admin.registration.index') . '?status=pending_payment' }}">
+                                <div class="info-box bg-maroon">
+                                    <span class="info-box-icon"><i class="fa fa-wallet"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Inscrições sem pagamento</span>
+                                        <span class="info-box-number mt-0">{{ $pendingPaymentRegistrations }}</span>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
