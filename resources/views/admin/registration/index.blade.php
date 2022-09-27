@@ -86,7 +86,11 @@
                                 </tbody>
                             </table>
                         </div>
-                        {{ $registrations->links() }}
+                        <div class="d-flex justify-content-center">
+                            <div class="my-4">
+                                {{ $registrations->appends(request()->query())->links() }}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
