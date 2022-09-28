@@ -52,6 +52,7 @@
                                         <th>Idade</th>
                                         <th>Whatsapp</th>
                                         <th>E-mail</th>
+                                        <th>Igreja</th>
                                         <th>Situação da matrícula</th>
                                         <th>Comprovante</th>
                                         <th></th>
@@ -66,6 +67,7 @@
                                             <td>{{ $registration->age }}</td>
                                             <td>{{ $registration->phone }}</td>
                                             <td>{{ $registration->user->email }}</td>
+                                            <td>{{ $registration->church }}</td>
                                             <td>{{ $registration->human_status }}</td>
                                             <td>
                                                 @if (!is_null($registration->payment_voucher))
