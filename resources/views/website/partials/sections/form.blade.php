@@ -46,10 +46,26 @@
                                 <p class="text-red-600 text-sm">{{ $message }}</p>
                             @enderror
                         </div>
-                        <div>
+                        <div class="mb-4">
                             <input type="text" placeholder="E-mail*" name="email" value="{{ old('email') }}"
                                 class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus:border focus:border-neon-blue border-transparent @error('email') border-red-600 @enderror">
                             @error('email')
+                                <p class="text-red-600 text-sm">{{ $message }}</p>
+                            @enderror
+                        </div>
+                        <div class="mb-4">
+                            <select id="church-select" name="church"
+                                class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus-border focus:border-neon-blue border-transparent @error('church') border-red-600 @enderror">
+                                    <option value="Igreja do Nazareno Central de Mossoró">Igreja do Nazareno Central de Mossoró</option>
+                                    <option value="Outra">Outra</option>
+                                    <option value="Nenhuma">Nenhuma</option>
+                            </select>
+                        </div>
+                        <div id="church-description-container" class="hidden">
+                            <input id="church-description" type="text" placeholder="Qual igreja?*" name="church_description"
+                                value="{{ old('church_description') }}"
+                                class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus:border focus:border-neon-blue border-transparent @error('church_description') border-red-600 @enderror">
+                            @error('church_description')
                                 <p class="text-red-600 text-sm">{{ $message }}</p>
                             @enderror
                         </div>
@@ -85,6 +101,14 @@
 
                 if (this.value != 'participant') {
                     document.getElementById('age-field-container').classList.add('hidden')
+                }
+            })
+
+            document.getElementById('church-select').addEventListener('change', function() {
+                document.getElementById('church-description-container').classList.add('hidden')
+
+                if (this.value == 'Outra') {
+                    document.getElementById('church-description-container').classList.remove('hidden')
                 }
             })
         })

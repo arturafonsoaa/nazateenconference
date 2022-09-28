@@ -31,7 +31,8 @@ class RegistrationController extends Controller
                 'age' => $request->get('age'),
                 'phone' => $request->get('phone'),
                 'message' => $request->get('message'),
-                'registration_type' => $request->get('registration_type')
+                'registration_type' => $request->get('registration_type'),
+                'church' => $request->get('church') == 'Outra' ? $request->get('church_description') : $request->get('church')
             ]);
 
             $user->syncRoles(['registration']);

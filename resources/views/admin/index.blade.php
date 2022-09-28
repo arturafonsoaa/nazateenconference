@@ -110,6 +110,10 @@
                                         <td>{{ $user->registration->age }}</td>
                                     </tr>
                                     <tr>
+                                        <td class="font-weight-bold">Igreja</td>
+                                        <td>{{ $user->registration->church }}</td>
+                                    </tr>
+                                    <tr>
                                         <td class="font-weight-bold">Whatsapp</td>
                                         <td>{{ $user->registration->phone }}</td>
                                     </tr>
