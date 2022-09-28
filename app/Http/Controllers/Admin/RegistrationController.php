@@ -65,4 +65,26 @@ class RegistrationController extends Controller
             return to_route('admin.registration.index');
         }
     }
+
+    public function destroy(int $registrationId)
+    {
+        DB::beginTransaction();
+
+        try {
+            $registration = Registration::findOrFail($registrationId);
+            $user = $registration->user;
+
+            $registration->forceDelete();
+            $user->delete();
+
+            DB::commit();
+
+            notify()->success('Inscrição excluída com sucesso!', 'Sucesso!');
+            return to_route('admin.registration.index');
+        } catch (Exception $e) {
+            DB::rollBack();
+            notify()->error($e->getMessage(), 'Erro');
+            return to_route('admin.registration.index');
+        }
+    }
 }
