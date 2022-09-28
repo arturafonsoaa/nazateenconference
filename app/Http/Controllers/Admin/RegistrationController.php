@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Enums\PaymentMethod;
 use App\Enums\RegistrationStatus;
-use App\Enums\RegistrationType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Registration\ApproveRegistrationRequest;
 use App\Jobs\SendRegistrationApproveEmailJob;

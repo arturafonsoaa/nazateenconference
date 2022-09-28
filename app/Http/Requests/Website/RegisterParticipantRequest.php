@@ -20,7 +20,9 @@ class RegisterParticipantRequest extends FormRequest
             'phone' => 'required',
             'email' => 'required|unique:users,email',
             'registration_type' => 'required',
-            'age' => 'required_if:registration_type,==,participant|nullable|integer|max:18|min:12'
+            'age' => 'required_if:registration_type,==,participant|nullable|integer|max:18|min:12',
+            'church' => 'required',
+            'church_description' => 'required_if:church,==,Outra|nullable'
         ];
     }
 
@@ -33,6 +35,7 @@ class RegisterParticipantRequest extends FormRequest
             'email.unique' => 'E-mail já utilizado',
             'registration_type.required' => 'Por favor, preencha o tipo de inscrição',
             'age.required_if' => 'Por favor, preencha sua idade',
+            'church_description.required_if' => 'Por favor, preencha sua igreja',
             'age.integer' => 'Por favor, preencha uma idade válida',
             'age.max' => 'A idade máxima permitida para o evento é de 18 anos',
             'age.min' => 'A idade mínima permitida para o evento é de 12 anos',
