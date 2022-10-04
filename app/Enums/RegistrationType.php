@@ -10,6 +10,6 @@ final class RegistrationType extends Enum
     #[Description('Participante')]
     const PendingPayment = 'participant';
 
-    #[Description('Líder')]
+    #[Description('Líder de adolescentes')]
     const UnderAnalysis = 'leader';
 }

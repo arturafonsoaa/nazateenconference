@@ -6,6 +6,11 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class RegisterParticipantRequest extends FormRequest
 {
+    public function __construct()
+    {
+        $this->redirect = route('website.index') . '#section-register-now';
+    }
+
     public function authorize()
     {
         return true;
@@ -13,8 +18,6 @@ class RegisterParticipantRequest extends FormRequest
 
     public function rules()
     {
-        $this->redirect = url()->previous() . '#section-register-now';
-
         return [
             'name' => 'required',
             'phone' => 'required',

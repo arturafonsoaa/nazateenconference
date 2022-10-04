@@ -314,6 +314,12 @@ return [
                     'icon' => '',
                     'can' => 'admin.reports.registrationsPerDay'
                 ],
+                [
+                    'text' => 'Métodos de pagamento',
+                    'route' => 'admin.reports.paymentMethod',
+                    'icon' => '',
+                    'can' => 'admin.reports.paymentMethod'
+                ],
             ],
         ],
         [
