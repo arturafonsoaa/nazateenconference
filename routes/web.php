@@ -34,6 +34,7 @@ Route::middleware(['auth', 'permission.check'])->prefix('painel')->name('admin.'
 
         Route::prefix('relatorios')->name('reports.')->group(function() {
             Route::get('inscricoes-por-dia', [ReportsController::class, 'registrationsPerDay'])->name('registrationsPerDay');
+            Route::get('metodos-de-pagamento', [ReportsController::class, 'paymentMethod'])->name('paymentMethod');
         });
     });
 

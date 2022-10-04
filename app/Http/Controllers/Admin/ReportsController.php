@@ -17,6 +17,20 @@ class ReportsController extends Controller
                 'registrations' => $registrations
             ]);
         } catch (Exception $e) {
+            return to_route('admin.index');
+        }
+    }
+
+    public function paymentMethod()
+    {
+        try {
+            $paymentMethods = Registration::where('status', 'approved')->get()->groupBy('payment_method');
+
+            return view('admin.reports.payment-method', [
+                'paymentMethods' => $paymentMethods
+            ]);
+        } catch (Exception $e) {
+            return to_route('admin.index');
         }
     }
 }
