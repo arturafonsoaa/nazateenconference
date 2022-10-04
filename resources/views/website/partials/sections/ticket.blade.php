@@ -29,7 +29,7 @@
                                     <i class="fa fa-check text-neon-pink mr-4"></i> Coffee break
                                 </li>
                                 <li class="py-4 px-6 bg-neutral-gray">
-                                    <i class="fa fa-check text-neon-pink mr-4"></i> Brindes
+                                    <i class="fa fa-check text-neon-pink mr-4"></i> Brinde
                                 </li>
                             </ul>
                         </div>
