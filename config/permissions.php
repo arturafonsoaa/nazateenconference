@@ -19,6 +19,7 @@ return [
 
     'admin.reports.index' => ['admin'],
     'admin.reports.registrationsPerDay' => ['admin'],
+    'admin.reports.paymentMethod' => ['admin'],
 
     'admin.changePassword' => ['admin', 'registration'],
     'admin.updatePassword' => ['admin', 'registration'],
