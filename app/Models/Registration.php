@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\PaymentMethod;
 use App\Enums\RegistrationStatus;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -16,7 +17,10 @@ class Registration extends Model
 
     public function getHumanStatusAttribute()
     {
-        return RegistrationStatus::fromValue($this->status)->description;
+        $statusDescription = RegistrationStatus::fromValue($this->status)->description;
+        return $this->status == 'approved' ?
+            $statusDescription . ' (' . PaymentMethod::fromValue($this->payment_method)->description . ')' :
+            $statusDescription;
     }
 
     public function getBrDateAttribute()

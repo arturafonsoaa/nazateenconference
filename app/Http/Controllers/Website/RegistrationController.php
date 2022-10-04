@@ -22,7 +22,7 @@ class RegistrationController extends Controller
                 'name' => $request->get('name'),
                 'email' => $request->get('email'),
                 'password' => Hash::make('123456'),
-                'default_password' => true
+                'default_password' => true,
             ]);
 
             $user->registration()->create([
@@ -30,7 +30,9 @@ class RegistrationController extends Controller
                 'name' => $request->get('name'),
                 'age' => $request->get('age'),
                 'phone' => $request->get('phone'),
-                'message' => $request->get('message')
+                'message' => $request->get('message'),
+                'registration_type' => $request->get('registration_type'),
+                'church' => $request->get('church') == 'Outra' ? $request->get('church_description') : $request->get('church')
             ]);
 
             $user->syncRoles(['registration']);
@@ -41,6 +43,7 @@ class RegistrationController extends Controller
 
             return to_route('admin.index');
         } catch (Exception $e) {
+            dd($e->getMessage());
             DB::rollBack();
             return redirect()->back();
         }
