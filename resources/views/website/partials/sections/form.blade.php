@@ -53,7 +53,7 @@
                                 <p class="text-red-600 text-sm">{{ $message }}</p>
                             @enderror
                         </div>
-                        <div class="mb-4">
+                        <div>
                             <select id="church-select" name="church"
                                 class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus-border focus:border-neon-blue border-transparent @error('church') border-red-600 @enderror">
                                     <option value="Igreja do Nazareno Central de Mossoró">Igreja do Nazareno Central de Mossoró</option>
@@ -61,7 +61,7 @@
                                     <option value="Nenhuma">Nenhuma</option>
                             </select>
                         </div>
-                        <div id="church-description-container" class="hidden">
+                        <div id="church-description-container" class="hidden mt-4">
                             <input id="church-description" type="text" placeholder="Qual igreja?*" name="church_description"
                                 value="{{ old('church_description') }}"
                                 class="w-full bg-neutral-gray p-4 text-white focus:ring-0 focus:border focus:border-neon-blue border-transparent @error('church_description') border-red-600 @enderror">
@@ -80,8 +80,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="text-center mb-4">
                     <button class="uppercase py-2 px-8 bg-neon-blue rounded-lg">Cadastrar</button>
+                </div>
+                <div class="text-center">
+                    <a href="{{ route('login') }}" class="text-neon-pink">Já se inscreveu? Clique aqui para acompanhar sua inscrição.</a>
                 </div>
             </form>
         </div>
