@@ -14,13 +14,13 @@
                 <div class="block rounded-lg shadow-lg bg-white">
                     <div class="overflow-hidden rounded-t-lg h-28 bg-neutral-gray"></div>
                     <div class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
-                        <img src="https://dummyimage.com/400x400/fff/fff"
+                        <img src="{{ Vite::asset('resources/img/joaomatheus.jpeg') }}"
                             class="w-full rounded-full border-2 border-white" />
                     </div>
                     <div class="px-8 pb-8">
-                        <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Em breve</h4>
+                        <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Pr. João Matheus</h4>
                         <p class="text-neutral-gray">
-                            Palestra de abertura
+                            Santidade
                         </p>
                     </div>
                 </div>
