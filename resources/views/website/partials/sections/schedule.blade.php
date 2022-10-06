@@ -127,7 +127,7 @@
                         </div>
                         <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray sm:flex sm:flex-col"
                             data-aos="fade-right" data-aos-delay="100">
-                            <div class="si-time text-white text-center">18:00 às 19:00</div>
+                            <div class="si-time text-white text-center">18:00 às 19:30</div>
 
                             <div class="si-info col-span-5 sm:px-4">
                                 <h3 class="text-white font-extrabold text-xl mb-2">
@@ -137,7 +137,7 @@
                         </div>
                         <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray sm:flex sm:flex-col"
                             data-aos="fade-right" data-aos-delay="100">
-                            <div class="si-time text-white text-center">19:00 às 21:00</div>
+                            <div class="si-time text-white text-center">19:30 às 21:30</div>
                             <div class="si-info col-span-4 sm:px-4">
                                 <h3 class="text-white font-extrabold text-xl mb-2 text-center lg:text-left">
                                     4&ordf; Sessão
@@ -146,7 +146,7 @@
                                     <ul class="text-white text-center lg:text-left">
                                         <li>Vídeo/Testemunho</li>
                                         <li>Ministério de Louvor Nazateen Conference</li>
-                                        <li>Palestra sobre Santidade Sexual</li>
+                                        <li>Palestra sobre Santidade Social</li>
                                     </ul>
                                 </p>
                             </div>
