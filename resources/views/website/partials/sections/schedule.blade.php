@@ -54,7 +54,7 @@
                         </div>
                         <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray sm:flex sm:flex-col"
                             data-aos="fade-right" data-aos-delay="100">
-                            <div class="si-time text-white text-center">19:90</div>
+                            <div class="si-time text-white text-center">19:30</div>
                             <div class="si-info col-span-4 sm:px-4">
                                 <h3 class="text-white font-extrabold text-xl mb-2 text-center lg:text-left">
                                     1&ordf; Sessão
