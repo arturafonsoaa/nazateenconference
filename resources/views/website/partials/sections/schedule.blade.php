@@ -111,6 +111,7 @@
                                 </h3>
                                 <p class="text-gray-200">
                                     <ul class="text-white text-center lg:text-left">
+                                        <li>Ministério de Louvor Nazateen Conference</li>
                                         <li>Roda de Conversa</li>
                                         <li>Palestra sobre Santidade Sexual</li>
                                     </ul>
