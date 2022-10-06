@@ -35,7 +35,7 @@ class RegisterParticipantRequest extends FormRequest
             'name.required' => 'Por favor, preencha seu nome',
             'phone.required' => 'Por favor, preencha seu whatsapp',
             'email.required' => 'Por favor, preencha seu e-mail',
-            'email.unique' => 'E-mail já utilizado',
+            'email.unique' => 'E-mail já utilizado, por favor, clique no link abaixo para acompanhar sua inscrição.',
             'registration_type.required' => 'Por favor, preencha o tipo de inscrição',
             'age.required_if' => 'Por favor, preencha sua idade',
             'church_description.required_if' => 'Por favor, preencha sua igreja',

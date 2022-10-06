@@ -40,21 +40,6 @@
                     </div>
                 </div>
             </div>
-            <div data-aos="zoom-in" data-aos-delay="300">
-                <div class="block rounded-lg shadow-lg bg-white">
-                    <div class="overflow-hidden rounded-t-lg h-28 bg-neon-purple"></div>
-                    <div class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
-                        <img src="https://dummyimage.com/400x400/fff/fff"
-                            class="w-full rounded-full border-2 border-white" />
-                    </div>
-                    <div class="px-8 pb-8">
-                        <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Em breve</h4>
-                        <p class="text-neon-purple">
-                            Santidade social
-                        </p>
-                    </div>
-                </div>
-            </div>
             <div data-aos="zoom-in" data-aos-delay="400">
                 <div class="block rounded-lg shadow-lg bg-white">
                     <div class="overflow-hidden rounded-t-lg h-28 bg-neon-pink"></div>
@@ -66,6 +51,21 @@
                         <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Em breve</h4>
                         <p class="text-neon-pink">
                             Santidade sexual
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300">
+                <div class="block rounded-lg shadow-lg bg-white">
+                    <div class="overflow-hidden rounded-t-lg h-28 bg-neon-purple"></div>
+                    <div class="w-32 -mt-16 overflow-hidden mx-auto mb-4">
+                        <img src="https://dummyimage.com/400x400/fff/fff"
+                            class="w-full rounded-full border-2 border-white" />
+                    </div>
+                    <div class="px-8 pb-8">
+                        <h4 class="text-2xl font-semibold mb-1 text-neutral-black">Em breve</h4>
+                        <p class="text-neon-purple">
+                            Santidade social
                         </p>
                     </div>
                 </div>
