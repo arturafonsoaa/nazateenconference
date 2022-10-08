@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Enums\PaymentMethod;
 use App\Enums\RegistrationStatus;
+use App\Enums\RegistrationType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Registration\ApproveRegistrationRequest;
 use App\Jobs\SendRegistrationApproveEmailJob;
@@ -32,6 +33,10 @@ class RegistrationController extends Controller
                 $registrations->wherePaymentMethod($request->get('payment_method'));
             }
 
+            if ($request->has('registration_type') && !is_null($request->get('registration_type'))) {
+                $registrations->whereRegistrationType($request->get('registration_type'));
+            }
+
             if ($request->has('church') && !is_null($request->get('church'))) {
                 $registrations->where('church', 'like', '%' . $request->get('church') . '%');
             }
@@ -52,6 +57,7 @@ class RegistrationController extends Controller
             return view('admin.registration.index', [
                 'paymentMethods' => $paymentMethods,
                 'registrationStatuses' => RegistrationStatus::asSelectArray(),
+                'registrationTypes' => RegistrationType::asSelectArray(),
                 'registrations' => $registrations->paginate(50)
             ]);
         } catch (Exception $e) {
