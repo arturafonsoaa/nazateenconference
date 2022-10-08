@@ -18,7 +18,10 @@
                             <tbody>
                                 @foreach ($paymentMethods as $paymentMethodName => $collection)
                                     <tr>
-                                        <td>{{ App\Enums\PaymentMethod::fromValue($paymentMethodName)->description }}</td>
+                                        <td>
+                                            <a href="{{ route('admin.registration.index', ['payment_method' => $paymentMethodName]) }}">
+                                                {{ App\Enums\PaymentMethod::fromValue($paymentMethodName)->description }}</td>
+                                            </a>
                                         <td>{{ $collection->count() }}</td>
                                         <td>
                                             {{ 'R$ ' . number_format(($paymentMethodName != 'free_voucher' ? $collection->count() * 40.66 : 0), 2, ',', '.') }}
