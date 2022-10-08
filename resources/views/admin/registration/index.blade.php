@@ -13,13 +13,14 @@
                             <form action="">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <x-adminlte-input value="{{ request()->has('name') ? request()->get('name') : '' }}" name="name"
-                                            placeholder="Busque pelo nome" class="mb-0" />
+                                        <x-adminlte-input value="{{ request()->has('name') ? request()->get('name') : '' }}"
+                                            name="name" placeholder="Busque pelo nome" class="mb-0" />
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="float-right">
                                             <button class="btn btn-default mr-1" type="button" data-toggle="collapse"
-                                                data-target="#search-collapse" aria-expanded="{{ !empty(request()->toArray()) ? 'true' : 'false' }}"
+                                                data-target="#search-collapse"
+                                                aria-expanded="{{ !empty(request()->toArray()) ? 'true' : 'false' }}"
                                                 aria-controls="search-collapse">
                                                 <i class="fa fa-filter"></i>
                                                 Filtros
@@ -28,7 +29,8 @@
                                                 <i class="fa fa-recycle"></i>
                                                 Limpar
                                             </a>
-                                            <button class="btn text-white" type="submit" style="background-color: #7831b6;">
+                                            <button class="btn text-white" type="submit"
+                                                style="background-color: #7831b6;">
                                                 <i class="fa fa-search"></i>
                                                 Buscar
                                             </button>
@@ -36,9 +38,15 @@
                                     </div>
                                 </div>
                                 <div class="collapse @if (!empty(request()->toArray())) show @endif " id="search-collapse">
-                                    <x-adminlte-select label="Situação da inscrição" name="status">
-                                        <x-adminlte-options empty-option="Todos" :options="$registrationStatuses" :selected="request()->has('status') ? request()->get('status'): null" />
-                                    </x-adminlte-select>
+                                    <hr>
+                                    <div class="row">
+                                        <x-adminlte-select label="Situação da inscrição" name="status" fgroup-class="col-md-4">
+                                            <x-adminlte-options empty-option="Todos" :options="$registrationStatuses" :selected="request()->has('status') ? request()->get('status') : null" />
+                                        </x-adminlte-select>
+
+                                        <x-adminlte-input label="Igreja" value="{{ request()->has('church') ? request()->get('church') : '' }}"
+                                            name="church" placeholder="Busque pela igreja" fgroup-class="col-md-4" />
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -71,7 +79,8 @@
                                             <td>{{ $registration->human_status }}</td>
                                             <td>
                                                 @if (!is_null($registration->payment_voucher))
-                                                    <a href="{{ route('admin.downloadPaymentVoucher', $registration->id) }}">
+                                                    <a
+                                                        href="{{ route('admin.downloadPaymentVoucher', $registration->id) }}">
                                                         Baixar comprovante
                                                     </a>
                                                 @endif
@@ -79,12 +88,18 @@
                                             <td>
                                                 <div class="d-flex">
                                                     @if ($registration->status == 'under_analysis' || $registration->status == 'pending_payment')
-                                                        <x-adminlte-button aria-id="{{ $registration->id }}" icon="fa fa-check fa-fw" data-toggle="modal"
-                                                            data-target="#approve-confirmation-modal" class="text-white btn-xs btn-open-modal-approve-registration mr-2"
+                                                        <x-adminlte-button aria-id="{{ $registration->id }}"
+                                                            icon="fa fa-check fa-fw" data-toggle="modal"
+                                                            data-target="#approve-confirmation-modal"
+                                                            class="text-white btn-xs btn-open-modal-approve-registration mr-2"
                                                             style="background-color: #7831b6;" />
                                                     @endif
-                                                    <x-adminlte-button aria-id="{{ $registration->id }}" aria-name="{{ $registration->name }}" aria-code="{{ $registration->registration_code }}" theme="danger" icon="fa fa-trash fa-fw" data-toggle="modal"
-                                                        data-target="#destroy-registration-modal" class="text-white btn-xs btn-open-modal-destroy-registration" />
+                                                    <x-adminlte-button aria-id="{{ $registration->id }}"
+                                                        aria-name="{{ $registration->name }}"
+                                                        aria-code="{{ $registration->registration_code }}" theme="danger"
+                                                        icon="fa fa-trash fa-fw" data-toggle="modal"
+                                                        data-target="#destroy-registration-modal"
+                                                        class="text-white btn-xs btn-open-modal-destroy-registration" />
                                                 </div>
 
                                             </td>
@@ -131,12 +146,14 @@
         </x-slot>
     </x-adminlte-modal>
 
-    <x-adminlte-modal id="destroy-registration-modal" title="Tem certeza que deseja apagar a inscrição?" class="no-footer" theme="danger">
+    <x-adminlte-modal id="destroy-registration-modal" title="Tem certeza que deseja apagar a inscrição?" class="no-footer"
+        theme="danger">
         <form id="form-destroy-registration" action="" method="post">
             @csrf
             @method('delete')
 
-            <p>Você está prestes a excluir a inscrição de <span class="registration-name"></span>, matrícula: <span class="registration-code"></span></p>
+            <p>Você está prestes a excluir a inscrição de <span class="registration-name"></span>, matrícula: <span
+                    class="registration-code"></span></p>
 
             <div class="text-right">
                 <button type="submit" class="btn btn-danger text-white">
@@ -153,7 +170,7 @@
 @section('css')
     <style>
         .no-footer .modal-footer {
-            display: none!important;
+            display: none !important;
         }
     </style>
 @endsection
@@ -162,12 +179,14 @@
     @parent
     <script>
         jQuery('.btn-open-modal-approve-registration').click(function() {
-            let urlApproveRegistration = jQuery('#url-approve-registration').html().trim().replace('/0', '/' + jQuery(this).attr('aria-id'))
+            let urlApproveRegistration = jQuery('#url-approve-registration').html().trim().replace('/0', '/' +
+                jQuery(this).attr('aria-id'))
             jQuery('#form-confirm-approval').attr('action', urlApproveRegistration)
         })
 
         jQuery('.btn-open-modal-destroy-registration').click(function() {
-            let urlDestroyRegistration = jQuery('#url-destroy-registration').html().trim().replace('/0', '/' + jQuery(this).attr('aria-id'))
+            let urlDestroyRegistration = jQuery('#url-destroy-registration').html().trim().replace('/0', '/' +
+                jQuery(this).attr('aria-id'))
             jQuery('#form-destroy-registration').attr('action', urlDestroyRegistration)
             jQuery('.registration-name').html(jQuery(this).attr('aria-name'))
             jQuery('.registration-code').html(jQuery(this).attr('aria-code'))

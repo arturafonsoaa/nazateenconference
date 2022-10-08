@@ -320,6 +320,12 @@ return [
                     'icon' => '',
                     'can' => 'admin.reports.paymentMethod'
                 ],
+                [
+                    'text' => 'Membros por igreja',
+                    'route' => 'admin.reports.churchReport',
+                    'icon' => '',
+                    'can' => 'admin.reports.churchReport'
+                ],
             ],
         ],
         [
