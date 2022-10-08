@@ -27,6 +27,10 @@ class RegistrationController extends Controller
                 $registrations->whereStatus($request->get('status'));
             }
 
+            if ($request->has('payment_method') && !is_null($request->get('payment_method'))) {
+                $registrations->wherePaymentMethod($request->get('payment_method'));
+            }
+
             if ($request->has('church') && !is_null($request->get('church'))) {
                 $registrations->where('church', 'like', '%' . $request->get('church') . '%');
             }
