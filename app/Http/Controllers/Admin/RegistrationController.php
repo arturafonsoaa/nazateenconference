@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Registration\ApproveRegistrationRequest;
 use App\Jobs\SendRegistrationApproveEmailJob;
 use App\Models\Registration;
+use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -34,6 +35,16 @@ class RegistrationController extends Controller
             if ($request->has('church') && !is_null($request->get('church'))) {
                 $registrations->where('church', 'like', '%' . $request->get('church') . '%');
             }
+
+            $fromDate = ($request->has('from_date') && !is_null($request->get('from_date'))) ?
+                Carbon::createFromFormat('d/m/Y', $request->get('from_date'))->startOfDay() :
+                Carbon::createFromFormat('Y', '2020');
+
+            $toDate = ($request->has('to_date') && !is_null($request->get('to_date'))) ?
+                Carbon::createFromFormat('d/m/Y', $request->get('to_date'))->endOfDay() :
+                Carbon::today()->endOfDay();
+
+            $registrations->whereBetween('created_at', [$fromDate, $toDate]);
 
             $paymentMethods = PaymentMethod::asSelectArray();
             unset($paymentMethods['gift_coupon']);
