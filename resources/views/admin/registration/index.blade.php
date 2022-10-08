@@ -40,12 +40,16 @@
                                 <div class="collapse @if (!empty(request()->toArray())) show @endif " id="search-collapse">
                                     <hr>
                                     <div class="row">
+                                        <x-adminlte-input label="Igreja" value="{{ request()->has('church') ? request()->get('church') : '' }}"
+                                            name="church" placeholder="Busque pela igreja" fgroup-class="col-md-4" />
+
                                         <x-adminlte-select label="Situação da inscrição" name="status" fgroup-class="col-md-4">
                                             <x-adminlte-options empty-option="Todos" :options="$registrationStatuses" :selected="request()->has('status') ? request()->get('status') : null" />
                                         </x-adminlte-select>
 
-                                        <x-adminlte-input label="Igreja" value="{{ request()->has('church') ? request()->get('church') : '' }}"
-                                            name="church" placeholder="Busque pela igreja" fgroup-class="col-md-4" />
+                                        <x-adminlte-select label="Método de pagamento" name="payment_method" fgroup-class="col-md-4">
+                                            <x-adminlte-options empty-option="Todos" :options="$paymentMethods" :selected="request()->has('payment_method') ? request()->get('payment_method') : null" />
+                                        </x-adminlte-select>
                                     </div>
                                 </div>
                             </form>
