@@ -33,4 +33,17 @@ class ReportsController extends Controller
             return to_route('admin.index');
         }
     }
+
+    public function churchReport()
+    {
+        try {
+            $churches = Registration::all()->groupBy('church');
+
+            return view('admin.reports.church', [
+                'churches' => $churches
+            ]);
+        } catch (Exception $e) {
+            return to_route('admin.index');
+        }
+    }
 }

@@ -2,46 +2,25 @@
 
 @section('content')
     <div class="py-5">
+        <h3 class="mb-3">
+            Inscrições
+        </h3>
         <div class="row">
-            <div class="col-12 col-md-8 offset-md-2">
-                <h3 class="mb-3">
-                    Inscrições
-                </h3>
+            <div class="col-md-9">
                 <div class="card">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <form action="">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <x-adminlte-input value="{{ request()->has('name') ? request()->get('name') : '' }}" name="name"
-                                            placeholder="Busque pelo nome" class="mb-0" />
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="float-right">
-                                            <button class="btn btn-default mr-1" type="button" data-toggle="collapse"
-                                                data-target="#search-collapse" aria-expanded="{{ !empty(request()->toArray()) ? 'true' : 'false' }}"
-                                                aria-controls="search-collapse">
-                                                <i class="fa fa-filter"></i>
-                                                Filtros
-                                            </button>
-                                            <a href="{{ route('admin.registration.index') }}" class="btn btn-default mr-1">
-                                                <i class="fa fa-recycle"></i>
-                                                Limpar
-                                            </a>
-                                            <button class="btn text-white" type="submit" style="background-color: #7831b6;">
-                                                <i class="fa fa-search"></i>
-                                                Buscar
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="collapse @if (!empty(request()->toArray())) show @endif " id="search-collapse">
-                                    <x-adminlte-select label="Situação da inscrição" name="status">
-                                        <x-adminlte-options empty-option="Todos" :options="$registrationStatuses" :selected="request()->has('status') ? request()->get('status'): null" />
-                                    </x-adminlte-select>
-                                </div>
-                            </form>
+                    <div class="card-header">
+                        <div>
+                            <p class="lead mb-0">
+                                Inscrições
+                            </p>
                         </div>
+                        <div>
+                            <p class="lead mb-0">
+                                Total de inscrições encontradas: {{ $registrations->total() }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <thead>
@@ -55,6 +34,7 @@
                                         <th>Igreja</th>
                                         <th>Situação da matrícula</th>
                                         <th>Comprovante</th>
+                                        <th>Data do cadastro</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -76,15 +56,22 @@
                                                     </a>
                                                 @endif
                                             </td>
+                                            <td>{{ $registration->created_at->format('d/m/Y') }}</td>
                                             <td>
                                                 <div class="d-flex">
                                                     @if ($registration->status == 'under_analysis' || $registration->status == 'pending_payment')
-                                                        <x-adminlte-button aria-id="{{ $registration->id }}" icon="fa fa-check fa-fw" data-toggle="modal"
-                                                            data-target="#approve-confirmation-modal" class="text-white btn-xs btn-open-modal-approve-registration mr-2"
+                                                        <x-adminlte-button aria-id="{{ $registration->id }}"
+                                                            icon="fa fa-check fa-fw" data-toggle="modal"
+                                                            data-target="#approve-confirmation-modal"
+                                                            class="text-white btn-xs btn-open-modal-approve-registration mr-2"
                                                             style="background-color: #7831b6;" />
                                                     @endif
-                                                    <x-adminlte-button aria-id="{{ $registration->id }}" aria-name="{{ $registration->name }}" aria-code="{{ $registration->registration_code }}" theme="danger" icon="fa fa-trash fa-fw" data-toggle="modal"
-                                                        data-target="#destroy-registration-modal" class="text-white btn-xs btn-open-modal-destroy-registration" />
+                                                    <x-adminlte-button aria-id="{{ $registration->id }}"
+                                                        aria-name="{{ $registration->name }}"
+                                                        aria-code="{{ $registration->registration_code }}" theme="danger"
+                                                        icon="fa fa-trash fa-fw" data-toggle="modal"
+                                                        data-target="#destroy-registration-modal"
+                                                        class="text-white btn-xs btn-open-modal-destroy-registration" />
                                                 </div>
 
                                             </td>
@@ -100,6 +87,68 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-3">
+                <form action="">
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <p class="lead mb-0">
+                                    Filtros
+                                </p>
+                            </div>
+                            <div class="card-tools">
+                                <a href="{{ route('admin.registration.index') }}" class="btn btn-default btn-sm">
+                                    <i class="fa fa-recycle"></i>
+                                    Limpar filtros
+                                </a>
+                                <button class="btn btn-sm text-white" type="submit" style="background-color: #7831b6;">
+                                    <i class="fa fa-filter"></i>
+                                    Filtrar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <x-adminlte-input label="Buscar pelo nome"
+                                    value="{{ request()->has('name') ? request()->get('name') : '' }}" name="name"
+                                    placeholder="Busque pelo nome" class="mb-0" />
+
+                                <div class="row">
+                                    <x-adminlte-input label="Data inicial:"
+                                        value="{{ request()->has('from_date') ? request()->get('from_date') : '' }}"
+                                        class="date" name="from_date" placeholder="Data inicial"
+                                        fgroup-class="col-md-6" />
+
+                                    <x-adminlte-input label="Data final:"
+                                        value="{{ request()->has('to_date') ? request()->get('to_date') : '' }}"
+                                        class="date" name="to_date" placeholder="Data final"
+                                        fgroup-class="col-md-6" />
+                                </div>
+
+                                <x-adminlte-select label="Tipo de inscrição" name="registration_type">
+                                    <x-adminlte-options empty-option="Todos" :options="$registrationTypes" :selected="request()->has('registration_type')
+                                        ? request()->get('registration_type')
+                                        : null" />
+                                </x-adminlte-select>
+
+                                <x-adminlte-input label="Igreja"
+                                    value="{{ request()->has('church') ? request()->get('church') : '' }}"
+                                    name="church" placeholder="Busque pela igreja" />
+
+                                <x-adminlte-select label="Situação da inscrição" name="status">
+                                    <x-adminlte-options empty-option="Todos" :options="$registrationStatuses" :selected="request()->has('status') ? request()->get('status') : null" />
+                                </x-adminlte-select>
+
+                                <x-adminlte-select label="Método de pagamento" name="payment_method">
+                                    <x-adminlte-options empty-option="Todos" :options="$paymentMethods" :selected="request()->has('payment_method')
+                                        ? request()->get('payment_method')
+                                        : null" />
+                                </x-adminlte-select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -131,12 +180,14 @@
         </x-slot>
     </x-adminlte-modal>
 
-    <x-adminlte-modal id="destroy-registration-modal" title="Tem certeza que deseja apagar a inscrição?" class="no-footer" theme="danger">
+    <x-adminlte-modal id="destroy-registration-modal" title="Tem certeza que deseja apagar a inscrição?" class="no-footer"
+        theme="danger">
         <form id="form-destroy-registration" action="" method="post">
             @csrf
             @method('delete')
 
-            <p>Você está prestes a excluir a inscrição de <span class="registration-name"></span>, matrícula: <span class="registration-code"></span></p>
+            <p>Você está prestes a excluir a inscrição de <span class="registration-name"></span>, matrícula: <span
+                    class="registration-code"></span></p>
 
             <div class="text-right">
                 <button type="submit" class="btn btn-danger text-white">
@@ -153,7 +204,21 @@
 @section('css')
     <style>
         .no-footer .modal-footer {
-            display: none!important;
+            display: none !important;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between !important;
+            align-items: center !important;
+        }
+
+        .card-header>.card-tools {
+            margin-right: 0 !important;
+        }
+
+        .card-header::after {
+            display: none;
         }
     </style>
 @endsection
@@ -161,16 +226,26 @@
 @section('js')
     @parent
     <script>
-        jQuery('.btn-open-modal-approve-registration').click(function() {
-            let urlApproveRegistration = jQuery('#url-approve-registration').html().trim().replace('/0', '/' + jQuery(this).attr('aria-id'))
-            jQuery('#form-confirm-approval').attr('action', urlApproveRegistration)
-        })
+        jQuery(document).ready(function() {
 
-        jQuery('.btn-open-modal-destroy-registration').click(function() {
-            let urlDestroyRegistration = jQuery('#url-destroy-registration').html().trim().replace('/0', '/' + jQuery(this).attr('aria-id'))
-            jQuery('#form-destroy-registration').attr('action', urlDestroyRegistration)
-            jQuery('.registration-name').html(jQuery(this).attr('aria-name'))
-            jQuery('.registration-code').html(jQuery(this).attr('aria-code'))
+            jQuery('.date').inputmask('99/99/9999')
+
+            jQuery('.btn-open-modal-approve-registration').click(function() {
+                let urlApproveRegistration = jQuery('#url-approve-registration').html().trim().replace('/0',
+                    '/' +
+                    jQuery(this).attr('aria-id'))
+                jQuery('#form-confirm-approval').attr('action', urlApproveRegistration)
+            })
+
+            jQuery('.btn-open-modal-destroy-registration').click(function() {
+                let urlDestroyRegistration = jQuery('#url-destroy-registration').html().trim().replace('/0',
+                    '/' +
+                    jQuery(this).attr('aria-id'))
+                jQuery('#form-destroy-registration').attr('action', urlDestroyRegistration)
+                jQuery('.registration-name').html(jQuery(this).attr('aria-name'))
+                jQuery('.registration-code').html(jQuery(this).attr('aria-code'))
+            })
+
         })
     </script>
 @endsection

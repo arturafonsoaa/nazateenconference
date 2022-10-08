@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Enums\PaymentMethod;
 use App\Enums\RegistrationStatus;
+use App\Enums\RegistrationType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Registration\ApproveRegistrationRequest;
 use App\Jobs\SendRegistrationApproveEmailJob;
 use App\Models\Registration;
+use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -27,12 +29,35 @@ class RegistrationController extends Controller
                 $registrations->whereStatus($request->get('status'));
             }
 
+            if ($request->has('payment_method') && !is_null($request->get('payment_method'))) {
+                $registrations->wherePaymentMethod($request->get('payment_method'));
+            }
+
+            if ($request->has('registration_type') && !is_null($request->get('registration_type'))) {
+                $registrations->whereRegistrationType($request->get('registration_type'));
+            }
+
+            if ($request->has('church') && !is_null($request->get('church'))) {
+                $registrations->where('church', 'like', '%' . $request->get('church') . '%');
+            }
+
+            $fromDate = ($request->has('from_date') && !is_null($request->get('from_date'))) ?
+                Carbon::createFromFormat('d/m/Y', $request->get('from_date'))->startOfDay() :
+                Carbon::createFromFormat('Y', '2020');
+
+            $toDate = ($request->has('to_date') && !is_null($request->get('to_date'))) ?
+                Carbon::createFromFormat('d/m/Y', $request->get('to_date'))->endOfDay() :
+                Carbon::today()->endOfDay();
+
+            $registrations->whereBetween('created_at', [$fromDate, $toDate]);
+
             $paymentMethods = PaymentMethod::asSelectArray();
             unset($paymentMethods['gift_coupon']);
 
             return view('admin.registration.index', [
                 'paymentMethods' => $paymentMethods,
                 'registrationStatuses' => RegistrationStatus::asSelectArray(),
+                'registrationTypes' => RegistrationType::asSelectArray(),
                 'registrations' => $registrations->paginate(50)
             ]);
         } catch (Exception $e) {
