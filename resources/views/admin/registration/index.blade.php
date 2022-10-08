@@ -40,15 +40,30 @@
                                 <div class="collapse @if (!empty(request()->toArray())) show @endif " id="search-collapse">
                                     <hr>
                                     <div class="row">
-                                        <x-adminlte-input label="Igreja" value="{{ request()->has('church') ? request()->get('church') : '' }}"
+                                        <x-adminlte-input label="Data inicial:"
+                                            value="{{ request()->has('from_date') ? request()->get('from_date') : '' }}"
+                                            class="date"
+                                            name="from_date" placeholder="Data inicial" fgroup-class="col-md-4" />
+
+                                        <x-adminlte-input label="Data final:"
+                                            value="{{ request()->has('to_date') ? request()->get('to_date') : '' }}"
+                                            class="date"
+                                            name="to_date" placeholder="Data final" fgroup-class="col-md-4" />
+
+                                        <x-adminlte-input label="Igreja"
+                                            value="{{ request()->has('church') ? request()->get('church') : '' }}"
                                             name="church" placeholder="Busque pela igreja" fgroup-class="col-md-4" />
 
-                                        <x-adminlte-select label="Situação da inscrição" name="status" fgroup-class="col-md-4">
+                                        <x-adminlte-select label="Situação da inscrição" name="status"
+                                            fgroup-class="col-md-4">
                                             <x-adminlte-options empty-option="Todos" :options="$registrationStatuses" :selected="request()->has('status') ? request()->get('status') : null" />
                                         </x-adminlte-select>
 
-                                        <x-adminlte-select label="Método de pagamento" name="payment_method" fgroup-class="col-md-4">
-                                            <x-adminlte-options empty-option="Todos" :options="$paymentMethods" :selected="request()->has('payment_method') ? request()->get('payment_method') : null" />
+                                        <x-adminlte-select label="Método de pagamento" name="payment_method"
+                                            fgroup-class="col-md-4">
+                                            <x-adminlte-options empty-option="Todos" :options="$paymentMethods" :selected="request()->has('payment_method')
+                                                ? request()->get('payment_method')
+                                                : null" />
                                         </x-adminlte-select>
                                     </div>
                                 </div>
@@ -67,6 +82,7 @@
                                         <th>Igreja</th>
                                         <th>Situação da matrícula</th>
                                         <th>Comprovante</th>
+                                        <th>Data do cadastro</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -89,6 +105,7 @@
                                                     </a>
                                                 @endif
                                             </td>
+                                            <td>{{ $registration->created_at->format('d/m/Y') }}</td>
                                             <td>
                                                 <div class="d-flex">
                                                     @if ($registration->status == 'under_analysis' || $registration->status == 'pending_payment')
@@ -182,18 +199,26 @@
 @section('js')
     @parent
     <script>
-        jQuery('.btn-open-modal-approve-registration').click(function() {
-            let urlApproveRegistration = jQuery('#url-approve-registration').html().trim().replace('/0', '/' +
-                jQuery(this).attr('aria-id'))
-            jQuery('#form-confirm-approval').attr('action', urlApproveRegistration)
-        })
+        jQuery(document).ready(function() {
 
-        jQuery('.btn-open-modal-destroy-registration').click(function() {
-            let urlDestroyRegistration = jQuery('#url-destroy-registration').html().trim().replace('/0', '/' +
-                jQuery(this).attr('aria-id'))
-            jQuery('#form-destroy-registration').attr('action', urlDestroyRegistration)
-            jQuery('.registration-name').html(jQuery(this).attr('aria-name'))
-            jQuery('.registration-code').html(jQuery(this).attr('aria-code'))
+            jQuery('.date').inputmask('99/99/9999')
+
+            jQuery('.btn-open-modal-approve-registration').click(function() {
+                let urlApproveRegistration = jQuery('#url-approve-registration').html().trim().replace('/0',
+                    '/' +
+                    jQuery(this).attr('aria-id'))
+                jQuery('#form-confirm-approval').attr('action', urlApproveRegistration)
+            })
+
+            jQuery('.btn-open-modal-destroy-registration').click(function() {
+                let urlDestroyRegistration = jQuery('#url-destroy-registration').html().trim().replace('/0',
+                    '/' +
+                    jQuery(this).attr('aria-id'))
+                jQuery('#form-destroy-registration').attr('action', urlDestroyRegistration)
+                jQuery('.registration-name').html(jQuery(this).attr('aria-name'))
+                jQuery('.registration-code').html(jQuery(this).attr('aria-code'))
+            })
+
         })
     </script>
 @endsection
