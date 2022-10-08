@@ -6,7 +6,7 @@
             Inscrições
         </h3>
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-9 order-2 order-md-1">
                 <div class="card">
                     <div class="card-header">
                         <div>
@@ -16,7 +16,7 @@
                         </div>
                         <div>
                             <p class="lead mb-0">
-                                Total de inscrições encontradas: {{ $registrations->total() }}
+                                Total: {{ $registrations->total() }}
                             </p>
                         </div>
                     </div>
@@ -51,7 +51,8 @@
                                             <td>{{ $registration->human_status }}</td>
                                             <td>
                                                 @if (!is_null($registration->payment_voucher))
-                                                    <a href="{{ route('admin.downloadPaymentVoucher', $registration->id) }}">
+                                                    <a
+                                                        href="{{ route('admin.downloadPaymentVoucher', $registration->id) }}">
                                                         Baixar comprovante
                                                     </a>
                                                 @endif
@@ -88,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 order-1 order-md-2">
                 <form action="">
                     <div class="card">
                         <div class="card-header">
@@ -106,6 +107,10 @@
                                     <i class="fa fa-filter"></i>
                                     Filtrar
                                 </button>
+                                <button type="button" class="btn btn-default btn-sm" data-card-widget="collapse"
+                                    title="Collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -122,8 +127,7 @@
 
                                     <x-adminlte-input label="Data final:"
                                         value="{{ request()->has('to_date') ? request()->get('to_date') : '' }}"
-                                        class="date" name="to_date" placeholder="Data final"
-                                        fgroup-class="col-md-6" />
+                                        class="date" name="to_date" placeholder="Data final" fgroup-class="col-md-6" />
                                 </div>
 
                                 <x-adminlte-select label="Tipo de inscrição" name="registration_type">
@@ -133,8 +137,8 @@
                                 </x-adminlte-select>
 
                                 <x-adminlte-input label="Igreja"
-                                    value="{{ request()->has('church') ? request()->get('church') : '' }}"
-                                    name="church" placeholder="Busque pela igreja" />
+                                    value="{{ request()->has('church') ? request()->get('church') : '' }}" name="church"
+                                    placeholder="Busque pela igreja" />
 
                                 <x-adminlte-select label="Situação da inscrição" name="status">
                                     <x-adminlte-options empty-option="Todos" :options="$registrationStatuses" :selected="request()->has('status') ? request()->get('status') : null" />
@@ -180,8 +184,8 @@
         </x-slot>
     </x-adminlte-modal>
 
-    <x-adminlte-modal id="destroy-registration-modal" title="Tem certeza que deseja apagar a inscrição?" class="no-footer"
-        theme="danger">
+    <x-adminlte-modal id="destroy-registration-modal" title="Tem certeza que deseja apagar a inscrição?"
+        class="no-footer" theme="danger">
         <form id="form-destroy-registration" action="" method="post">
             @csrf
             @method('delete')
