@@ -37,6 +37,8 @@ Route::middleware(['auth', 'permission.check'])->prefix('painel')->name('admin.'
             Route::get('', [AdminRegistrationController::class, 'index'])->name('index');
             Route::post('{registrationId}/aprovar-cadastro', [AdminRegistrationController::class, 'approve'])->name('approve');
             Route::delete('{registrationId}/apagar-cadastro', [AdminRegistrationController::class, 'destroy'])->name('destroy');
+            Route::get('{registrationId}/editar-cadastro', [AdminRegistrationController::class, 'edit'])->name('edit');
+            Route::patch('{registrationId}/atualizar-cadastro', [AdminRegistrationController::class, 'update'])->name('update');
         });
 
         Route::prefix('relatorios')->name('reports.')->group(function() {
