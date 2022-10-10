@@ -14,8 +14,17 @@ return [
     'admin.adminUser.destroy' => ['admin'],
     'admin.adminUser.edit' => ['admin'],
 
-    'admin.registration.index' => ['admin'],
+    'admin.acquirerUser.index' => ['admin'],
+    'admin.acquirerUser.store' => ['admin'],
+    'admin.acquirerUser.create' => ['admin'],
+    'admin.acquirerUser.show' => ['admin'],
+    'admin.acquirerUser.update' => ['admin'],
+    'admin.acquirerUser.destroy' => ['admin'],
+    'admin.acquirerUser.edit' => ['admin'],
+
+    'admin.registration.index' => ['admin', 'acquirer'],
     'admin.registration.approve' => ['admin'],
+    'admin.registration.destroy' => ['admin'],
 
     'admin.reports.index' => ['admin'],
     'admin.reports.registrationsPerDay' => ['admin'],

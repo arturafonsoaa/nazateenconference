@@ -15,6 +15,10 @@ class PermissionsSeeder extends Seeder
             'name' => 'admin'
         ]);
 
+        $acquirer = Role::firstOrCreate([
+            'name' => 'acquirer'
+        ]);
+
         $registration = Role::firstOrCreate([
             'name' => 'registration'
         ]);
