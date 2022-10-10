@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'admin.index' => ['admin', 'registration'],
+    'admin.index' => ['admin', 'registration', 'acquirer'],
 
     'admin.sendPaymentVoucher' => ['admin', 'registration'],
     'admin.downloadPaymentVoucher' => ['admin', 'registration'],
@@ -31,6 +31,6 @@ return [
     'admin.reports.paymentMethod' => ['admin'],
     'admin.reports.churchReport' => ['admin'],
 
-    'admin.changePassword' => ['admin', 'registration'],
-    'admin.updatePassword' => ['admin', 'registration'],
+    'admin.changePassword' => ['admin', 'registration', 'acquirer'],
+    'admin.updatePassword' => ['admin', 'registration', 'acquirer'],
 ];
