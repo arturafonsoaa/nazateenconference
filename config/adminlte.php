@@ -352,6 +352,25 @@ return [
                     'can' => 'admin.adminUser.create'
                 ],
             ],
+        ],
+        [
+            'text' => 'Credenciadores',
+            'icon' => 'fa fa-user-tag fa-fw mr-1',
+            'can' => 'admin.acquirerUser.index',
+            'submenu' => [
+                [
+                    'text' => 'Listar credenciadores',
+                    'route' => 'admin.acquirerUser.index',
+                    'icon' => 'fa fa-id-card-alt fa-fw mr-1',
+                    'can' => 'admin.acquirerUser.index'
+                ],
+                [
+                    'text' => 'Cadastrar credenciador',
+                    'route' => 'admin.acquirerUser.create',
+                    'icon' => 'fa fa-user-plus fa-fw mr-1',
+                    'can' => 'admin.acquirerUser.create'
+                ],
+            ],
         ]
     ],
 
