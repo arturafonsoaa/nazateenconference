@@ -24,6 +24,8 @@ return [
 
     'admin.registration.index' => ['admin', 'acquirer'],
     'admin.registration.approve' => ['admin'],
+    'admin.registration.edit' => ['admin', 'acquirer'],
+    'admin.registration.update' => ['admin', 'acquirer'],
     'admin.registration.destroy' => ['admin'],
 
     'admin.reports.index' => ['admin'],

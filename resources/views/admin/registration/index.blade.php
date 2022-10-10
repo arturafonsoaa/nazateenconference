@@ -60,6 +60,11 @@
                                             <td>{{ $registration->created_at->format('d/m/Y') }}</td>
                                             <td>
                                                 <div class="d-flex">
+                                                    @can('admin.registration.edit')
+                                                        <a href="{{ route('admin.registration.edit', $registration->id) }}" class="btn btn-xs btn-info mr-2">
+                                                            <i class="fa fa-edit"></i>
+                                                        </a>
+                                                    @endcan
                                                     @can('admin.registration.approve')
                                                         @if ($registration->status == 'under_analysis' || $registration->status == 'pending_payment')
                                                             <x-adminlte-button aria-id="{{ $registration->id }}"

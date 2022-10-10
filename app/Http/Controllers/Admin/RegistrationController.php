@@ -7,6 +7,7 @@ use App\Enums\RegistrationStatus;
 use App\Enums\RegistrationType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Registration\ApproveRegistrationRequest;
+use App\Http\Requests\Admin\Registration\UpdateRegistrationRequest;
 use App\Jobs\SendRegistrationApproveEmailJob;
 use App\Models\Registration;
 use Carbon\Carbon;
@@ -87,6 +88,47 @@ class RegistrationController extends Controller
             DB::rollBack();
             notify()->error($e->getMessage(), 'Erro');
             return to_route('admin.registration.index');
+        }
+    }
+
+    public function edit(int $registrationId)
+    {
+        try {
+            return view('admin.registration.edit', [
+                'registration' => Registration::findOrFail($registrationId)
+            ]);
+        } catch (Exception $e) {
+            notify()->error($e->getMessage(), 'Erro');
+            return to_route('admin.registration.index');
+        }
+    }
+
+    public function update(UpdateRegistrationRequest $request, int $registrationId)
+    {
+        DB::beginTransaction();
+
+        try {
+            $registration = Registration::findOrFail($registrationId);
+
+            $registration->update([
+                'name' => $request->get('name'),
+                'phone' => $request->get('phone'),
+                'church' => $request->get('church')
+            ]);
+
+            $user = $registration->user;
+
+            $user->update([
+                'name' => $request->get('name'),
+                'email' => $request->get('email')
+            ]);
+
+            DB::commit();
+            return to_route('admin.registration.index', ['name' => $registration->name]);
+        } catch (Exception $e) {
+            DB::rollBack();
+            notify()->error('Não foi possível atualizar o cadastro' . $e->getMessage(), 'Erro');
+            return redirect()->back();
         }
     }
 
