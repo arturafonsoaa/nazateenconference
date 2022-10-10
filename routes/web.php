@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AcquirerUserController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PaymentController;
@@ -23,6 +24,12 @@ Route::middleware(['auth', 'permission.check'])->prefix('painel')->name('admin.'
         Route::prefix('administradores')->name('adminUser.')->group(function () {
             Route::resource('', AdminUserController::class)->parameters([
                 '' => 'adminUserId'
+            ]);
+        });
+
+        Route::prefix('credenciadores')->name('acquirerUser.')->group(function () {
+            Route::resource('', AcquirerUserController::class)->parameters([
+                '' => 'acquirerUserId'
             ]);
         });
 

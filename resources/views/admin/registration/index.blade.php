@@ -60,19 +60,23 @@
                                             <td>{{ $registration->created_at->format('d/m/Y') }}</td>
                                             <td>
                                                 <div class="d-flex">
-                                                    @if ($registration->status == 'under_analysis' || $registration->status == 'pending_payment')
+                                                    @can('admin.registration.approve')
+                                                        @if ($registration->status == 'under_analysis' || $registration->status == 'pending_payment')
+                                                            <x-adminlte-button aria-id="{{ $registration->id }}"
+                                                                icon="fa fa-check fa-fw" data-toggle="modal"
+                                                                data-target="#approve-confirmation-modal"
+                                                                class="text-white btn-xs btn-open-modal-approve-registration mr-2"
+                                                                style="background-color: #7831b6;" />
+                                                        @endif
+                                                    @endcan
+                                                    @can('admin.registration.destroy')
                                                         <x-adminlte-button aria-id="{{ $registration->id }}"
-                                                            icon="fa fa-check fa-fw" data-toggle="modal"
-                                                            data-target="#approve-confirmation-modal"
-                                                            class="text-white btn-xs btn-open-modal-approve-registration mr-2"
-                                                            style="background-color: #7831b6;" />
-                                                    @endif
-                                                    <x-adminlte-button aria-id="{{ $registration->id }}"
-                                                        aria-name="{{ $registration->name }}"
-                                                        aria-code="{{ $registration->registration_code }}" theme="danger"
-                                                        icon="fa fa-trash fa-fw" data-toggle="modal"
-                                                        data-target="#destroy-registration-modal"
-                                                        class="text-white btn-xs btn-open-modal-destroy-registration" />
+                                                            aria-name="{{ $registration->name }}"
+                                                            aria-code="{{ $registration->registration_code }}" theme="danger"
+                                                            icon="fa fa-trash fa-fw" data-toggle="modal"
+                                                            data-target="#destroy-registration-modal"
+                                                            class="text-white btn-xs btn-open-modal-destroy-registration" />
+                                                    @endcan
                                                 </div>
 
                                             </td>
