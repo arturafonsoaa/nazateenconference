@@ -15,9 +15,16 @@ class Registration extends Model
 
     protected $appends = ['br_date'];
 
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'deleted_at'
+    ];
+
     public function getHumanStatusAttribute()
     {
         $statusDescription = RegistrationStatus::fromValue($this->status)->description;
+
         return $this->status == 'approved' ?
             $statusDescription . ' (' . PaymentMethod::fromValue($this->payment_method)->description . ')' :
             $statusDescription;
@@ -25,7 +32,7 @@ class Registration extends Model
 
     public function getBrDateAttribute()
     {
-        return $this->created_at->format('d/m/Y');
+        return $this->created_at?->format('d/m/Y');
     }
 
     public function user()
