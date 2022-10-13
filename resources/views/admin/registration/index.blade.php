@@ -26,8 +26,7 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Dia 1</th>
-                                        <th>Dia 2</th>
+                                        <th>CheckIn</th>
                                         <th>Matrícula</th>
                                         <th>Nome</th>
                                         <th>Idade</th>
@@ -51,13 +50,6 @@
                                                     </span>
                                                 @endif
                                             </td>
-                                            <td>
-                                                @if (!is_null($registration->present_on_the_second_day) && $registration->present_on_the_second_day)
-                                                    <span class="text-success">
-                                                        <i class="fa fa-check-circle"></i>
-                                                    </span>
-                                                @endif
-                                            </td>
                                             <td>{{ $registration->registration_code }}</td>
                                             <td>{{ $registration->user->name }}</td>
                                             <td>{{ $registration->age }}</td>
@@ -76,8 +68,7 @@
                                             <td>{{ $registration->created_at->format('d/m/Y') }}</td>
                                             <td>
                                                 <div class="d-flex">
-                                                    @if (auth()->user()->hasPermissionTo('admin.registration.checkin') &&
-                                                        (!$registration->present_on_the_first_day || !$registration->present_on_the_second_day))
+                                                    @if (auth()->user()->hasPermissionTo('admin.registration.checkin') && !$registration->present_on_the_first_day)
                                                         <x-adminlte-button aria-id="{{ $registration->id }}"
                                                             icon="fa fa-calendar-check fa-fw" data-toggle="modal"
                                                             data-target="#checkin-modal" theme="success"
@@ -211,11 +202,9 @@
         <form id="form-checkin" action="" method="post">
             @csrf
 
-            <x-adminlte-select name="day" label="Dia do checkin">
-                <x-adminlte-options :options="[]" />
-            </x-adminlte-select>
+            <p>Verifique os dados abaixo, e corrija-os se for preciso</p>
 
-            <p class="lead">Verifique os dados abaixo, e corrija-os se for preciso</p>
+            <input type="hidden" name="original_name">
 
             <x-adminlte-input label="Nome completo:" name="name" enable-old-support />
 
@@ -303,20 +292,7 @@
     @parent
     <script>
         function fillCheckinForm(registration) {
-            if (!registration.present_on_the_first_day) {
-                jQuery('#form-checkin [name="day"]').append(jQuery('<option>', {
-                    value: '1',
-                    text: 'Dia 1'
-                }));
-            }
-
-            if (!registration.present_on_the_second_day) {
-                jQuery('#form-checkin [name="day"]').append(jQuery('<option>', {
-                    value: '2',
-                    text: 'Dia 2'
-                }));
-            }
-
+            jQuery('#form-checkin [name="original_name"]').val(registration.name)
             jQuery('#form-checkin [name="name"]').val(registration.name)
             jQuery('#form-checkin [name="phone"]').val(registration.phone)
             jQuery('#form-checkin [name="church"]').val(registration.church)
@@ -339,8 +315,6 @@
                     .html()
                     .trim()
                     .replace('/0', '/' + id)
-
-                jQuery('[name="day"]').find("option").remove().end()
 
                 fetch(urlShowRegistration)
                     .then(response => {
