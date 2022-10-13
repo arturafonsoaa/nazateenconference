@@ -162,16 +162,8 @@ class RegistrationController extends Controller
         try {
             $registration = Registration::findOrFail($registrationId);
 
-            $field = $request->get('day') == '1' ? 'present_on_the_first_day' :
-                ($request->get('day') == '2' ? 'present_on_the_second_day' : null);
-
-            if (!is_null($field)) {
-                $registration->update([
-                    $field => true
-                ]);
-            }
-
             $registration->update([
+                'present_on_the_first_day' => true,
                 'name' => $request->get('name'),
                 'phone' => $request->get('phone'),
                 'church' => $request->get('church')
