@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\RegistrationController as AdminRegistrationController;
 use App\Http\Controllers\Admin\ReportsController;
+use App\Http\Controllers\Api\Registration\FindRegistration;
 use App\Http\Controllers\Website\HomeController;
 use App\Http\Controllers\Website\RegistrationController;
 use Illuminate\Support\Facades\Route;
@@ -39,12 +40,19 @@ Route::middleware(['auth', 'permission.check'])->prefix('painel')->name('admin.'
             Route::delete('{registrationId}/apagar-cadastro', [AdminRegistrationController::class, 'destroy'])->name('destroy');
             Route::get('{registrationId}/editar-cadastro', [AdminRegistrationController::class, 'edit'])->name('edit');
             Route::patch('{registrationId}/atualizar-cadastro', [AdminRegistrationController::class, 'update'])->name('update');
+            Route::post('{registrationId}/checkin', [AdminRegistrationController::class, 'checkin'])->name('checkin');
         });
 
-        Route::prefix('relatorios')->name('reports.')->group(function() {
+        Route::prefix('relatorios')->name('reports.')->group(function () {
             Route::get('inscricoes-por-dia', [ReportsController::class, 'registrationsPerDay'])->name('registrationsPerDay');
             Route::get('metodos-de-pagamento', [ReportsController::class, 'paymentMethod'])->name('paymentMethod');
             Route::get('membros-por-igreja', [ReportsController::class, 'churchReport'])->name('churchReport');
+        });
+
+        Route::prefix('api')->name('api.')->group(function () {
+            Route::prefix('registros')->name('registration.')->group(function () {
+                Route::get('{registrationId}/buscar', FindRegistration::class)->name('show');
+            });
         });
     });
 
