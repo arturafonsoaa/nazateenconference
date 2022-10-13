@@ -26,6 +26,8 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
+                                        <th>Dia 1</th>
+                                        <th>Dia 2</th>
                                         <th>Matrícula</th>
                                         <th>Nome</th>
                                         <th>Idade</th>
@@ -42,6 +44,20 @@
                                     @foreach ($registrations as $registration)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
+                                            <td>
+                                                @if (!is_null($registration->present_on_the_first_day) && $registration->present_on_the_first_day)
+                                                    <span class="text-success">
+                                                        <i class="fa fa-check-circle"></i>
+                                                    </span>
+                                                @endif
+                                            </td>
+                                            <td>
+                                                @if (!is_null($registration->present_on_the_second_day) && $registration->present_on_the_second_day)
+                                                    <span class="text-success">
+                                                        <i class="fa fa-check-circle"></i>
+                                                    </span>
+                                                @endif
+                                            </td>
                                             <td>{{ $registration->registration_code }}</td>
                                             <td>{{ $registration->user->name }}</td>
                                             <td>{{ $registration->age }}</td>
@@ -199,6 +215,16 @@
                 <x-adminlte-options :options="[]" />
             </x-adminlte-select>
 
+            <p class="lead">Verifique os dados abaixo, e corrija-os se for preciso</p>
+
+            <x-adminlte-input label="Nome completo:" name="name" enable-old-support />
+
+            <x-adminlte-input label="Telefone:" name="phone" class="phone" enable-old-support />
+
+            <x-adminlte-input label="Igreja:" name="church" enable-old-support />
+
+            <x-adminlte-input label="E-mail:" name="email" enable-old-support />
+
             <div class="text-right">
                 <button type="submit" class="btn text-white" style="background-color: #7831b6;">
                     <i class="fa fa-calendar-check fa-fw"></i> Fazer checkin
@@ -276,20 +302,25 @@
 @section('js')
     @parent
     <script>
-        function renderCheckinSelect(registration) {
+        function fillCheckinForm(registration) {
             if (!registration.present_on_the_first_day) {
-                $('[name="day"]').append($('<option>', {
+                jQuery('#form-checkin [name="day"]').append(jQuery('<option>', {
                     value: '1',
                     text: 'Dia 1'
                 }));
             }
 
             if (!registration.present_on_the_second_day) {
-                $('[name="day"]').append($('<option>', {
+                jQuery('#form-checkin [name="day"]').append(jQuery('<option>', {
                     value: '2',
                     text: 'Dia 2'
                 }));
             }
+
+            jQuery('#form-checkin [name="name"]').val(registration.name)
+            jQuery('#form-checkin [name="phone"]').val(registration.phone)
+            jQuery('#form-checkin [name="church"]').val(registration.church)
+            jQuery('#form-checkin [name="email"]').val(registration.user.email)
         }
 
         jQuery(document).ready(function() {
@@ -317,7 +348,7 @@
                     })
                     .then(json => {
                         let registration = json.data.registration
-                        renderCheckinSelect(registration)
+                        fillCheckinForm(registration)
                     })
                     .catch(function(error) {
                         console.log(error)
