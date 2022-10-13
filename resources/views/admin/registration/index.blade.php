@@ -26,6 +26,8 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
+                                        <th>Dia 1</th>
+                                        <th>Dia 2</th>
                                         <th>Matrícula</th>
                                         <th>Nome</th>
                                         <th>Idade</th>
@@ -42,6 +44,20 @@
                                     @foreach ($registrations as $registration)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
+                                            <td>
+                                                @if (!is_null($registration->present_on_the_first_day) && $registration->present_on_the_first_day)
+                                                    <span class="text-success">
+                                                        <i class="fa fa-check-circle"></i>
+                                                    </span>
+                                                @endif
+                                            </td>
+                                            <td>
+                                                @if (!is_null($registration->present_on_the_second_day) && $registration->present_on_the_second_day)
+                                                    <span class="text-success">
+                                                        <i class="fa fa-check-circle"></i>
+                                                    </span>
+                                                @endif
+                                            </td>
                                             <td>{{ $registration->registration_code }}</td>
                                             <td>{{ $registration->user->name }}</td>
                                             <td>{{ $registration->age }}</td>
