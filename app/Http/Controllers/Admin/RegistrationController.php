@@ -171,6 +171,19 @@ class RegistrationController extends Controller
                 ]);
             }
 
+            $registration->update([
+                'name' => $request->get('name'),
+                'phone' => $request->get('phone'),
+                'church' => $request->get('church')
+            ]);
+
+            $user = $registration->user;
+
+            $user->update([
+                'name' => $request->get('name'),
+                'email' => $request->get('email')
+            ]);
+
             DB::commit();
             notify()->success('Checkin realizado com sucesso com sucesso!', 'Sucesso!');
             return to_route('admin.registration.index');

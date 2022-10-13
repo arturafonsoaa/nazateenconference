@@ -14,12 +14,12 @@ class FindRegistration extends Controller
         try {
             return response()->json([
                 'data' => [
-                    'registration' => Registration::findOrFail($registrationId)
+                    'registration' => Registration::with('user')->where('id', $registrationId)->firstOrFail()
                 ]
             ]);
         } catch (Exception $e) {
             return response()->json([
-                'error' => $e->json_encode
+                'error' => $e
             ], Response::HTTP_NOT_FOUND);
         }
     }
