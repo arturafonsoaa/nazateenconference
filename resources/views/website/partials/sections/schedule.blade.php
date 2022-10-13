@@ -80,6 +80,16 @@
                     <div class="tab-pane fade" id="tabs-day2" role="tabpanel" aria-labelledby="tabs-day1-tab">
                         <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray sm:flex sm:flex-col"
                             data-aos="fade-right" data-aos-delay="100">
+                            <div class="si-time text-white text-center">09:00 às 10:30</div>
+
+                            <div class="si-info col-span-5 sm:px-4">
+                                <h3 class="text-white font-extrabold text-xl mb-2">
+                                    Oficinas temáticas
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="schedule-item py-12 grid grid-cols-8 gap-4 items-center border-b border-b-neutral-gray sm:flex sm:flex-col"
+                            data-aos="fade-right" data-aos-delay="100">
                             <div class="si-time text-white text-center">14:00 às 16:00</div>
                             <div class="si-info col-span-4 sm:px-4">
                                 <h3 class="text-white font-extrabold text-xl mb-2 text-center lg:text-left">
@@ -94,11 +104,11 @@
                                 </p>
                             </div>
                             <div class="si-name col-span-2">
-                                <h4 class="text-white font-bold text-center lg:text-right">Em breve</h4>
+                                <h4 class="text-white font-bold text-center lg:text-right">Pra. Maely Ionã</h4>
                                 <p class="text-neon-purple text-center lg:text-right">Preletora</p>
                             </div>
                             <div class="si-pic sm:w-24">
-                                <img src="https://dummyimage.com/400x400/fff/fff"
+                                <img src="{{ Vite::asset('resources/img/maely.jpeg') }}"
                                     class="rounded-full lg:w-9/12 mx-auto">
                             </div>
                         </div>
