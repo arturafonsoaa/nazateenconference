@@ -7,6 +7,7 @@ use App\Enums\RegistrationStatus;
 use App\Enums\RegistrationType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Registration\ApproveRegistrationRequest;
+use App\Http\Requests\Admin\Registration\CheckinRequest;
 use App\Http\Requests\Admin\Registration\UpdateRegistrationRequest;
 use App\Jobs\SendRegistrationApproveEmailJob;
 use App\Models\Registration;
@@ -146,6 +147,32 @@ class RegistrationController extends Controller
             DB::commit();
 
             notify()->success('Inscrição excluída com sucesso!', 'Sucesso!');
+            return to_route('admin.registration.index');
+        } catch (Exception $e) {
+            DB::rollBack();
+            notify()->error($e->getMessage(), 'Erro');
+            return to_route('admin.registration.index');
+        }
+    }
+
+    public function checkin(CheckinRequest $request, int $registrationId)
+    {
+        DB::beginTransaction();
+
+        try {
+            $registration = Registration::findOrFail($registrationId);
+
+            $field = $request->get('day') == '1' ? 'present_on_the_first_day' :
+                ($request->get('day') == '2' ? 'present_on_the_second_day' : null);
+
+            if (!is_null($field)) {
+                $registration->update([
+                    $field => true
+                ]);
+            }
+
+            DB::commit();
+            notify()->success('Checkin realizado com sucesso com sucesso!', 'Sucesso!');
             return to_route('admin.registration.index');
         } catch (Exception $e) {
             DB::rollBack();
