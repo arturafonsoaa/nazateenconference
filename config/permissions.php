@@ -27,6 +27,7 @@ return [
     'admin.registration.edit' => ['admin', 'acquirer'],
     'admin.registration.update' => ['admin', 'acquirer'],
     'admin.registration.destroy' => ['admin'],
+    'admin.registration.checkin' => ['admin', 'acquirer'],
 
     'admin.reports.index' => ['admin'],
     'admin.reports.registrationsPerDay' => ['admin'],

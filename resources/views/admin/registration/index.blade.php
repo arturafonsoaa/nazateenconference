@@ -60,8 +60,17 @@
                                             <td>{{ $registration->created_at->format('d/m/Y') }}</td>
                                             <td>
                                                 <div class="d-flex">
+                                                    @if (auth()->user()->hasPermissionTo('admin.registration.checkin') &&
+                                                        (!$registration->present_on_the_first_day || !$registration->present_on_the_second_day))
+                                                        <x-adminlte-button aria-id="{{ $registration->id }}"
+                                                            icon="fa fa-calendar-check fa-fw" data-toggle="modal"
+                                                            data-target="#checkin-modal" theme="success"
+                                                            class="text-white btn-sm btn-open-modal-checkin mr-2" />
+                                                    @endif
+
                                                     @can('admin.registration.edit')
-                                                        <a href="{{ route('admin.registration.edit', $registration->id) }}" class="btn btn-xs btn-info mr-2">
+                                                        <a href="{{ route('admin.registration.edit', $registration->id) }}"
+                                                            class="btn btn-sm btn-info mr-2">
                                                             <i class="fa fa-edit"></i>
                                                         </a>
                                                     @endcan
@@ -70,7 +79,7 @@
                                                             <x-adminlte-button aria-id="{{ $registration->id }}"
                                                                 icon="fa fa-check fa-fw" data-toggle="modal"
                                                                 data-target="#approve-confirmation-modal"
-                                                                class="text-white btn-xs btn-open-modal-approve-registration mr-2"
+                                                                class="text-white btn-sm btn-open-modal-approve-registration mr-2"
                                                                 style="background-color: #7831b6;" />
                                                         @endif
                                                     @endcan
@@ -80,7 +89,7 @@
                                                             aria-code="{{ $registration->registration_code }}" theme="danger"
                                                             icon="fa fa-trash fa-fw" data-toggle="modal"
                                                             data-target="#destroy-registration-modal"
-                                                            class="text-white btn-xs btn-open-modal-destroy-registration" />
+                                                            class="text-white btn-sm btn-open-modal-destroy-registration" />
                                                     @endcan
                                                 </div>
 
@@ -166,6 +175,14 @@
         </div>
     </div>
 
+    <div id="url-show-registration" class="d-none">
+        {{ route('admin.api.registration.show', 0) }}
+    </div>
+
+    <div id="url-checkin" class="d-none">
+        {{ route('admin.registration.checkin', 0) }}
+    </div>
+
     <div id="url-approve-registration" class="d-none">
         {{ route('admin.registration.approve', 0) }}
     </div>
@@ -174,7 +191,27 @@
         {{ route('admin.registration.destroy', 0) }}
     </div>
 
-    <x-adminlte-modal id="approve-confirmation-modal" title="Tem certeza que deseja aprovar a inscrição?" class="no-footer">
+    <x-adminlte-modal id="checkin-modal" title="Selecione o dia para fazer checkin" class="no-footer">
+        <form id="form-checkin" action="" method="post">
+            @csrf
+
+            <x-adminlte-select name="day" label="Dia do checkin">
+                <x-adminlte-options :options="[]" />
+            </x-adminlte-select>
+
+            <div class="text-right">
+                <button type="submit" class="btn text-white" style="background-color: #7831b6;">
+                    <i class="fa fa-calendar-check fa-fw"></i> Fazer checkin
+                </button>
+                <x-adminlte-button theme="default" label="Cancelar" data-dismiss="modal" />
+            </div>
+        </form>
+        <x-slot name="footerSlot">
+        </x-slot>
+    </x-adminlte-modal>
+
+    <x-adminlte-modal id="approve-confirmation-modal" title="Tem certeza que deseja aprovar a inscrição?"
+        class="no-footer">
         <form id="form-confirm-approval" action="" method="post">
             @csrf
 
@@ -239,21 +276,72 @@
 @section('js')
     @parent
     <script>
+        function renderCheckinSelect(registration) {
+            if (!registration.present_on_the_first_day) {
+                $('[name="day"]').append($('<option>', {
+                    value: '1',
+                    text: 'Dia 1'
+                }));
+            }
+
+            if (!registration.present_on_the_second_day) {
+                $('[name="day"]').append($('<option>', {
+                    value: '2',
+                    text: 'Dia 2'
+                }));
+            }
+        }
+
         jQuery(document).ready(function() {
 
             jQuery('.date').inputmask('99/99/9999')
 
+            jQuery('.btn-open-modal-checkin').click(function() {
+                let id = jQuery(this).attr('aria-id');
+
+                let urlCheckin = jQuery('#url-checkin')
+                    .html()
+                    .trim()
+                    .replace('/0', '/' + id)
+
+                let urlShowRegistration = jQuery('#url-show-registration')
+                    .html()
+                    .trim()
+                    .replace('/0', '/' + id)
+
+                jQuery('[name="day"]').find("option").remove().end()
+
+                fetch(urlShowRegistration)
+                    .then(response => {
+                        return response.json()
+                    })
+                    .then(json => {
+                        let registration = json.data.registration
+                        renderCheckinSelect(registration)
+                    })
+                    .catch(function(error) {
+                        console.log(error)
+                    })
+                    .finally(function() {
+                        jQuery('#form-checkin').attr('action', urlCheckin)
+                    })
+            })
+
             jQuery('.btn-open-modal-approve-registration').click(function() {
-                let urlApproveRegistration = jQuery('#url-approve-registration').html().trim().replace('/0',
-                    '/' +
-                    jQuery(this).attr('aria-id'))
+                let urlApproveRegistration = jQuery('#url-approve-registration')
+                    .html()
+                    .trim()
+                    .replace('/0', '/' + jQuery(this).attr('aria-id'))
+
                 jQuery('#form-confirm-approval').attr('action', urlApproveRegistration)
             })
 
             jQuery('.btn-open-modal-destroy-registration').click(function() {
-                let urlDestroyRegistration = jQuery('#url-destroy-registration').html().trim().replace('/0',
-                    '/' +
-                    jQuery(this).attr('aria-id'))
+                let urlDestroyRegistration = jQuery('#url-destroy-registration')
+                    .html()
+                    .trim()
+                    .replace('/0', '/' + jQuery(this).attr('aria-id'))
+
                 jQuery('#form-destroy-registration').attr('action', urlDestroyRegistration)
                 jQuery('.registration-name').html(jQuery(this).attr('aria-name'))
                 jQuery('.registration-code').html(jQuery(this).attr('aria-code'))
