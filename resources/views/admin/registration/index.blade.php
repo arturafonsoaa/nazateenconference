@@ -175,6 +175,12 @@
                                         : null" />
                                 </x-adminlte-select>
                             </div>
+
+                            @can('admin.registration.exportPdf')
+                                <a href="{{ route('admin.registration.exportPdf', request()->query()) }}" class="btn btn-default">
+                                    <i class="fa fa-file-pdf mr-2"></i> Exportar PDF
+                                </a>
+                            @endcan
                         </div>
                     </div>
                 </form>

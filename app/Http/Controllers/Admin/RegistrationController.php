@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Enums\PaymentMethod;
 use App\Enums\RegistrationStatus;
 use App\Enums\RegistrationType;
+use App\Exports\RegistrationsPdfExport;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Registration\ApproveRegistrationRequest;
 use App\Http\Requests\Admin\Registration\CheckinRequest;
@@ -183,6 +184,15 @@ class RegistrationController extends Controller
             DB::rollBack();
             notify()->error($e->getMessage(), 'Erro');
             return to_route('admin.registration.index');
+        }
+    }
+
+    public function exportPdf(Request $request)
+    {
+        try {
+            return (new RegistrationsPdfExport($request->collect()))->download('cadastros.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
+        } catch (Exception $e) {
+            dd($e->getMessage());
         }
     }
 }
