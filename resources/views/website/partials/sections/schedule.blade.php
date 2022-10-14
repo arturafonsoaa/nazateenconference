@@ -128,11 +128,11 @@
                                 </p>
                             </div>
                             <div class="si-name col-span-2">
-                                <h4 class="text-white font-bold text-center lg:text-right">Em breve</h4>
+                                <h4 class="text-white font-bold text-center lg:text-right">Pr. Júnior</h4>
                                 <p class="text-neon-purple text-center lg:text-right">Preletor</p>
                             </div>
                             <div class="si-pic sm:w-24">
-                                <img src="https://dummyimage.com/400x400/fff/fff"
+                                <img src="{{ Vite::asset('resources/img/junior.jpeg') }}"
                                     class="rounded-full lg:w-9/12 mx-auto">
                             </div>
                         </div>
@@ -162,11 +162,11 @@
                                 </p>
                             </div>
                             <div class="si-name col-span-2">
-                                <h4 class="text-white font-bold text-center lg:text-right">Em breve</h4>
+                                <h4 class="text-white font-bold text-center lg:text-right">Daniela Amaral</h4>
                                 <p class="text-neon-purple text-center lg:text-right">Preletora</p>
                             </div>
                             <div class="si-pic sm:w-24">
-                                <img src="https://dummyimage.com/400x400/fff/fff"
+                                <img src="{{ Vite::asset('resources/img/danielaamaral.jpeg') }}"
                                     class="rounded-full lg:w-9/12 mx-auto">
                             </div>
                         </div>
