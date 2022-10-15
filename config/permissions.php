@@ -29,6 +29,8 @@ return [
     'admin.registration.destroy' => ['admin'],
     'admin.registration.checkin' => ['admin', 'acquirer'],
     'admin.registration.exportPdf' => ['admin', 'acquirer'],
+    'admin.registration.exportCsv' => ['admin', 'acquirer'],
+    'admin.registration.exportToRaffle' => ['admin', 'acquirer'],
 
     'admin.reports.index' => ['admin'],
     'admin.reports.registrationsPerDay' => ['admin'],

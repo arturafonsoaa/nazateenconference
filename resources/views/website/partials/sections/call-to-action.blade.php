@@ -1,6 +1,6 @@
-<section id="call-to-action" class="bg-gradient-to-r from-neon-pink to-neon-purple py-16">
+<section id="call-to-action" class="bg-gradient-to-r from-neon-pink to-neon-purple py-16 h-16">
     <div class="container m-auto" data-aos="fade-up">
-        <div class="flex items-center justify-between sm:flex-wrap  sm:gap-8 sm:justify-center">
+        {{--<div class="flex items-center justify-between sm:flex-wrap  sm:gap-8 sm:justify-center">
             <div>
                 <h3 class="text-xl font-semibold text-white">
                     Adquira agora seu ingresso
@@ -12,6 +12,6 @@
                     Comprar ingresso
                 </a>
             </div>
-        </div>
+        </div> --}}
     </div>
 </section>
