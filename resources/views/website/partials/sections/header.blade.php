@@ -3,7 +3,7 @@
 
     @include('website.partials.navbar')
 
-    <div class="container py-24 lg:py-28 m-auto flex flex-col items-center">
+    <div class="container py-24 lg:py-56 m-auto flex flex-col items-center">
         <div class="flex gap-x-8 gap-y-4 justify-center mb-8 sm:min-w-full sm:flex-wrap">
             <div class="flex items-start lg:items-center gap-2" data-aos="fade-up">
                 <i class="fa fa-fw fa-calendar-check text-neon-pink text-xl"></i>
@@ -27,34 +27,5 @@
         <figure class="max-w-6xl m-auto mb-8" data-aos="fade-up" data-aos-delay="300">
             <img src="{{ Vite::asset('resources/img/logo-nazateen-conference.png') }}">
         </figure>
-        <div class='w-96 py-4 sm:px-4'>
-            <h2 class='text-center text-4xl lg:text-5xl font-bold text-white mb-4' data-aos="fade-up"
-                data-aos-delay="400">
-                Faltam
-            </h2>
-            <div class="flex justify-around items-center gap-2 p-4 mb-2" data-aos="fade-up" data-aos-delay="500">
-                <div class='py-4 px-6 bg-black/[.4] text-white flex flex-col items-center justify-center'>
-                    <span id='days' class="text-xl lg:text-2xl font-bold mb-2"></span>
-                    <span class='text-small'>Dias</span>
-                </div>
-                <div class='py-4 px-6 bg-black/[.4] text-white flex flex-col items-center justify-center'>
-                    <span id='hours' class="text-xl lg:text-2xl font-bold mb-2"></span>
-                    <span class='text-small'>Hrs</span>
-                </div>
-                <div class='py-4 px-6 bg-black/[.4] text-white flex flex-col items-center justify-center'>
-                    <span id='mins' class="text-xl lg:text-2xl font-bold mb-2"></span>
-                    <span class='text-small'>Mins</span>
-                </div>
-                <div class='py-4 px-6 bg-black/[.4] text-white flex flex-col items-center justify-center'>
-                    <span id='secs' class="text-xl lg:text-2xl font-bold mb-2"></span>
-                    <span class='text-small'>Segs</span>
-                </div>
-            </div>
-        </div>
-        <div class="text-center" data-aos="fade-up" data-aos-delay="600">
-            <a href="#section-register-now" class="bg-neon-pink rounded-lg py-2 px-8 text-white uppercase">
-                Comprar Ingresso
-            </a>
-        </div>
     </div>
 </section>
