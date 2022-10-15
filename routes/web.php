@@ -42,6 +42,8 @@ Route::middleware(['auth', 'permission.check'])->prefix('painel')->name('admin.'
             Route::patch('{registrationId}/atualizar-cadastro', [AdminRegistrationController::class, 'update'])->name('update');
             Route::post('{registrationId}/checkin', [AdminRegistrationController::class, 'checkin'])->name('checkin');
             Route::get('exportar-pdf', [AdminRegistrationController::class, 'exportPdf'])->name('exportPdf');
+            Route::get('exportar-csv', [AdminRegistrationController::class, 'exportCsv'])->name('exportCsv');
+            Route::get('exportar-para-sorteio', [AdminRegistrationController::class, 'exportToRaffle'])->name('exportToRaffle');
         });
 
         Route::prefix('relatorios')->name('reports.')->group(function () {
