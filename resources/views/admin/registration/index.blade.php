@@ -177,8 +177,23 @@
                             </div>
 
                             @can('admin.registration.exportPdf')
-                                <a href="{{ route('admin.registration.exportPdf', request()->query()) }}" class="btn btn-default">
+                                <a href="{{ route('admin.registration.exportPdf', request()->query()) }}"
+                                    class="btn btn-default mb-2">
                                     <i class="fa fa-file-pdf mr-2"></i> Exportar PDF
+                                </a>
+                            @endcan
+
+                            @can('admin.registration.exportCsv')
+                                <a href="{{ route('admin.registration.exportCsv', request()->query()) }}"
+                                    class="btn btn-default mb-2">
+                                    <i class="fa fa-file-csv mr-2"></i> Exportar CSV
+                                </a>
+                            @endcan
+
+                            @can('admin.registration.exportToRaffle')
+                                <a href="{{ route('admin.registration.exportToRaffle', request()->query()) }}"
+                                    class="btn btn-default mb-2">
+                                    <i class="fa fa-dice-three mr-2"></i> Exportar para sorteio
                                 </a>
                             @endcan
                         </div>
